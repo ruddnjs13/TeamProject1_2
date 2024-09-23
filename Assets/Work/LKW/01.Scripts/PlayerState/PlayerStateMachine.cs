@@ -1,17 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Playables;
 
-public class PlayerStateMachine : MonoBehaviour
+public enum PlayerStateType
 {
-    // Start is called before the first frame update
-    void Start()
+    Idle,
+    Move,
+    Jump,
+    Fall,
+    Attack,
+}
+
+public class PlayerStateMachine
+{
+    public PlayerState CurrentState { get; private set; }
+    public Dictionary<PlayerStateType, PlayerState> StateDictionary;
+
+    private Player _player;
+
+    public PlayerStateMachine()
     {
-        
+        StateDictionary = new Dictionary<PlayerStateType, PlayerState>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Initialize(Player player, PlayerState startState)
+    {
+        _player = player;
+        CurrentState = startState;
+    }
+
+    public void ChangeState(PlayerStateType nextState)
+    {
+        CurrentState.Extit();
+        CurrentState = StateDictionary[nextState];
+        CurrentState.Enter();
+    }
+
+    public void AddState(PlayerStateType stateType, PlayerState playerState)
     {
         
     }
