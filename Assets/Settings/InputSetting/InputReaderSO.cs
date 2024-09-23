@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(menuName = "SO/InputReader")]
-public class InputReader : ScriptableObject, Controls.IPlayerActions
+public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
 {
     private Controls _controls;
     private void OnEnable()
