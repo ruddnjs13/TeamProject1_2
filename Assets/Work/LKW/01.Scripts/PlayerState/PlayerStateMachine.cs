@@ -16,13 +16,13 @@ public enum PlayerStateType
 public class PlayerStateMachine
 {
     public PlayerState CurrentState { get; private set; }
-    public Dictionary<PlayerStateType, PlayerState> StateDictionary;
+    public Dictionary<PlayerStateType, PlayerState> stateDictionary;
 
     private Player _player;
 
     public PlayerStateMachine()
     {
-        StateDictionary = new Dictionary<PlayerStateType, PlayerState>();
+        stateDictionary = new Dictionary<PlayerStateType, PlayerState>();
     }
 
     public void Initialize(Player player, PlayerState startState)
@@ -33,13 +33,13 @@ public class PlayerStateMachine
 
     public void ChangeState(PlayerStateType nextState)
     {
-        CurrentState.Extit();
-        CurrentState = StateDictionary[nextState];
+        CurrentState.Exit();
+        CurrentState = stateDictionary[nextState];
         CurrentState.Enter();
     }
 
     public void AddState(PlayerStateType stateType, PlayerState playerState)
     {
-        
+        stateDictionary.Add(stateType, playerState);
     }
 }

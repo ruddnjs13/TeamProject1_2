@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="66529809-aa60-4f1e-86bf-2c24d9fcadf9" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputSetting/InputReaderSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/InputSetting/InputReaderSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Agent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Agent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerStateMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerGroundState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PerforceDirect.Settings">
     <option name="CHARSET" value="없음" />
@@ -101,6 +103,9 @@
       <workItem from="1727017764688" duration="2239000" />
       <workItem from="1727070412124" duration="5786000" />
       <workItem from="1727100698082" duration="4019000" />
+      <workItem from="1727172423125" duration="1105000" />
+      <workItem from="1727173573191" duration="1038000" />
+      <workItem from="1727187313447" duration="2608000" />
     </task>
     <servers />
   </component>
