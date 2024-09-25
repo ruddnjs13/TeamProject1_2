@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="66529809-aa60-4f1e-86bf-2c24d9fcadf9" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/LKW.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/LKW.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Agent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Agent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerStateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerGroundState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerGroundState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerMoveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerMoveState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/aa/b7bbd196/Activator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerGroundState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerIdleState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -114,7 +115,7 @@
       <workItem from="1727187313447" duration="2608000" />
       <workItem from="1727222010610" duration="5863000" />
       <workItem from="1727247449119" duration="2835000" />
-      <workItem from="1727261028108" duration="1707000" />
+      <workItem from="1727261028108" duration="5062000" />
     </task>
     <servers />
   </component>

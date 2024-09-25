@@ -10,7 +10,6 @@ public abstract class Agent : MonoBehaviour
     public Rigidbody2D RbCompo { get;  set; }
     public Collider2D ColliderCompo { get;  set; }
     public Animator AnimatorCompo { get; set; }
-    public InputReaderSO InputCompo { get;  set; }
     #endregion
 
     [SerializeField] private LayerMask _whatIsGround;

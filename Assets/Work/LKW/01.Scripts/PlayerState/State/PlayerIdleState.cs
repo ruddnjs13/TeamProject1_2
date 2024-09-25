@@ -20,11 +20,11 @@ public class PlayerIdleState : PlayerGroundState
     {
         base.StateUpdate();
 
-        float xMove = _player.InputCompo.XMove;
+        float xMove = _player.playerInput.XMove;
 
         if (Mathf.Abs(xMove) > 0)
         {
-            _stateMachine.ChangeState(PlayerStateType.Move);
+            _player.StateMachine.ChangeState(PlayerStateEnum.Move);
         }
     }
 }

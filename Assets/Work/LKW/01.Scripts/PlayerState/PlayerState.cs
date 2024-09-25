@@ -7,13 +7,11 @@ using UnityEngine.Video;
 public abstract class PlayerState
 {
     protected Player _player;
-    protected PlayerStateMachine _stateMachine;
     protected readonly int _animBoolHash;
 
     protected PlayerState(Player player, PlayerStateMachine stateMachine, string animBoolName)
     {
         _player = player;
-        _stateMachine = stateMachine;
         _animBoolHash = Animator.StringToHash(animBoolName);
     }
 

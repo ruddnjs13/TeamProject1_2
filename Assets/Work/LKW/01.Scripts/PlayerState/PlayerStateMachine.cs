@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public enum PlayerStateType
+public enum PlayerStateEnum
 {
     Air,
     Ground,
@@ -18,13 +18,13 @@ public enum PlayerStateType
 public class PlayerStateMachine
 {
     public PlayerState CurrentState { get; private set; }
-    public Dictionary<PlayerStateType, PlayerState> stateDictionary;
+    public Dictionary<PlayerStateEnum, PlayerState> stateDictionary;
 
     private Player _player;
 
     public PlayerStateMachine()
     {
-        stateDictionary = new Dictionary<PlayerStateType, PlayerState>();
+        stateDictionary = new Dictionary<PlayerStateEnum, PlayerState>();
     }
 
     public void Initialize(Player player, PlayerState startState)
@@ -33,15 +33,15 @@ public class PlayerStateMachine
         CurrentState = startState;
     }
 
-    public void ChangeState(PlayerStateType nextState)
+    public void ChangeState(PlayerStateEnum nextState)
     {
         CurrentState.Exit();
         CurrentState = stateDictionary[nextState];
         CurrentState.Enter();
     }
 
-    public void AddState(PlayerStateType stateType, PlayerState playerState)
+    public void AddState(PlayerStateEnum stateEnum, PlayerState playerState)
     {
-        stateDictionary.Add(stateType, playerState);
+        stateDictionary.Add(stateEnum, playerState);
     }
 }

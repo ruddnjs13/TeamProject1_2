@@ -21,6 +21,6 @@ public class PlayerMoveState : PlayerGroundState
     public override void StateUpdate()
     {
         base.StateUpdate();
-        _player.SetMovement(new Vector2(_player.InputCompo.XMove,_player.RbCompo.velocity.y));
+        _player.SetMovement(new Vector2(_player.playerInput.XMove,_player.RbCompo.velocity.y));
     }
 }

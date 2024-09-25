@@ -17,7 +17,7 @@ public class PlayerGroundState : PlayerState
 
     private void HandleGroundChange(bool prev, bool next)
     {
-        _stateMachine.ChangeState(PlayerStateType.Air);
+        _player.StateMachine.ChangeState(PlayerStateEnum.Air);
     }
 
     public override void Exit()
