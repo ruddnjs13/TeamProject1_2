@@ -19,12 +19,12 @@ public abstract class PlayerState
 
     public virtual void  Enter()
     {
-        
-    }
+        _player.AnimatorCompo.SetBool(_animBoolHash,true);
+   }
 
     public virtual void Exit()
     {
-        
+        _player.AnimatorCompo.SetBool(_animBoolHash,true);
     }
 
     public virtual void StateUpdate()

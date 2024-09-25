@@ -17,7 +17,12 @@ public class PlayerGroundState : PlayerState
 
     private void HandleGroundChange(bool prev, bool next)
     {
-        // 에어 스테이트로 변환
-        //_stateMachine.ChangeState();
+        _stateMachine.ChangeState(PlayerStateType.Air);
+    }
+
+    public override void Exit()
+    {
+        _player.IsGround.OnValueChanged -= HandleGroundChange;
+        base.Exit();
     }
 }

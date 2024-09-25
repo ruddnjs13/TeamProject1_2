@@ -6,6 +6,8 @@ using UnityEngine.Playables;
 
 public enum PlayerStateType
 {
+    Air,
+    Ground,
     Idle,
     Move,
     Jump,
