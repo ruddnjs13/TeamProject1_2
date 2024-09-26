@@ -12,24 +12,24 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
 {
     private Controls _controls;
 
-    public Action JumpEvnet;
+    public Action JumpEvent;
     
-    public float XMove { get; private set; }
+    public Vector2 Movement { get; private set; }
     private void OnEnable()
     {
         if (_controls == null)
         {
             _controls = new Controls();
+            _controls.Player.SetCallbacks(this);
         }
         
-        _controls.Player.SetCallbacks(this);
         _controls.Player.Enable();
 
     }
 
     public void OnMovement(InputAction.CallbackContext context)
     {
-        XMove = context.ReadValue<Vector2>().x;
+        Movement = context.ReadValue<Vector2>();
     }
 
     public void OnDash(InputAction.CallbackContext context)
@@ -44,7 +44,8 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
     {
         if (context.performed)
         {
-            JumpEvnet?.Invoke();
+            Debug.Log("점프");
+            JumpEvent?.Invoke();
         }
     }
 }

@@ -8,21 +8,23 @@ public class PlayerGroundState : PlayerState
     {
     }
 
-
     public override void Enter()
     {
         base.Enter();
-        _player.IsGround.OnValueChanged += HandleGroundChange;
-    }
-
-    private void HandleGroundChange(bool prev, bool next)
-    {
-        _player.StateMachine.ChangeState(PlayerStateEnum.Air);
+        _player.playerInput.JumpEvent += HandleJumpEvent;
     }
 
     public override void Exit()
     {
-        _player.IsGround.OnValueChanged -= HandleGroundChange;
+        _player.playerInput.JumpEvent -= HandleJumpEvent;
         base.Exit();
+    }
+
+    private void HandleJumpEvent()
+    {
+        if (_player.IsGround.Value)
+        {
+            _stateMachine.ChangeState(PlayerStateEnum.Jump);
+        }
     }
 }

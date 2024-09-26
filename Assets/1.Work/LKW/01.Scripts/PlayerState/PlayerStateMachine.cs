@@ -7,12 +7,13 @@ using UnityEngine.Playables;
 public enum PlayerStateEnum
 {
     Air,
-    Ground,
     Idle,
     Move,
     Jump,
     Fall,
-    Attack,
+    // Attack,
+    WallSlide,
+    WallJump
 }
 
 public class PlayerStateMachine
@@ -27,16 +28,18 @@ public class PlayerStateMachine
         stateDictionary = new Dictionary<PlayerStateEnum, PlayerState>();
     }
 
-    public void Initialize(Player player, PlayerState startState)
+    public void Initialize(Player player, PlayerStateEnum startStateEnum)
     {
         _player = player;
-        CurrentState = startState;
+        CurrentState = stateDictionary[startStateEnum];
+        CurrentState.Enter();
     }
 
     public void ChangeState(PlayerStateEnum nextState)
     {
         CurrentState.Exit();
         CurrentState = stateDictionary[nextState];
+        Debug.Log(CurrentState);
         CurrentState.Enter();
     }
 
