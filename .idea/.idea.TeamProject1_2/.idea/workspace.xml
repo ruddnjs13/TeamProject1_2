@@ -23,11 +23,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Candy0424&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ruddnjs13/TeamProject1_2.git&quot;,
+    &quot;accountId&quot;: &quot;c26c1169-98d7-49cc-843b-548e633b80df&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Manager/SkillManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Skill/DashSkill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Skill/Skill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="없음" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/80/c520f6ea/020009A2pdb49.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -40,20 +54,13 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LKW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CD&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\lkwon\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\lkwon\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\lkwon\\AppData\\Local\\Symbols\\src&quot;
-    ]
   }
 }</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
@@ -106,6 +113,8 @@
       <workItem from="1727007673702" duration="224000" />
       <workItem from="1727017764688" duration="2239000" />
       <workItem from="1727070412124" duration="5786000" />
+      <workItem from="1727153247281" duration="889000" />
+      <workItem from="1727157209243" duration="2640000" />
     </task>
     <servers />
   </component>
@@ -120,6 +129,7 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
