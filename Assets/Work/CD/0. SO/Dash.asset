@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0902b90c7d2b544a88ea9d9adacb2e7, type: 3}
   m_Name: Dash
   m_EditorClassIdentifier: 
-  skillName: 
-  skillDescription: 
+  skillName: Dash
+  skillDescription: This is Dash
   damage: 0
-  cooldown: 0
-  skillIcon: {fileID: 0}
-  skillAnimationName: 
+  cooldown: 3.5
+  skillIcon: {fileID: 1789816353022828185, guid: 1e59551d7b4978e48aa9cebf5c70bb41, type: 3}
+  skillAnimationName: DashTrigger
