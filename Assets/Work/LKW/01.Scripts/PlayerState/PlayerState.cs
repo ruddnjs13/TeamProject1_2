@@ -4,25 +4,29 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Video;
 
-public abstract class PlayerState
+public abstract class PlayerState : MonoBehaviour
 {
     protected Player _player;
+    protected PlayerStateMachine _stateMachine;
     protected readonly int _animBoolHash;
 
-    protected PlayerState(Player player, PlayerStateMachine stateMachine, string animBoolName)
+
+    public PlayerState(Player player, PlayerStateMachine stateMachine, string animBoolName)
     {
         _player = player;
+        _stateMachine = stateMachine;
         _animBoolHash = Animator.StringToHash(animBoolName);
     }
 
+
     public virtual void  Enter()
     {
-        _player.AnimatorCompo.SetBool(_animBoolHash,true);
-   }
+        
+    }
 
-    public virtual void Exit()
+    public virtual void Extit()
     {
-        _player.AnimatorCompo.SetBool(_animBoolHash,true);
+        
     }
 
     public virtual void StateUpdate()
@@ -34,4 +38,6 @@ public abstract class PlayerState
     {
         
     }
+    
+    
 }
