@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillSO : MonoBehaviour
+[CreateAssetMenu(menuName = "SO/Skill")]
+public class SkillSO : ScriptableObject
 {
     [Header("SkillName")]
     public string skillName;
