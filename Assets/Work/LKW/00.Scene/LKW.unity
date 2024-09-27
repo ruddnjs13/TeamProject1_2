@@ -917,6 +917,7 @@ MonoBehaviour:
     _value: 0
   _moveSpeed: 5
   _jumpPower: 8
+  _wallJumpPower: 0
   _inputReader: {fileID: 11400000, guid: 6afb184478c487d44a3a03792b42f365, type: 2}
 --- !u!50 &1904741415
 Rigidbody2D:
