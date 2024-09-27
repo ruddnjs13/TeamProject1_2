@@ -1,0 +1,1931 @@
+fileFormatVersion: 2
+guid: 0c9a5e59aec03f1439e8ab66588bacea
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Assassin_Frame_0
+    originalName: 
+    pivot: {x: 1.7708334, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 69
+      width: 24
+      height: 20
+    spriteID: 80106142b5246504eaee4e0c78c24c9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 69}
+  - name: Assassin_Frame_1
+    originalName: 
+    pivot: {x: 1.7708334, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 97
+      width: 24
+      height: 20
+    spriteID: dbb77e9a3731b564997377a1b6ee49e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 97}
+  - name: Assassin_Frame_10
+    originalName: 
+    pivot: {x: 1.8478261, y: -0.055555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 120
+      width: 23
+      height: 18
+    spriteID: e6fe3e09dbc75584eb1de68fa8752b25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 120}
+  - name: Assassin_Frame_11
+    originalName: 
+    pivot: {x: 1.8478261, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 267
+      width: 23
+      height: 16
+    spriteID: 9397292f735c95048bf2ff41052a8c88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 267}
+  - name: Assassin_Frame_12
+    originalName: 
+    pivot: {x: 1.8478261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 291
+      width: 23
+      height: 16
+    spriteID: 0007f4fbf9b1d214da91c79bea07ecec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 291}
+  - name: Assassin_Frame_13
+    originalName: 
+    pivot: {x: 1.8478261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 403
+      width: 23
+      height: 19
+    spriteID: 38d9777a07e073546a29a9b01aca5323
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 403}
+  - name: Assassin_Frame_14
+    originalName: 
+    pivot: {x: 1.8478261, y: -0.055555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 146
+      width: 23
+      height: 18
+    spriteID: 25aac93e2e131e548a8b0d00699b3ee3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 146}
+  - name: Assassin_Frame_15
+    originalName: 
+    pivot: {x: 1.8478261, y: -0.05882353}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 217
+      width: 23
+      height: 17
+    spriteID: 7d90096062d740b4a8ecb5265b7cb2a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 217}
+  - name: Assassin_Frame_16
+    originalName: 
+    pivot: {x: 1.8478261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 315
+      width: 23
+      height: 16
+    spriteID: a49833f84602d6b49a73c296235e09bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 315}
+  - name: Assassin_Frame_17
+    originalName: 
+    pivot: {x: 1.8478261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 430
+      width: 23
+      height: 19
+    spriteID: c2c8d4ebc130943469cbe45483669e56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 430}
+  - name: Assassin_Frame_18
+    originalName: 
+    pivot: {x: 1.8478261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 457
+      width: 23
+      height: 19
+    spriteID: 4989ef1e9004a034f895da60afee2989
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 457}
+  - name: Assassin_Frame_19
+    originalName: 
+    pivot: {x: 1.8478261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 484
+      width: 23
+      height: 19
+    spriteID: abf7abb2a2d2f4d4ca4394312a3fe560
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 484}
+  - name: Assassin_Frame_20
+    originalName: 
+    pivot: {x: 1.8478261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 27
+      width: 23
+      height: 19
+    spriteID: ea1573c2488a17c4ca1b311a4b10a0da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 27}
+  - name: Assassin_Frame_21
+    originalName: 
+    pivot: {x: 1.8478261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 54
+      width: 23
+      height: 19
+    spriteID: 19edfa6112584014f8751d5b68fa6351
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 54}
+  - name: Assassin_Frame_22
+    originalName: 
+    pivot: {x: 1.8478261, y: -0.11764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 242
+      width: 23
+      height: 17
+    spriteID: b25d8b37ef0c553429a15a1a96129e0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 242}
+  - name: Assassin_Frame_23
+    originalName: 
+    pivot: {x: 1.8478261, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 339
+      width: 23
+      height: 16
+    spriteID: 7c259cb6744a6ef4e8c47ed81d92319c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 339}
+  - name: Assassin_Frame_24
+    originalName: 
+    pivot: {x: 1.8478261, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 363
+      width: 23
+      height: 16
+    spriteID: d0642ef7783dc1548b9e2597b74ec031
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 363}
+  - name: Assassin_Frame_25
+    originalName: 
+    pivot: {x: 1.8478261, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 387
+      width: 23
+      height: 16
+    spriteID: 751038a25e429294b955d4dfb12fea44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 387}
+  - name: Assassin_Frame_34
+    originalName: 
+    pivot: {x: 1.3064517, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 73
+      width: 31
+      height: 20
+    spriteID: 1fbbc41f1fd6f154c9ff1a4a3e998154
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 73}
+  - name: Assassin_Frame_35
+    originalName: 
+    pivot: {x: 1.2741936, y: 0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 101
+      width: 31
+      height: 19
+    spriteID: 6dc153907d95766419592ec796beae21
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 101}
+  - name: Assassin_Frame_36
+    originalName: 
+    pivot: {x: 1.2741936, y: 0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 128
+      width: 31
+      height: 19
+    spriteID: 2b8d21d764eb8dd4bbb7d02cffd50973
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 128}
+  - name: Assassin_Frame_37
+    originalName: 
+    pivot: {x: 1.5192308, y: 0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 450
+      width: 26
+      height: 19
+    spriteID: 19242dd7f0195e74b95cfcbb3adb0e11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 450}
+  - name: Assassin_Frame_38
+    originalName: 
+    pivot: {x: 1.5192308, y: 0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 477
+      width: 26
+      height: 19
+    spriteID: 6a1af93fd20655a47a62384610c7373f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 477}
+  - name: Assassin_Frame_2
+    originalName: 
+    pivot: {x: 1.7708334, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 125
+      width: 24
+      height: 20
+    spriteID: f6a96630bbcd95548b0530f1b48886d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 125}
+  - name: Assassin_Frame_3
+    originalName: 
+    pivot: {x: 1.7, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 254
+      width: 25
+      height: 20
+    spriteID: debbb589795898e488318822718bfe29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 254}
+  - name: Assassin_Frame_4
+    originalName: 
+    pivot: {x: 1.7, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 282
+      width: 25
+      height: 20
+    spriteID: a290c305bbc521341a7263ed171e864e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 282}
+  - name: Assassin_Frame_5
+    originalName: 
+    pivot: {x: 1.7, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 310
+      width: 25
+      height: 20
+    spriteID: 7bda05c26a0ec9e4c8fe057413e15dba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 310}
+  - name: Assassin_Frame_6
+    originalName: 
+    pivot: {x: 1.7, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 338
+      width: 25
+      height: 20
+    spriteID: 72c99c1f19fc0a54299e8b8841913224
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 338}
+  - name: Assassin_Frame_7
+    originalName: 
+    pivot: {x: 1.7708334, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 153
+      width: 24
+      height: 20
+    spriteID: 7f5db88faceb943458f448f0d5ce12bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 153}
+  - name: Assassin_Frame_8
+    originalName: 
+    pivot: {x: 1.7, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 366
+      width: 25
+      height: 20
+    spriteID: 4a06b52529d1b99409230f8c40537702
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 366}
+  - name: Assassin_Frame_9
+    originalName: 
+    pivot: {x: 1.7, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 394
+      width: 25
+      height: 20
+    spriteID: 1cac7b55128af9e48ad43b8482facb2e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 394}
+  - name: Assassin_Frame_26
+    originalName: 
+    pivot: {x: 1.5344828, y: 0.07142857}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 172
+      width: 29
+      height: 14
+    spriteID: 646d61e3a302e724ea49fc6fe2bba528
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 172}
+  - name: Assassin_Frame_27
+    originalName: 
+    pivot: {x: 1.5344828, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 27
+      width: 29
+      height: 15
+    spriteID: 552a09112e119904e989a81c97becc0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 27}
+  - name: Assassin_Frame_28
+    originalName: 
+    pivot: {x: 1.5344828, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 50
+      width: 29
+      height: 15
+    spriteID: b4f339dfc1b7edc48acbe98ae9e50dc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 50}
+  - name: Assassin_Frame_29
+    originalName: 
+    pivot: {x: 1.5344828, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 73
+      width: 29
+      height: 15
+    spriteID: d0f52dc64d2001040abc57e4e013f15b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 73}
+  - name: Assassin_Frame_30
+    originalName: 
+    pivot: {x: 1.4375, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 181
+      width: 24
+      height: 20
+    spriteID: 7d4509e31fec8b24181914dd8d74334e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 181}
+  - name: Assassin_Frame_31
+    originalName: 
+    pivot: {x: 1.5, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 237
+      width: 23
+      height: 20
+    spriteID: 3bd832b73d8df014bb291a60ca53b263
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 237}
+  - name: Assassin_Frame_32
+    originalName: 
+    pivot: {x: 1.5681818, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 319
+      width: 22
+      height: 20
+    spriteID: 705f7762aefd2624188613242eeb84ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 319}
+  - name: Assassin_Frame_33
+    originalName: 
+    pivot: {x: 1.5681818, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 347
+      width: 22
+      height: 20
+    spriteID: 399cc9b9f8ddfed418c986e279974aff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 347}
+  - name: Assassin_Frame_39
+    originalName: 
+    pivot: {x: 1.7708334, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 209
+      width: 24
+      height: 20
+    spriteID: b6508b45121ebe54083b9c25ea1ec29f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 209}
+  - name: Assassin_Frame_40
+    originalName: 
+    pivot: {x: 1.840909, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 375
+      width: 22
+      height: 20
+    spriteID: 156904a980822f54592c4e9abefdd622
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 375}
+  - name: Assassin_Frame_41
+    originalName: 
+    pivot: {x: 1.7, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 422
+      width: 25
+      height: 20
+    spriteID: 748fa7487ced5c94e9c4bdd6908e225a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 422}
+  - name: Assassin_Frame_42
+    originalName: 
+    pivot: {x: 1.625, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 155
+      width: 28
+      height: 20
+    spriteID: 50f6749fcb920104b98af454a16d24f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 155}
+  - name: Assassin_Frame_43
+    originalName: 
+    pivot: {x: 1.6481482, y: 0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 204
+      width: 27
+      height: 20
+    spriteID: 21732622a50e45a4aab220d80b02f82d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 204}
+  - name: Assassin_Frame_44
+    originalName: 
+    pivot: {x: 0.58000004, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 75
+      height: 15
+    spriteID: 5a77247e08b6bf94e95d3be369426176
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Assassin_Frame_45
+    originalName: 
+    pivot: {x: 0.38392854, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 152
+      y: 4
+      width: 56
+      height: 15
+    spriteID: dc4f59cedb8858b4dbb1e64d9a59a593
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 152, y: 4}
+  - name: Assassin_Frame_46
+    originalName: 
+    pivot: {x: 0.3596491, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 87
+      y: 4
+      width: 57
+      height: 15
+    spriteID: f42d98ff34a91d2459b844c403152bb1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 87, y: 4}
+  - name: Assassin_Frame_47
+    originalName: 
+    pivot: {x: 0.17045453, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 27
+      width: 44
+      height: 15
+    spriteID: 113731e3c76c03349b44313044e90025
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 27}
+  - name: Assassin_Frame_48
+    originalName: 
+    pivot: {x: 0.1547619, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 50
+      width: 42
+      height: 15
+    spriteID: 8f59ed3d3bfa723499b29303e7ba4abd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 50}
+  - name: Assassin_Frame_49
+    originalName: 
+    pivot: {x: -0.058139596, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 183
+      width: 43
+      height: 13
+    spriteID: d73b600159dd08d4c89da3df724c0786
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 183}
+  - name: Assassin_Frame_50
+    originalName: 
+    pivot: {x: -0.12162169, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 27
+      width: 37
+      height: 13
+    spriteID: 265e6435f256bbd4c8af1f66b83be044
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 27}
+  - name: Assassin_Frame_51
+    originalName: 
+    pivot: {x: -0.094594665, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 48
+      width: 37
+      height: 13
+    spriteID: 1ab62baaa8d884a499fd5719cb2ee311
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 48}
+  - name: Assassin_Frame_52
+    originalName: 
+    pivot: {x: -0.06756764, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 232
+      width: 37
+      height: 14
+    spriteID: 1fe6c07f3c9de9c41a3a7b5c0ebef501
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 232}
+  - name: Assassin_Frame_53
+    originalName: 
+    pivot: {x: -0.07812508, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 216
+      y: 4
+      width: 32
+      height: 14
+    spriteID: cf7bee1c79b569d4e84f1563d4516a77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 216, y: 4}
+  - name: Assassin_Frame_54
+    originalName: 
+    pivot: {x: 1.6458334, y: 0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 265
+      width: 24
+      height: 19
+    spriteID: f71ba1d5c52df1b47a5a6654285761da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 265}
+  - name: Assassin_Frame_55
+    originalName: 
+    pivot: {x: 1.6458334, y: 0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 292
+      width: 24
+      height: 19
+    spriteID: 35b232953ddb766418f608c4507ede13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 292}
+  - name: Assassin_Frame_56
+    originalName: 
+    pivot: {x: 1.6739131, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 81
+      width: 23
+      height: 19
+    spriteID: 6a65fc42fed5eac46a6a8a4e8302dab5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 81}
+  - name: Assassin_Frame_57
+    originalName: 
+    pivot: {x: 1.5961539, y: 0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 96
+      width: 26
+      height: 16
+    spriteID: cd38b5a3c7b91b049873c81e67463d5c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 96}
+  - name: Assassin_Frame_58
+    originalName: 
+    pivot: {x: 1.574074, y: 0.06666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 194
+      width: 27
+      height: 15
+    spriteID: c6fae925e825de248b7b56639241389c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 194}
+  - name: Assassin_Frame_59
+    originalName: 
+    pivot: {x: 1.5535715, y: 0.083333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 411
+      width: 28
+      height: 12
+    spriteID: 524c98983173db442a08e46d40f3dc3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 411}
+  - name: Assassin_Frame_60
+    originalName: 
+    pivot: {x: 1.5535715, y: 0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 448
+      width: 28
+      height: 9
+    spriteID: 296253e1df4f5c34ea3a4678722cc944
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 448}
+  - name: Assassin_Frame_61
+    originalName: 
+    pivot: {x: 1.5344828, y: 0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 431
+      width: 29
+      height: 9
+    spriteID: 465a773b0e69a6c489d8c1389990ee4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 431}
+  - name: Assassin_Frame_62
+    originalName: 
+    pivot: {x: 1.5166667, y: 0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 169
+      y: 27
+      width: 30
+      height: 9
+    spriteID: 5b9ca54979b0387469f29cd101c3da36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 169, y: 27}
+  - name: Assassin_Frame_63
+    originalName: 
+    pivot: {x: 1.5961539, y: 0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 465
+      width: 26
+      height: 9
+    spriteID: 0f55c63d036bdba4bb898a083b195e58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 465}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 748046995
+    name: Assassin
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Assassin_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 3
+        y: -1
+        width: 24
+        height: 20
+      spriteId: 80106142b5246504eaee4e0c78c24c9a
+    - name: Assassin_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 3
+        y: -1
+        width: 24
+        height: 20
+      spriteId: dbb77e9a3731b564997377a1b6ee49e2
+    - name: Assassin_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 3
+        y: 1
+        width: 23
+        height: 18
+      spriteId: e6fe3e09dbc75584eb1de68fa8752b25
+    - name: Assassin_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 3
+        y: 2
+        width: 23
+        height: 16
+      spriteId: 9397292f735c95048bf2ff41052a8c88
+    - name: Assassin_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 3
+        y: 0
+        width: 23
+        height: 16
+      spriteId: 0007f4fbf9b1d214da91c79bea07ecec
+    - name: Assassin_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 3
+        y: 0
+        width: 23
+        height: 19
+      spriteId: 38d9777a07e073546a29a9b01aca5323
+    - name: Assassin_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 3
+        y: 1
+        width: 23
+        height: 18
+      spriteId: 25aac93e2e131e548a8b0d00699b3ee3
+    - name: Assassin_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 3
+        y: 1
+        width: 23
+        height: 17
+      spriteId: 7d90096062d740b4a8ecb5265b7cb2a9
+    - name: Assassin_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 3
+        y: 0
+        width: 23
+        height: 16
+      spriteId: a49833f84602d6b49a73c296235e09bf
+    - name: Assassin_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 3
+        y: 0
+        width: 23
+        height: 19
+      spriteId: c2c8d4ebc130943469cbe45483669e56
+    - name: Assassin_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 3
+        y: 0
+        width: 23
+        height: 19
+      spriteId: 4989ef1e9004a034f895da60afee2989
+    - name: Assassin_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 3
+        y: 0
+        width: 23
+        height: 19
+      spriteId: abf7abb2a2d2f4d4ca4394312a3fe560
+    - name: Assassin_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 3
+        y: 0
+        width: 23
+        height: 19
+      spriteId: ea1573c2488a17c4ca1b311a4b10a0da
+    - name: Assassin_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 3
+        y: 0
+        width: 23
+        height: 19
+      spriteId: 19edfa6112584014f8751d5b68fa6351
+    - name: Assassin_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 3
+        y: 2
+        width: 23
+        height: 17
+      spriteId: b25d8b37ef0c553429a15a1a96129e0d
+    - name: Assassin_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 3
+        y: 2
+        width: 23
+        height: 16
+      spriteId: 7c259cb6744a6ef4e8c47ed81d92319c
+    - name: Assassin_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 3
+        y: 2
+        width: 23
+        height: 16
+      spriteId: d0642ef7783dc1548b9e2597b74ec031
+    - name: Assassin_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 3
+        y: 2
+        width: 23
+        height: 16
+      spriteId: 751038a25e429294b955d4dfb12fea44
+    - name: Assassin_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 5
+        y: -1
+        width: 31
+        height: 20
+      spriteId: 1fbbc41f1fd6f154c9ff1a4a3e998154
+    - name: Assassin_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 6
+        y: -1
+        width: 31
+        height: 19
+      spriteId: 6dc153907d95766419592ec796beae21
+    - name: Assassin_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 6
+        y: -1
+        width: 31
+        height: 19
+      spriteId: 2b8d21d764eb8dd4bbb7d02cffd50973
+    - name: Assassin_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 6
+        y: -1
+        width: 26
+        height: 19
+      spriteId: 19242dd7f0195e74b95cfcbb3adb0e11
+    - name: Assassin_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 6
+        y: -1
+        width: 26
+        height: 19
+      spriteId: 6a1af93fd20655a47a62384610c7373f
+    - name: Assassin_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 3
+        y: -1
+        width: 24
+        height: 20
+      spriteId: f6a96630bbcd95548b0530f1b48886d5
+    - name: Assassin_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 3
+        y: -1
+        width: 25
+        height: 20
+      spriteId: debbb589795898e488318822718bfe29
+    - name: Assassin_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 3
+        y: -1
+        width: 25
+        height: 20
+      spriteId: a290c305bbc521341a7263ed171e864e
+    - name: Assassin_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 3
+        y: -1
+        width: 25
+        height: 20
+      spriteId: 7bda05c26a0ec9e4c8fe057413e15dba
+    - name: Assassin_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 3
+        y: -1
+        width: 25
+        height: 20
+      spriteId: 72c99c1f19fc0a54299e8b8841913224
+    - name: Assassin_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 3
+        y: -1
+        width: 24
+        height: 20
+      spriteId: 7f5db88faceb943458f448f0d5ce12bf
+    - name: Assassin_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 3
+        y: -1
+        width: 25
+        height: 20
+      spriteId: 4a06b52529d1b99409230f8c40537702
+    - name: Assassin_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 3
+        y: -1
+        width: 25
+        height: 20
+      spriteId: 1cac7b55128af9e48ad43b8482facb2e
+    - name: Assassin_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 1
+        y: -1
+        width: 29
+        height: 14
+      spriteId: 646d61e3a302e724ea49fc6fe2bba528
+    - name: Assassin_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 1
+        y: -1
+        width: 29
+        height: 15
+      spriteId: 552a09112e119904e989a81c97becc0a
+    - name: Assassin_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 1
+        y: -1
+        width: 29
+        height: 15
+      spriteId: b4f339dfc1b7edc48acbe98ae9e50dc9
+    - name: Assassin_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 1
+        y: -1
+        width: 29
+        height: 15
+      spriteId: d0f52dc64d2001040abc57e4e013f15b
+    - name: Assassin_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 11
+        y: -1
+        width: 24
+        height: 20
+      spriteId: 7d4509e31fec8b24181914dd8d74334e
+    - name: Assassin_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 11
+        y: -1
+        width: 23
+        height: 20
+      spriteId: 3bd832b73d8df014bb291a60ca53b263
+    - name: Assassin_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 11
+        y: -1
+        width: 22
+        height: 20
+      spriteId: 705f7762aefd2624188613242eeb84ea
+    - name: Assassin_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 11
+        y: -1
+        width: 22
+        height: 20
+      spriteId: 399cc9b9f8ddfed418c986e279974aff
+    - name: Assassin_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 3
+        y: -1
+        width: 24
+        height: 20
+      spriteId: b6508b45121ebe54083b9c25ea1ec29f
+    - name: Assassin_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 5
+        y: -1
+        width: 22
+        height: 20
+      spriteId: 156904a980822f54592c4e9abefdd622
+    - name: Assassin_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 3
+        y: -1
+        width: 25
+        height: 20
+      spriteId: 748fa7487ced5c94e9c4bdd6908e225a
+    - name: Assassin_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 0
+        y: -1
+        width: 28
+        height: 20
+      spriteId: 50f6749fcb920104b98af454a16d24f7
+    - name: Assassin_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 1
+        y: -1
+        width: 27
+        height: 20
+      spriteId: 21732622a50e45a4aab220d80b02f82d
+    - name: Assassin_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 2
+        y: -1
+        width: 75
+        height: 15
+      spriteId: 5a77247e08b6bf94e95d3be369426176
+    - name: Assassin_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 24
+        y: -1
+        width: 56
+        height: 15
+      spriteId: dc4f59cedb8858b4dbb1e64d9a59a593
+    - name: Assassin_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 25
+        y: -1
+        width: 57
+        height: 15
+      spriteId: f42d98ff34a91d2459b844c403152bb1
+    - name: Assassin_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 38
+        y: -1
+        width: 44
+        height: 15
+      spriteId: 113731e3c76c03349b44313044e90025
+    - name: Assassin_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 39
+        y: -1
+        width: 42
+        height: 15
+      spriteId: 8f59ed3d3bfa723499b29303e7ba4abd
+    - name: Assassin_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 48
+        y: 0
+        width: 43
+        height: 13
+      spriteId: d73b600159dd08d4c89da3df724c0786
+    - name: Assassin_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 50
+        y: 0
+        width: 37
+        height: 13
+      spriteId: 265e6435f256bbd4c8af1f66b83be044
+    - name: Assassin_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 49
+        y: 0
+        width: 37
+        height: 13
+      spriteId: 1ab62baaa8d884a499fd5719cb2ee311
+    - name: Assassin_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 48
+        y: 0
+        width: 37
+        height: 14
+      spriteId: 1fe6c07f3c9de9c41a3a7b5c0ebef501
+    - name: Assassin_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 48
+        y: 0
+        width: 32
+        height: 14
+      spriteId: cf7bee1c79b569d4e84f1563d4516a77
+    - name: Assassin_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 6
+        y: -1
+        width: 24
+        height: 19
+      spriteId: f71ba1d5c52df1b47a5a6654285761da
+    - name: Assassin_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 6
+        y: -1
+        width: 24
+        height: 19
+      spriteId: 35b232953ddb766418f608c4507ede13
+    - name: Assassin_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 7
+        y: 0
+        width: 23
+        height: 19
+      spriteId: 6a65fc42fed5eac46a6a8a4e8302dab5
+    - name: Assassin_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 4
+        y: -1
+        width: 26
+        height: 16
+      spriteId: cd38b5a3c7b91b049873c81e67463d5c
+    - name: Assassin_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 3
+        y: -1
+        width: 27
+        height: 15
+      spriteId: c6fae925e825de248b7b56639241389c
+    - name: Assassin_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 2
+        y: -1
+        width: 28
+        height: 12
+      spriteId: 524c98983173db442a08e46d40f3dc3b
+    - name: Assassin_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 2
+        y: -1
+        width: 28
+        height: 9
+      spriteId: 296253e1df4f5c34ea3a4678722cc944
+    - name: Assassin_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 1
+        y: -1
+        width: 29
+        height: 9
+      spriteId: 465a773b0e69a6c489d8c1389990ee4c
+    - name: Assassin_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 0
+        y: -1
+        width: 30
+        height: 9
+      spriteId: 5b9ca54979b0387469f29cd101c3da36
+    - name: Assassin_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 4
+        y: -1
+        width: 26
+        height: 9
+      spriteId: 0f55c63d036bdba4bb898a083b195e58
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 91, y: 19}

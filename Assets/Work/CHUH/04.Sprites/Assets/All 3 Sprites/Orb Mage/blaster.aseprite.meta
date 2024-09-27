@@ -1,0 +1,1959 @@
+fileFormatVersion: 2
+guid: 9166f03dc46051449976032c858b3186
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: blaster_Frame_47
+    originalName: 
+    pivot: {x: 0.47807017, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 43
+      width: 114
+      height: 30
+    spriteID: 0c0cd2db329e08846aef7887ad0c8209
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 43}
+  - name: blaster_Frame_48
+    originalName: 
+    pivot: {x: 0.48660713, y: 0.032258067}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 4
+      width: 112
+      height: 31
+    spriteID: dd141842fb5227e4bba1a0aad40e8905
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 4}
+  - name: blaster_Frame_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 109
+      height: 32
+    spriteID: 8c6757d3b36f8f44b9df37fd344ce965
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: blaster_Frame_50
+    originalName: 
+    pivot: {x: 0.50934577, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 81
+      width: 107
+      height: 31
+    spriteID: ce0927ccec0af214187d2b132ad2e3a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 81}
+  - name: blaster_Frame_51
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 120
+      width: 99
+      height: 27
+    spriteID: 29da9eac8ceac5247ad8984d4f6fa94c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 120}
+  - name: blaster_Frame_0
+    originalName: 
+    pivot: {x: 3.5416667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 184
+      width: 12
+      height: 29
+    spriteID: d8c07702c79f8c649a65098e890038ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 184}
+  - name: blaster_Frame_1
+    originalName: 
+    pivot: {x: 3.5416667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 221
+      width: 12
+      height: 29
+    spriteID: 9305aa93e65c4d443afc90bdada7f85b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 221}
+  - name: blaster_Frame_2
+    originalName: 
+    pivot: {x: 3.5416667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 258
+      width: 12
+      height: 29
+    spriteID: d9a9fab854c022643819060b2725ab4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 258}
+  - name: blaster_Frame_3
+    originalName: 
+    pivot: {x: 3.5416667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 295
+      width: 12
+      height: 29
+    spriteID: 53c5c5fe45f83a74c9e376fd2ad34260
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 295}
+  - name: blaster_Frame_4
+    originalName: 
+    pivot: {x: 3.0333333, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 44
+      width: 15
+      height: 27
+    spriteID: d63fb25ae859c5b4fb2514388d632eae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 44}
+  - name: blaster_Frame_5
+    originalName: 
+    pivot: {x: 3.3461537, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 239
+      y: 472
+      width: 13
+      height: 28
+    spriteID: e264b7f264e945d41b4609b42698152b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 239, y: 472}
+  - name: blaster_Frame_6
+    originalName: 
+    pivot: {x: 3.0333333, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 324
+      width: 15
+      height: 28
+    spriteID: 874c122c756ca634cba8c016d2256ce8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 324}
+  - name: blaster_Frame_7
+    originalName: 
+    pivot: {x: 3.0333333, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 360
+      width: 15
+      height: 28
+    spriteID: 9124af2d1e1648a4e9ffbec2c6d1da45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 360}
+  - name: blaster_Frame_8
+    originalName: 
+    pivot: {x: 3.0333333, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 79
+      width: 15
+      height: 27
+    spriteID: 66115508a8f089741af04c3799304628
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 79}
+  - name: blaster_Frame_9
+    originalName: 
+    pivot: {x: 3.1785715, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 468
+      width: 14
+      height: 29
+    spriteID: 83907194a0a922b418ecc5951f201f51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 468}
+  - name: blaster_Frame_10
+    originalName: 
+    pivot: {x: 3.0333333, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 396
+      width: 15
+      height: 28
+    spriteID: 1a8e8fe364137774a804394b27eda181
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 396}
+  - name: blaster_Frame_11
+    originalName: 
+    pivot: {x: 3.0333333, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 432
+      width: 15
+      height: 28
+    spriteID: c62e88cbac8b520468cbd919a3649f4a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 432}
+  - name: blaster_Frame_12
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 236
+      y: 81
+      width: 16
+      height: 27
+    spriteID: 1c1d89a1a01da224d923ae997c9806b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 236, y: 81}
+  - name: blaster_Frame_13
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 472
+      width: 16
+      height: 27
+    spriteID: a589c24403bcf2b4492b9d0e4f0207f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 472}
+  - name: blaster_Frame_14
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 16
+      height: 27
+    spriteID: 1f3f073888db3d846a1b5251bf64a018
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
+  - name: blaster_Frame_15
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 79
+      width: 16
+      height: 27
+    spriteID: 680c4deaa20f0c34d801a6e77ea62d45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 79}
+  - name: blaster_Frame_16
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 114
+      width: 16
+      height: 27
+    spriteID: 41e22cb903d6cab42ad303e20bf6e50b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 114}
+  - name: blaster_Frame_17
+    originalName: 
+    pivot: {x: 3.0882354, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 367
+      width: 17
+      height: 27
+    spriteID: b11145fed8236004d89d761819fb82c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 367}
+  - name: blaster_Frame_18
+    originalName: 
+    pivot: {x: 3.0882354, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 402
+      width: 17
+      height: 27
+    spriteID: 46c6c8a2cb9b41645afd945d26a352bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 402}
+  - name: blaster_Frame_19
+    originalName: 
+    pivot: {x: 2.868421, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 332
+      width: 19
+      height: 27
+    spriteID: 48b63f59a88b1a64e9dab3a2bbe5d684
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 332}
+  - name: blaster_Frame_20
+    originalName: 
+    pivot: {x: 2.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 404
+      width: 21
+      height: 28
+    spriteID: 1611ffb4dec982a4ab6859886894ca95
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 404}
+  - name: blaster_Frame_21
+    originalName: 
+    pivot: {x: 2.625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 297
+      width: 20
+      height: 27
+    spriteID: cf4b6ebce23941548af7bafa60036831
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 297}
+  - name: blaster_Frame_22
+    originalName: 
+    pivot: {x: 2.625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 467
+      width: 20
+      height: 30
+    spriteID: b40f1a14d1032b64ca208860cf61041a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 156, y: 467}
+  - name: blaster_Frame_23
+    originalName: 
+    pivot: {x: 2.625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 366
+      width: 20
+      height: 30
+    spriteID: 01ee502f124beaa4fb56c789f5bc6cba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 366}
+  - name: blaster_Frame_24
+    originalName: 
+    pivot: {x: 2.6578948, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 260
+      width: 19
+      height: 29
+    spriteID: d792c2d407da93b4eb18642d58adcce0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 260}
+  - name: blaster_Frame_25
+    originalName: 
+    pivot: {x: 4.227273, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 402
+      width: 11
+      height: 27
+    spriteID: a9cf7ebd95120cd48b60369e6798815c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 240, y: 402}
+  - name: blaster_Frame_26
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 149
+      width: 16
+      height: 27
+    spriteID: 8d055309966c4a8498c62d79f345d226
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 149}
+  - name: blaster_Frame_27
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 184
+      width: 16
+      height: 27
+    spriteID: c5d00ad197e107146854949a3731b2dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 184}
+  - name: blaster_Frame_28
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 219
+      width: 16
+      height: 27
+    spriteID: 68bc0d17195120840bf6ed843c444fcb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 219}
+  - name: blaster_Frame_29
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 254
+      width: 16
+      height: 27
+    spriteID: d11e51ed56598fc4bb4ead208d5a45a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 254}
+  - name: blaster_Frame_30
+    originalName: 
+    pivot: {x: 3.21875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 289
+      width: 16
+      height: 27
+    spriteID: c036dac7278aef645ada040abd55558b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 289}
+  - name: blaster_Frame_31
+    originalName: 
+    pivot: {x: 3.0882354, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 437
+      width: 17
+      height: 27
+    spriteID: 4678939f44c5e844494e1d516c3aeef0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 437}
+  - name: blaster_Frame_32
+    originalName: 
+    pivot: {x: 2.2037036, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 467
+      width: 27
+      height: 28
+    spriteID: 4ae30e1d0baacac4793430b2109fdda3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 467}
+  - name: blaster_Frame_33
+    originalName: 
+    pivot: {x: 0.9545455, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 225
+      width: 55
+      height: 31
+    spriteID: b2b25202095ade34ba7dbcee7ebfd266
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 225}
+  - name: blaster_Frame_34
+    originalName: 
+    pivot: {x: 1.0500001, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 388
+      width: 50
+      height: 31
+    spriteID: 2cf4311f7d32bb34ebb5ed50b6167d7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 388}
+  - name: blaster_Frame_35
+    originalName: 
+    pivot: {x: 1.09375, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 427
+      width: 48
+      height: 32
+    spriteID: 995cd4600718042409fbdfaa91a14270
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 427}
+  - name: blaster_Frame_36
+    originalName: 
+    pivot: {x: 1.0306122, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 305
+      width: 49
+      height: 33
+    spriteID: b1452c3f9f9368848b9331a6fe863843
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 305}
+  - name: blaster_Frame_37
+    originalName: 
+    pivot: {x: 1.0100001, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 264
+      width: 50
+      height: 33
+    spriteID: 778a9cf8a353de946b65e04b7db00d33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 264}
+  - name: blaster_Frame_38
+    originalName: 
+    pivot: {x: 1.0978261, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 346
+      width: 46
+      height: 34
+    spriteID: b5d569c2630cbb04293929ea431580d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 346}
+  - name: blaster_Frame_39
+    originalName: 
+    pivot: {x: 2.4130435, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 260
+      width: 23
+      height: 28
+    spriteID: 8c95fceeb86552d4f9758196cbe73781
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 260}
+  - name: blaster_Frame_40
+    originalName: 
+    pivot: {x: 2.4130435, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 212
+      y: 190
+      width: 23
+      height: 27
+    spriteID: 312a38ef28f068d48ab80b0c1433b069
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 212, y: 190}
+  - name: blaster_Frame_41
+    originalName: 
+    pivot: {x: 2.4130435, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 296
+      width: 23
+      height: 27
+    spriteID: 69829bb49fe36e349a6a45616d6dee68
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 296}
+  - name: blaster_Frame_42
+    originalName: 
+    pivot: {x: 2.4130435, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 331
+      width: 23
+      height: 27
+    spriteID: f9c7af83a51e45441b2920e487beb06a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 331}
+  - name: blaster_Frame_43
+    originalName: 
+    pivot: {x: 2.3125, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 120
+      width: 24
+      height: 27
+    spriteID: 92ac7dd8a0d16fd46acff8efe5494ef2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 120}
+  - name: blaster_Frame_44
+    originalName: 
+    pivot: {x: 2.6904762, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 440
+      width: 21
+      height: 27
+    spriteID: 6a3e5078bedf9ae40b6f9d7ef6c8b7e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 440}
+  - name: blaster_Frame_45
+    originalName: 
+    pivot: {x: 2.6904762, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 475
+      width: 21
+      height: 27
+    spriteID: ff5dd2b3eb4284f4ca8ca71a9c202aa3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 475}
+  - name: blaster_Frame_46
+    originalName: 
+    pivot: {x: 1.9107143, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 217
+      y: 155
+      width: 28
+      height: 27
+    spriteID: 326e4b208972a7a4bab335108f3afa35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 217, y: 155}
+  - name: blaster_Frame_52
+    originalName: 
+    pivot: {x: 0.5056818, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 155
+      width: 88
+      height: 27
+    spriteID: 27d9091b12f53ef4eadc06c070061422
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 155}
+  - name: blaster_Frame_53
+    originalName: 
+    pivot: {x: 0.53614455, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 190
+      width: 83
+      height: 27
+    spriteID: 3520ef32e068b6041a845bd7429daefd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 190}
+  - name: blaster_Frame_54
+    originalName: 
+    pivot: {x: 0.7177419, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 225
+      width: 62
+      height: 27
+    spriteID: 9c0a756306b85b84d8e4b5fa3631095c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 225}
+  - name: blaster_Frame_55
+    originalName: 
+    pivot: {x: 3.3, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 114
+      width: 15
+      height: 27
+    spriteID: 6aef8017cce37be49a23259486f0c977
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 114}
+  - name: blaster_Frame_56
+    originalName: 
+    pivot: {x: 3.4642859, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 149
+      width: 14
+      height: 27
+    spriteID: 53e74c1c0e21e6640b750b7752f59934
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 149}
+  - name: blaster_Frame_57
+    originalName: 
+    pivot: {x: 3.8750002, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 367
+      width: 12
+      height: 27
+    spriteID: 0a8b99e1539d606418ca1c9bda8591de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 240, y: 367}
+  - name: blaster_Frame_58
+    originalName: 
+    pivot: {x: 3.8750002, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 437
+      width: 12
+      height: 24
+    spriteID: dd5d32745e4ec574388fc7abba0d24a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 240, y: 437}
+  - name: blaster_Frame_59
+    originalName: 
+    pivot: {x: 2.5249999, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 68
+      width: 20
+      height: 17
+    spriteID: 30a31ba01b6e4aa4d9d6029fd6cf4b2f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 68}
+  - name: blaster_Frame_60
+    originalName: 
+    pivot: {x: 2.6578948, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 141
+      width: 19
+      height: 14
+    spriteID: fc7f19194967650489bf5ee5eb3fdcd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 141}
+  - name: blaster_Frame_61
+    originalName: 
+    pivot: {x: 2.3863637, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 93
+      width: 22
+      height: 15
+    spriteID: efd31a4ed0a535c49873f2f7e0d7ce20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 93}
+  - name: blaster_Frame_62
+    originalName: 
+    pivot: {x: 2.2291667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 44
+      width: 24
+      height: 16
+    spriteID: b0eee05dd90309e439eca1beb19aa254
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 44}
+  - name: blaster_Frame_63
+    originalName: 
+    pivot: {x: 2.84375, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 116
+      width: 16
+      height: 17
+    spriteID: e3cd075a2125363459224265f10b8fe3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 116}
+  - name: blaster_Frame_64
+    originalName: 
+    pivot: {x: 5.055556, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 503
+      width: 9
+      height: 5
+    spriteID: 2b744e9c36df53542a0b13347943fb87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 503}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1005084511
+    name: blaster
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: blaster_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 5
+        y: 0
+        width: 114
+        height: 30
+      spriteId: 0c0cd2db329e08846aef7887ad0c8209
+    - name: blaster_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 5
+        y: -1
+        width: 112
+        height: 31
+      spriteId: dd141842fb5227e4bba1a0aad40e8905
+    - name: blaster_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 5
+        y: -2
+        width: 109
+        height: 32
+      spriteId: 8c6757d3b36f8f44b9df37fd344ce965
+    - name: blaster_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 5
+        y: 0
+        width: 107
+        height: 31
+      spriteId: ce0927ccec0af214187d2b132ad2e3a1
+    - name: blaster_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 10
+        y: 0
+        width: 99
+        height: 27
+      spriteId: 29da9eac8ceac5247ad8984d4f6fa94c
+    - name: blaster_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 17
+        y: 0
+        width: 12
+        height: 29
+      spriteId: d8c07702c79f8c649a65098e890038ed
+    - name: blaster_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 17
+        y: 0
+        width: 12
+        height: 29
+      spriteId: 9305aa93e65c4d443afc90bdada7f85b
+    - name: blaster_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 17
+        y: 0
+        width: 12
+        height: 29
+      spriteId: d9a9fab854c022643819060b2725ab4c
+    - name: blaster_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 17
+        y: 0
+        width: 12
+        height: 29
+      spriteId: 53c5c5fe45f83a74c9e376fd2ad34260
+    - name: blaster_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 14
+        y: 0
+        width: 15
+        height: 27
+      spriteId: d63fb25ae859c5b4fb2514388d632eae
+    - name: blaster_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 16
+        y: 1
+        width: 13
+        height: 28
+      spriteId: e264b7f264e945d41b4609b42698152b
+    - name: blaster_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 14
+        y: 2
+        width: 15
+        height: 28
+      spriteId: 874c122c756ca634cba8c016d2256ce8
+    - name: blaster_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 14
+        y: 1
+        width: 15
+        height: 28
+      spriteId: 9124af2d1e1648a4e9ffbec2c6d1da45
+    - name: blaster_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 14
+        y: 0
+        width: 15
+        height: 27
+      spriteId: 66115508a8f089741af04c3799304628
+    - name: blaster_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 15
+        y: 0
+        width: 14
+        height: 29
+      spriteId: 83907194a0a922b418ecc5951f201f51
+    - name: blaster_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 14
+        y: 2
+        width: 15
+        height: 28
+      spriteId: 1a8e8fe364137774a804394b27eda181
+    - name: blaster_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 14
+        y: 1
+        width: 15
+        height: 28
+      spriteId: c62e88cbac8b520468cbd919a3649f4a
+    - name: blaster_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: 1c1d89a1a01da224d923ae997c9806b9
+    - name: blaster_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: a589c24403bcf2b4492b9d0e4f0207f9
+    - name: blaster_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: 1f3f073888db3d846a1b5251bf64a018
+    - name: blaster_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: 680c4deaa20f0c34d801a6e77ea62d45
+    - name: blaster_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: 41e22cb903d6cab42ad303e20bf6e50b
+    - name: blaster_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 7
+        y: 0
+        width: 17
+        height: 27
+      spriteId: b11145fed8236004d89d761819fb82c1
+    - name: blaster_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 7
+        y: 0
+        width: 17
+        height: 27
+      spriteId: 46c6c8a2cb9b41645afd945d26a352bb
+    - name: blaster_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 5
+        y: 0
+        width: 19
+        height: 27
+      spriteId: 48b63f59a88b1a64e9dab3a2bbe5d684
+    - name: blaster_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 7
+        y: 0
+        width: 21
+        height: 28
+      spriteId: 1611ffb4dec982a4ab6859886894ca95
+    - name: blaster_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 7
+        y: 0
+        width: 20
+        height: 27
+      spriteId: cf4b6ebce23941548af7bafa60036831
+    - name: blaster_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 7
+        y: 0
+        width: 20
+        height: 30
+      spriteId: b40f1a14d1032b64ca208860cf61041a
+    - name: blaster_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 7
+        y: 0
+        width: 20
+        height: 30
+      spriteId: 01ee502f124beaa4fb56c789f5bc6cba
+    - name: blaster_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 9
+        y: 0
+        width: 19
+        height: 29
+      spriteId: d792c2d407da93b4eb18642d58adcce0
+    - name: blaster_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 13
+        y: 0
+        width: 11
+        height: 27
+      spriteId: a9cf7ebd95120cd48b60369e6798815c
+    - name: blaster_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: 8d055309966c4a8498c62d79f345d226
+    - name: blaster_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: c5d00ad197e107146854949a3731b2dc
+    - name: blaster_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: 68bc0d17195120840bf6ed843c444fcb
+    - name: blaster_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: d11e51ed56598fc4bb4ead208d5a45a0
+    - name: blaster_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 27
+      spriteId: c036dac7278aef645ada040abd55558b
+    - name: blaster_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 7
+        y: 0
+        width: 17
+        height: 27
+      spriteId: 4678939f44c5e844494e1d516c3aeef0
+    - name: blaster_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 0
+        y: 0
+        width: 27
+        height: 28
+      spriteId: 4ae30e1d0baacac4793430b2109fdda3
+    - name: blaster_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 7
+        y: 0
+        width: 55
+        height: 31
+      spriteId: b2b25202095ade34ba7dbcee7ebfd266
+    - name: blaster_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 7
+        y: 0
+        width: 50
+        height: 31
+      spriteId: 2cf4311f7d32bb34ebb5ed50b6167d7a
+    - name: blaster_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 7
+        y: 0
+        width: 48
+        height: 32
+      spriteId: 995cd4600718042409fbdfaa91a14270
+    - name: blaster_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 9
+        y: 0
+        width: 49
+        height: 33
+      spriteId: b1452c3f9f9368848b9331a6fe863843
+    - name: blaster_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 9
+        y: 0
+        width: 50
+        height: 33
+      spriteId: 778a9cf8a353de946b65e04b7db00d33
+    - name: blaster_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 9
+        y: 0
+        width: 46
+        height: 34
+      spriteId: b5d569c2630cbb04293929ea431580d1
+    - name: blaster_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 4
+        y: 0
+        width: 23
+        height: 28
+      spriteId: 8c95fceeb86552d4f9758196cbe73781
+    - name: blaster_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 4
+        y: 0
+        width: 23
+        height: 27
+      spriteId: 312a38ef28f068d48ab80b0c1433b069
+    - name: blaster_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 4
+        y: 0
+        width: 23
+        height: 27
+      spriteId: 69829bb49fe36e349a6a45616d6dee68
+    - name: blaster_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 4
+        y: 0
+        width: 23
+        height: 27
+      spriteId: f9c7af83a51e45441b2920e487beb06a
+    - name: blaster_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 4
+        y: 0
+        width: 24
+        height: 27
+      spriteId: 92ac7dd8a0d16fd46acff8efe5494ef2
+    - name: blaster_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 3
+        y: 0
+        width: 21
+        height: 27
+      spriteId: 6a3e5078bedf9ae40b6f9d7ef6c8b7e7
+    - name: blaster_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 3
+        y: 0
+        width: 21
+        height: 27
+      spriteId: ff5dd2b3eb4284f4ca8ca71a9c202aa3
+    - name: blaster_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 6
+        y: 0
+        width: 28
+        height: 27
+      spriteId: 326e4b208972a7a4bab335108f3afa35
+    - name: blaster_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 15
+        y: 0
+        width: 88
+        height: 27
+      spriteId: 27d9091b12f53ef4eadc06c070061422
+    - name: blaster_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 15
+        y: 0
+        width: 83
+        height: 27
+      spriteId: 3520ef32e068b6041a845bd7429daefd
+    - name: blaster_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 15
+        y: 0
+        width: 62
+        height: 27
+      spriteId: 9c0a756306b85b84d8e4b5fa3631095c
+    - name: blaster_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 10
+        y: 0
+        width: 15
+        height: 27
+      spriteId: 6aef8017cce37be49a23259486f0c977
+    - name: blaster_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 11
+        y: 0
+        width: 14
+        height: 27
+      spriteId: 53e74c1c0e21e6640b750b7752f59934
+    - name: blaster_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 13
+        y: 0
+        width: 12
+        height: 27
+      spriteId: 0a8b99e1539d606418ca1c9bda8591de
+    - name: blaster_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 13
+        y: 0
+        width: 12
+        height: 24
+      spriteId: dd5d32745e4ec574388fc7abba0d24a1
+    - name: blaster_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 9
+        y: 0
+        width: 20
+        height: 17
+      spriteId: 30a31ba01b6e4aa4d9d6029fd6cf4b2f
+    - name: blaster_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 9
+        y: 0
+        width: 19
+        height: 14
+      spriteId: fc7f19194967650489bf5ee5eb3fdcd3
+    - name: blaster_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 7
+        y: 0
+        width: 22
+        height: 15
+      spriteId: efd31a4ed0a535c49873f2f7e0d7ce20
+    - name: blaster_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 6
+        y: 0
+        width: 24
+        height: 16
+      spriteId: b0eee05dd90309e439eca1beb19aa254
+    - name: blaster_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 14
+        y: 0
+        width: 16
+        height: 17
+      spriteId: e3cd075a2125363459224265f10b8fe3
+    - name: blaster_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 14
+        y: 0
+        width: 9
+        height: 5
+      spriteId: 2b744e9c36df53542a0b13347943fb87
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 119, y: 34}
