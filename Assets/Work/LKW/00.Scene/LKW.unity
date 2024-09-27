@@ -608,8 +608,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.052243546, y: -0.4264716}
-  m_Size: {x: 0.60890216, y: 0.2547343}
+  m_Offset: {x: 0.067312256, y: -0.4264716}
+  m_Size: {x: 0.47331697, y: 0.2547343}
   m_Direction: 1
 --- !u!1 &1296982913
 GameObject:
@@ -912,9 +912,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _checkerTrm: {fileID: 1978467800}
-  _distance: 0.4
+  _distance: 0.36
   IsGround:
     _value: 0
+  canFlip: 1
   _moveSpeed: 5
   _jumpPower: 8
   _wallJumpPower: 0

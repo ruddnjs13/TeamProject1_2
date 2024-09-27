@@ -12,8 +12,14 @@ public class PlayerWallSatate : PlayerState
     public override void Enter()
     {
         base.Enter();
+        _player.canFlip = false;
         _player.playerInput.JumpEvent += HandleJumpEvent;
-        
+    }
+
+    public override void Exit()
+    {
+        _player.playerInput.JumpEvent -= HandleJumpEvent;
+        base.Exit();
     }
 
     private void HandleJumpEvent()

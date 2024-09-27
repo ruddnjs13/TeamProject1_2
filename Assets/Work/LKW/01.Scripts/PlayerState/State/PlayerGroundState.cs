@@ -12,6 +12,7 @@ public class PlayerGroundState : PlayerState
     {
         base.Enter();
         _player.playerInput.JumpEvent += HandleJumpEvent;
+        _player.canFlip = true;
     }
 
     public override void Exit()

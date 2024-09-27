@@ -32,7 +32,7 @@ public abstract class Agent : MonoBehaviour
     public NotifyValue<bool> IsGround = new NotifyValue<bool>();
     public float facingDirection { get; protected set; }
 
-
+    public bool canFlip = true;
     
     protected virtual void Awake()
     {
@@ -89,6 +89,7 @@ public abstract class Agent : MonoBehaviour
     public void Flip(float facingDirection)
     {
         this.facingDirection = facingDirection;
+        if(!canFlip) return;
         if (facingDirection > 0)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0,0,0));

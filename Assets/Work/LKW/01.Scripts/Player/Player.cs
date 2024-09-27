@@ -14,8 +14,6 @@ public class Player : Agent
     public float _wallJumpPower;
     #endregion
 
-    
-
     [SerializeField] private InputReaderSO _inputReader;
     public InputReaderSO playerInput => _inputReader;
 

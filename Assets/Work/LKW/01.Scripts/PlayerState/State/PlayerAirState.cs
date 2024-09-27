@@ -11,6 +11,7 @@ public class PlayerAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        _player.canFlip = true;
     }
 
     public override void Exit()
