@@ -17,7 +17,8 @@ public class PlayerJumpState : PlayerAirState
     public override void StateUpdate()
     {
         base.StateUpdate();
-        if (_player.RbCompo.velocity.y < -1)
+        _player.SetMovement(new Vector2(_player.playerInput.Movement.x * _player._moveSpeed,_player.RbCompo.velocity.y));
+        if (_player.RbCompo.velocity.y < -0)
         {
             _stateMachine.ChangeState(PlayerStateEnum.Fall);
         }

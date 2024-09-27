@@ -13,10 +13,20 @@ public class PlayerWallSatate : PlayerState
     {
         base.Enter();
         _player.playerInput.JumpEvent += HandleJumpEvent;
+        
     }
 
     private void HandleJumpEvent()
     {
         _stateMachine.ChangeState(PlayerStateEnum.WallJump);
+    }
+
+    public override void StateUpdate()
+    {
+        base.StateUpdate();
+        if (_player.IsGround.Value)
+        {
+            _stateMachine.ChangeState(PlayerStateEnum.Idle);
+        }
     }
 }

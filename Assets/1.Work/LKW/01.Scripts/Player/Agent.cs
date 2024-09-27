@@ -15,16 +15,22 @@ public abstract class Agent : MonoBehaviour
     #endregion
     
     #region CheckGroundSetting
-
     [SerializeField] private LayerMask _whatIsGround;
-    [SerializeField] private LayerMask _whatIsWall;
     [SerializeField] private Vector2 _boxSize;
     [SerializeField] private Transform _boxTrm;
+    #endregion
+
+    #region WallCheckerSetting
+
+    [SerializeField] private LayerMask _whatIsWall;
+    [SerializeField] private Transform _checkerTrm;
+    [SerializeField] private float _distance;
 
     #endregion
 
     [SerializeField]
     public NotifyValue<bool> IsGround = new NotifyValue<bool>();
+    public float facingDirection { get; protected set; }
 
 
     
@@ -69,9 +75,11 @@ public abstract class Agent : MonoBehaviour
 
     #region WallCheckRegion
 
-    protected void CheckWall()
+    public bool CheckWall(float direction)
     {
-        //if (Physics2D.Raycast())
+        return (Physics2D.Raycast(_checkerTrm.position,
+            new Vector2(direction, 0), _distance, _whatIsWall));
+
     }
 
     #endregion
@@ -80,6 +88,7 @@ public abstract class Agent : MonoBehaviour
 
     public void Flip(float facingDirection)
     {
+        this.facingDirection = facingDirection;
         if (facingDirection > 0)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0,0,0));

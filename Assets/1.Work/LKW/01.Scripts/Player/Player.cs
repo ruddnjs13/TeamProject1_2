@@ -11,6 +11,7 @@ public class Player : Agent
     [Header("MoveSetting")] 
     public float _moveSpeed; 
     public float _jumpPower;
+    public float _wallJumpPower;
     #endregion
 
     

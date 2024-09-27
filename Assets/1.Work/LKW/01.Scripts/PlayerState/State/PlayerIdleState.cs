@@ -13,9 +13,14 @@ public class PlayerIdleState : PlayerGroundState
 
     public override void Enter()
     {
+        base.Enter();
         _player.StopImmediately(false);
     }
-    
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
 
     public override void StateUpdate()
     {

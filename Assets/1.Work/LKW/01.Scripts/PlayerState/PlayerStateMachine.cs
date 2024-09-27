@@ -13,6 +13,7 @@ public enum PlayerStateEnum
     Fall,
     // Attack,
     WallSlide,
+    WallGrab,
     WallJump
 }
 

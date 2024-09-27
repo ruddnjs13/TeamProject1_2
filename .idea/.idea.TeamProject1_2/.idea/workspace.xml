@@ -5,73 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66529809-aa60-4f1e-86bf-2c24d9fcadf9" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallGrabState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallJumpState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallSlideState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputSetting/InputReaderSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/InputSetting/InputReaderSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/fall/fall0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/fall/fall0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/fall/fall1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/fall/fall1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/fall/fall2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/fall/fall2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/fall/fall3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/fall/fall3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/idle_blink/idle_blink0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/idle_blink/idle_blink0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/idle_blink/idle_blink1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/idle_blink/idle_blink1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/idle_blink/idle_blink2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/idle_blink/idle_blink2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/jump/jump0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/jump/jump0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/jump/jump1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/jump/jump1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/jump/jump2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/jump/jump2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/jump/jump3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/jump/jump3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run6.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run7.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run8.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/run/run9.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/00.Scene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/00.Scene/New Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/00.Scene/New Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/01.Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/01.Scripts/TestScripts.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/01.Scripts/TestScripts.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/LKW.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/LKW.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Core.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Core/MonoSingleton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Core/MonoSingleton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Core/NotifyValue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Core/NotifyValue.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Agent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Agent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Entity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Entity.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerStateMachine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/PlayerStateMachine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerGroundState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerGroundState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerIdleState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerIdleState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerMoveState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerMoveState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/Animation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/Animation/PalyerAnimator.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/Animation/PalyerAnimator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/00.Scene/LKW.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/00.Scene/LKW.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/Player/Agent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/Player/Agent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/PlayerStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerAirState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerAirState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerFallState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerFallState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerJumpState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallGrab.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallGrab.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallGrabState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallJump.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallJump.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallJumpState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallSatate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallSatate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallSlide.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallSlide.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallSlideState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/02.Animation/Fall.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/02.Animation/Fall.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/02.Animation/Jump.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/02.Animation/Jump.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Work/LKW/Animation/PlayerAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Work/LKW/Animation/PlayerAnimator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_grab/wall_grab9.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/AssetPack/Light/wall_slide/wall_slide3.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +67,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerGroundState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerJumpState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallSatate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/1.Work/LKW/01.Scripts/PlayerState/State/PlayerWallSlide.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -175,7 +154,10 @@
       <workItem from="1727247449119" duration="2835000" />
       <workItem from="1727261028108" duration="5062000" />
       <workItem from="1727330715172" duration="11232000" />
-      <workItem from="1727359817494" duration="9229000" />
+      <workItem from="1727359817494" duration="9402000" />
+      <workItem from="1727393771831" duration="6293000" />
+      <workItem from="1727406437512" duration="2208000" />
+      <workItem from="1727447271625" duration="383000" />
     </task>
     <servers />
   </component>
