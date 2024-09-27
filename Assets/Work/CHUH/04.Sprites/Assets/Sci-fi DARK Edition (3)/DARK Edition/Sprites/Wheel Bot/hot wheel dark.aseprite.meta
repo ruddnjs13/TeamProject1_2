@@ -1,0 +1,1203 @@
+fileFormatVersion: 2
+guid: ed995ee699e92124fb43767d6e5ba584
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: hot wheel dark_Frame_0
+    originalName: 
+    pivot: {x: 3.5384617, y: -0.058823533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 188
+      width: 13
+      height: 17
+    spriteID: 5966174356c8edb4397daed18ec4e096
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 188}
+  - name: hot wheel dark_Frame_1
+    originalName: 
+    pivot: {x: 3.5384617, y: -0.058823533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 188
+      width: 13
+      height: 17
+    spriteID: bc3304fe46432964b9abecd81a1b14a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 188}
+  - name: hot wheel dark_Frame_2
+    originalName: 
+    pivot: {x: 3.2857141, y: -0.055555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 188
+      width: 14
+      height: 18
+    spriteID: 5ff79884ba3b3f2489015ef435d10c2f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 188}
+  - name: hot wheel dark_Frame_3
+    originalName: 
+    pivot: {x: 2.1904762, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 128
+      width: 21
+      height: 22
+    spriteID: 60cfcb846a4dd3941b14611dd6ecd49b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 128}
+  - name: hot wheel dark_Frame_4
+    originalName: 
+    pivot: {x: 2.3, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 158
+      y: 128
+      width: 20
+      height: 22
+    spriteID: dc53c6a3a8fabea4794cc54159d769ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 158, y: 128}
+  - name: hot wheel dark_Frame_5
+    originalName: 
+    pivot: {x: 2.3, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 186
+      y: 128
+      width: 20
+      height: 22
+    spriteID: 9767991095e220b41a6383d92532e40d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 186, y: 128}
+  - name: hot wheel dark_Frame_6
+    originalName: 
+    pivot: {x: 2.3, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 214
+      y: 128
+      width: 20
+      height: 22
+    spriteID: c63c0074d0513f946b404b52c447cb66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 214, y: 128}
+  - name: hot wheel dark_Frame_7
+    originalName: 
+    pivot: {x: 2.0833333, y: -0.04347826}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 89
+      y: 95
+      width: 24
+      height: 23
+    spriteID: 881d1650870b4a34eb9d1d1b46070d5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 89, y: 95}
+  - name: hot wheel dark_Frame_8
+    originalName: 
+    pivot: {x: 2.04, y: -0.047619052}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 95
+      width: 25
+      height: 21
+    spriteID: 1da4952195198444f8688c248198964b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 95}
+  - name: hot wheel dark_Frame_9
+    originalName: 
+    pivot: {x: 1.9259259, y: -0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 189
+      y: 65
+      width: 27
+      height: 20
+    spriteID: 7d073226aa379b244bc3caa30d61784d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 189, y: 65}
+  - name: hot wheel dark_Frame_10
+    originalName: 
+    pivot: {x: 2.368421, y: -0.047619052}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 158
+      width: 19
+      height: 21
+    spriteID: cb890b89ea8c6d9459212fb637fe6942
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 158}
+  - name: hot wheel dark_Frame_11
+    originalName: 
+    pivot: {x: 2.2727273, y: -0.04347826}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 229
+      y: 34
+      width: 22
+      height: 23
+    spriteID: be84d86a905075d4592a38e268b5ffb2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 229, y: 34}
+  - name: hot wheel dark_Frame_12
+    originalName: 
+    pivot: {x: 2.2173913, y: -0.047619052}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 128
+      width: 23
+      height: 21
+    spriteID: 0aaf42edb4b50ee4ead63d91752fdd2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 128}
+  - name: hot wheel dark_Frame_13
+    originalName: 
+    pivot: {x: 2.08, y: -0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 128
+      width: 25
+      height: 20
+    spriteID: bd89395924abcbe48abf6576091cdfba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 128}
+  - name: hot wheel dark_Frame_14
+    originalName: 
+    pivot: {x: 2.647059, y: -0.047619052}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 235
+      y: 4
+      width: 17
+      height: 21
+    spriteID: cf9e09f2eafbdf24997f7bdcb4959c28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 235, y: 4}
+  - name: hot wheel dark_Frame_15
+    originalName: 
+    pivot: {x: 1.9999999, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 95
+      width: 23
+      height: 22
+    spriteID: c79be2475eba27943b303b29852a698e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 95}
+  - name: hot wheel dark_Frame_16
+    originalName: 
+    pivot: {x: 1.9999999, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 185
+      y: 95
+      width: 23
+      height: 22
+    spriteID: 8927ff50f9bb61345a0e48a2a8eeb411
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 185, y: 95}
+  - name: hot wheel dark_Frame_17
+    originalName: 
+    pivot: {x: 1.9999999, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 216
+      y: 95
+      width: 23
+      height: 22
+    spriteID: b4f7a1d239f0d234591dc2a3cbc8136d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 216, y: 95}
+  - name: hot wheel dark_Frame_18
+    originalName: 
+    pivot: {x: 2.090909, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 128
+      width: 22
+      height: 22
+    spriteID: 703d23d16a212fb4cb7bcc22c3796757
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 128}
+  - name: hot wheel dark_Frame_19
+    originalName: 
+    pivot: {x: 1.3529412, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 193
+      y: 4
+      width: 34
+      height: 22
+    spriteID: 8739986f2b100e64bbd9cae2b21a7421
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 193, y: 4}
+  - name: hot wheel dark_Frame_20
+    originalName: 
+    pivot: {x: 1.3428572, y: -0.04347826}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 186
+      y: 34
+      width: 35
+      height: 23
+    spriteID: 48abfa18b24b8fe4d967744c743975cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 186, y: 34}
+  - name: hot wheel dark_Frame_21
+    originalName: 
+    pivot: {x: 1.3529412, y: -0.041666668}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 95
+      width: 34
+      height: 24
+    spriteID: c1e06f801c84bc74aa3bc0b44318893c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 95}
+  - name: hot wheel dark_Frame_22
+    originalName: 
+    pivot: {x: 1.3142856, y: -0.04}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 95
+      width: 35
+      height: 25
+    spriteID: 33662053786b46a45b442b2f22c40817
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 95}
+  - name: hot wheel dark_Frame_24
+    originalName: 
+    pivot: {x: 0.4044944, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 89
+      height: 22
+    spriteID: cb7b1a2c8e0c8784a82a04444d40c775
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: hot wheel dark_Frame_25
+    originalName: 
+    pivot: {x: 0.3452381, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 4
+      width: 84
+      height: 22
+    spriteID: 2b9cd09272333cf4c89795321e5826a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 4}
+  - name: hot wheel dark_Frame_26
+    originalName: 
+    pivot: {x: 0.3253012, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 34
+      width: 83
+      height: 23
+    spriteID: 0d9e396334c6ee04699f9785e249efd1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 34}
+  - name: hot wheel dark_Frame_27
+    originalName: 
+    pivot: {x: 0.3253012, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 34
+      width: 83
+      height: 22
+    spriteID: d906ad76473fd1048b4dec9dc1fc6466
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 34}
+  - name: hot wheel dark_Frame_28
+    originalName: 
+    pivot: {x: 0.3253012, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 65
+      width: 83
+      height: 22
+    spriteID: a9fa2e0d7fa327e46a79c34be0513e69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 65}
+  - name: hot wheel dark_Frame_29
+    originalName: 
+    pivot: {x: -1.2608696, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 128
+      width: 23
+      height: 22
+    spriteID: a75c589195781194e872ac841bd61938
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 128}
+  - name: hot wheel dark_Frame_30
+    originalName: 
+    pivot: {x: 2.3, y: -0.045454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 158
+      width: 20
+      height: 22
+    spriteID: c79ff1cc136661b4aa0350444346e790
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 158}
+  - name: hot wheel dark_Frame_31
+    originalName: 
+    pivot: {x: 2.1904762, y: -0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 158
+      width: 21
+      height: 20
+    spriteID: 61a0c824f8a879e4ebe0354d38beb9c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 158}
+  - name: hot wheel dark_Frame_32
+    originalName: 
+    pivot: {x: 2.2173913, y: -0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 158
+      width: 23
+      height: 16
+    spriteID: f22f184afe8a52e4b893d14562b370c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 158}
+  - name: hot wheel dark_Frame_33
+    originalName: 
+    pivot: {x: 2, y: -0.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 65
+      width: 27
+      height: 20
+    spriteID: d59665dc759bbe8469eb6264f687e7ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 224, y: 65}
+  - name: hot wheel dark_Frame_34
+    originalName: 
+    pivot: {x: 2.5, y: -0.058823533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 158
+      width: 22
+      height: 17
+    spriteID: 5c1adcf530deaa14ebd5c6671ea5cba8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 158}
+  - name: hot wheel dark_Frame_35
+    originalName: 
+    pivot: {x: 2.3333333, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 149
+      y: 158
+      width: 24
+      height: 11
+    spriteID: abba25e585db2c54db68b89cf4fbc86a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 149, y: 158}
+  - name: hot wheel dark_Frame_36
+    originalName: 
+    pivot: {x: 2.3333333, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 158
+      width: 24
+      height: 11
+    spriteID: 2b02005a816d64246aa0fc6ef95ba968
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 158}
+  - name: hot wheel dark_Frame_37
+    originalName: 
+    pivot: {x: 2.3333333, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 213
+      y: 158
+      width: 24
+      height: 11
+    spriteID: a226c3802482d52479af5d7649d3f139
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 213, y: 158}
+  - name: hot wheel dark_Frame_23
+    originalName: 
+    pivot: {x: 0.45348835, y: -0.058823533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 65
+      width: 86
+      height: 17
+    spriteID: 52e4aafb115076c44b140bc60017841e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 65}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -328854166
+    name: hot wheel dark
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: hot wheel dark_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 10
+        y: 1
+        width: 13
+        height: 17
+      spriteId: 5966174356c8edb4397daed18ec4e096
+    - name: hot wheel dark_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 10
+        y: 1
+        width: 13
+        height: 17
+      spriteId: bc3304fe46432964b9abecd81a1b14a1
+    - name: hot wheel dark_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 10
+        y: 1
+        width: 14
+        height: 18
+      spriteId: 5ff79884ba3b3f2489015ef435d10c2f
+    - name: hot wheel dark_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 10
+        y: 2
+        width: 21
+        height: 22
+      spriteId: 60cfcb846a4dd3941b14611dd6ecd49b
+    - name: hot wheel dark_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 10
+        y: 1
+        width: 20
+        height: 22
+      spriteId: dc53c6a3a8fabea4794cc54159d769ad
+    - name: hot wheel dark_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 10
+        y: 1
+        width: 20
+        height: 22
+      spriteId: 9767991095e220b41a6383d92532e40d
+    - name: hot wheel dark_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 10
+        y: 1
+        width: 20
+        height: 22
+      spriteId: c63c0074d0513f946b404b52c447cb66
+    - name: hot wheel dark_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 6
+        y: 1
+        width: 24
+        height: 23
+      spriteId: 881d1650870b4a34eb9d1d1b46070d5d
+    - name: hot wheel dark_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 5
+        y: 1
+        width: 25
+        height: 21
+      spriteId: 1da4952195198444f8688c248198964b
+    - name: hot wheel dark_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 4
+        y: 1
+        width: 27
+        height: 20
+      spriteId: 7d073226aa379b244bc3caa30d61784d
+    - name: hot wheel dark_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 11
+        y: 1
+        width: 19
+        height: 21
+      spriteId: cb890b89ea8c6d9459212fb637fe6942
+    - name: hot wheel dark_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 6
+        y: 1
+        width: 22
+        height: 23
+      spriteId: be84d86a905075d4592a38e268b5ffb2
+    - name: hot wheel dark_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 5
+        y: 1
+        width: 23
+        height: 21
+      spriteId: 0aaf42edb4b50ee4ead63d91752fdd2c
+    - name: hot wheel dark_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 4
+        y: 1
+        width: 25
+        height: 20
+      spriteId: bd89395924abcbe48abf6576091cdfba
+    - name: hot wheel dark_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 11
+        y: 1
+        width: 17
+        height: 21
+      spriteId: cf9e09f2eafbdf24997f7bdcb4959c28
+    - name: hot wheel dark_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 10
+        y: 1
+        width: 23
+        height: 22
+      spriteId: c79be2475eba27943b303b29852a698e
+    - name: hot wheel dark_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 10
+        y: 1
+        width: 23
+        height: 22
+      spriteId: 8927ff50f9bb61345a0e48a2a8eeb411
+    - name: hot wheel dark_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 10
+        y: 1
+        width: 23
+        height: 22
+      spriteId: b4f7a1d239f0d234591dc2a3cbc8136d
+    - name: hot wheel dark_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 10
+        y: 1
+        width: 22
+        height: 22
+      spriteId: 703d23d16a212fb4cb7bcc22c3796757
+    - name: hot wheel dark_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 10
+        y: 1
+        width: 34
+        height: 22
+      spriteId: 8739986f2b100e64bbd9cae2b21a7421
+    - name: hot wheel dark_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 9
+        y: 1
+        width: 35
+        height: 23
+      spriteId: 48abfa18b24b8fe4d967744c743975cf
+    - name: hot wheel dark_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 10
+        y: 1
+        width: 34
+        height: 24
+      spriteId: c1e06f801c84bc74aa3bc0b44318893c
+    - name: hot wheel dark_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 10
+        y: 1
+        width: 35
+        height: 25
+      spriteId: 33662053786b46a45b442b2f22c40817
+    - name: hot wheel dark_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 20
+        y: 1
+        width: 89
+        height: 22
+      spriteId: cb7b1a2c8e0c8784a82a04444d40c775
+    - name: hot wheel dark_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 27
+        y: 1
+        width: 84
+        height: 22
+      spriteId: 2b9cd09272333cf4c89795321e5826a5
+    - name: hot wheel dark_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 29
+        y: 0
+        width: 83
+        height: 23
+      spriteId: 0d9e396334c6ee04699f9785e249efd1
+    - name: hot wheel dark_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 29
+        y: 1
+        width: 83
+        height: 22
+      spriteId: d906ad76473fd1048b4dec9dc1fc6466
+    - name: hot wheel dark_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 29
+        y: 1
+        width: 83
+        height: 22
+      spriteId: a9fa2e0d7fa327e46a79c34be0513e69
+    - name: hot wheel dark_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 85
+        y: 1
+        width: 23
+        height: 22
+      spriteId: a75c589195781194e872ac841bd61938
+    - name: hot wheel dark_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 10
+        y: 1
+        width: 20
+        height: 22
+      spriteId: c79ff1cc136661b4aa0350444346e790
+    - name: hot wheel dark_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 10
+        y: 1
+        width: 21
+        height: 20
+      spriteId: 61a0c824f8a879e4ebe0354d38beb9c4
+    - name: hot wheel dark_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 5
+        y: 1
+        width: 23
+        height: 16
+      spriteId: f22f184afe8a52e4b893d14562b370c5
+    - name: hot wheel dark_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 2
+        y: 1
+        width: 27
+        height: 20
+      spriteId: d59665dc759bbe8469eb6264f687e7ff
+    - name: hot wheel dark_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 1
+        y: 1
+        width: 22
+        height: 17
+      spriteId: 5c1adcf530deaa14ebd5c6671ea5cba8
+    - name: hot wheel dark_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 0
+        y: 1
+        width: 24
+        height: 11
+      spriteId: abba25e585db2c54db68b89cf4fbc86a
+    - name: hot wheel dark_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 0
+        y: 1
+        width: 24
+        height: 11
+      spriteId: 2b02005a816d64246aa0fc6ef95ba968
+    - name: hot wheel dark_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 0
+        y: 1
+        width: 24
+        height: 11
+      spriteId: a226c3802482d52479af5d7649d3f139
+    - name: hot wheel dark_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 17
+        y: 1
+        width: 86
+        height: 17
+      spriteId: 52e4aafb115076c44b140bc60017841e
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 112, y: 26}
