@@ -12,6 +12,7 @@ public class PlayerMoveState : PlayerGroundState
     public override void StateUpdate()
     {
         base.StateUpdate();
+        _player.StopImmediately(false);
         _player.SetMovement(new Vector2(_player.playerInput.Movement.x * _player._moveSpeed,_player.RbCompo.velocity.y));
         if (Mathf.Abs(_player.playerInput.Movement.x) < 0.01f)
         {

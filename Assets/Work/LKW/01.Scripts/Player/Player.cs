@@ -17,7 +17,7 @@ public class Player : Agent
     [SerializeField] private InputReaderSO _inputReader;
     public InputReaderSO playerInput => _inputReader;
 
-
+    public bool _isDahing = false;
     
     public PlayerStateMachine StateMachine { get; private set; }
 
