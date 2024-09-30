@@ -32,8 +32,8 @@ public class SkillManager : MonoBehaviour
                 skillCompo.Initialize(_player);
                 
                 Type type = skillCompo.GetType();
-                Debug.Log(type);
-                Debug.Log(skillCompo);
+                // Debug.Log(type);
+                // Debug.Log(skillCompo);
                 
                 Skills.Add(type, skillCompo);
             }

@@ -13,6 +13,7 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
     private Controls _controls;
 
     public Action JumpEvent;
+    public Action DashEvent;
     
     public Vector2 Movement { get; private set; }
     private void OnEnable()
@@ -34,6 +35,10 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
 
     public void OnDash(InputAction.CallbackContext context)
     {
+        if (context.performed)
+        {
+            DashEvent?.Invoke();
+        }
     }
 
     public void OnAttack(InputAction.CallbackContext context)
