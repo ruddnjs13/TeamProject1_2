@@ -21,7 +21,7 @@ public class SkillManager : MonoSingleton<SkillManager>
     }
     
 
-    private void Start()
+    private void OnEnable()
     {
         _player = GameObject.Find("Player").GetComponent<Player>();
         foreach (SkillType skillType in Enum.GetValues(typeof(SkillType)))
