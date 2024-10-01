@@ -18,7 +18,6 @@ public abstract class PlayerState
         _animBoolHash = Animator.StringToHash(animBoolName);
         _stateMachine = stateMachine;
         _animName = animBoolName;
-
     }
 
     public virtual void  Enter()

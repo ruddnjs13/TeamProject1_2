@@ -9,7 +9,7 @@ public enum SkillType
 }
 
 
-public class SkillManager : MonoBehaviour
+public class SkillManager : MonoSingleton<SkillManager>
 {
     public Dictionary<Type, Skill> Skills;
 
@@ -40,7 +40,7 @@ public class SkillManager : MonoBehaviour
         }
     }
 
-    private T GetSkill<T>() where T : Skill
+    public T GetSkill<T>() where T : Skill
     {
         Type t = typeof(T);
         if (Skills.TryGetValue(t, out var targetSkill)) // 해당 Key가 있으면 True

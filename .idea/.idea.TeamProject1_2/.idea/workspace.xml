@@ -7,7 +7,8 @@
     <list default="true" id="66529809-aa60-4f1e-86bf-2c24d9fcadf9" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/InputSetting/InputReaderSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/InputSetting/InputReaderSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Skill/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Skill/Skill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Manager/SkillManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Manager/SkillManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Skill/DashSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Skill/DashSkill.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/CD.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,6 +127,8 @@
       <workItem from="1727653685383" duration="12000" />
       <workItem from="1727653708060" duration="30000" />
       <workItem from="1727653778956" duration="8113000" />
+      <workItem from="1727701515042" duration="10748000" />
+      <workItem from="1727775473631" duration="4932000" />
     </task>
     <servers />
   </component>
