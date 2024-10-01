@@ -396,7 +396,7 @@ MonoBehaviour:
   OnSkillActivated:
     m_PersistentCalls:
       m_Calls: []
-  dashPower: 1
+  dashPower: 2
   _maxDashTime: 0.5
 --- !u!114 &1095280099
 MonoBehaviour:
