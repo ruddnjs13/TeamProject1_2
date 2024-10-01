@@ -27,7 +27,7 @@ public class DashSkill : Skill
         // 스킬 메서드
         Debug.Log("Dash");
         _owner.SetMovement(Vector2.zero);
-        Vector2 dir = Vector2.right * dashPower * 5f;
+        Vector2 dir = _owner.transform.right * dashPower * 5f;
         _owner._isDahing = true;
         _owner.playerInput._isDashing = true;
         _prevGravityScale = _owner.RbCompo.gravityScale;
@@ -54,7 +54,6 @@ public class DashSkill : Skill
             _owner._isDahing = false;
             _owner.RbCompo.gravityScale = _prevGravityScale;
             _owner.SetMovement(Vector2.zero);
-            _owner.StopImmediately(true);
         }
     }
 
