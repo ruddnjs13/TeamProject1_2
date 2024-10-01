@@ -12,6 +12,8 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
 {
     private Controls _controls;
 
+    [HideInInspector] public bool _isDashing = false;
+
     public Action JumpEvent;
     public Action DashEvent;
     
@@ -37,6 +39,7 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
     {
         if (context.performed)
         {
+            _isDashing = true;
             DashEvent?.Invoke();
         }
     }
