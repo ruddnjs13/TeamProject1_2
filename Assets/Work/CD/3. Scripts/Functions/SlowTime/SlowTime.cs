@@ -2,21 +2,31 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
+ 
 public class SlowTime : MonoBehaviour
 {
+    public UnityEvent OnTimeSlowPlay;
+    public UnityEvent OnTimeSlowStop;
+
     private void Update()
+    {
+        InputSet();
+    }
+
+    private void InputSet()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Slow();
+            OnTimeSlowPlay?.Invoke();
         }
-    }
-
-    private void Slow()
-    {
-        Debug.Log("얍!");
-        Time.timeScale = 0.5f;
-        Time.fixedDeltaTime = Time.timeScale * .02f;
+        else if (Input.GetKeyDown(KeyCode.O))
+        {
+            OnTimeSlowStop?.Invoke();
+        }
+        else
+        {
+            return;
+        }
     }
 }
