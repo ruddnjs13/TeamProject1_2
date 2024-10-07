@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Serialization;
 
 public class Player : Agent
 {
@@ -17,7 +18,7 @@ public class Player : Agent
     [SerializeField] private InputReaderSO _inputReader;
     public InputReaderSO playerInput => _inputReader;
 
-    public bool _isDahing = false;
+    [FormerlySerializedAs("_isDahing")] public bool _isDashing = false;
     
     public PlayerStateMachine StateMachine { get; private set; }
 

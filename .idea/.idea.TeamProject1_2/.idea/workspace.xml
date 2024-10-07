@@ -39,7 +39,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "LKW",
+    "git-widget-placeholder": "CD",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -125,6 +125,7 @@
       <workItem from="1727775473631" duration="4932000" />
       <workItem from="1727792230098" duration="23000" />
       <workItem from="1727792262680" duration="332000" />
+      <workItem from="1727795114551" duration="2686000" />
     </task>
     <servers />
   </component>
