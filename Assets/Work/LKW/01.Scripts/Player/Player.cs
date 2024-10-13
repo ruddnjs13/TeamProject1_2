@@ -23,7 +23,6 @@ public class Player : Agent
 
     protected override void Awake()
     {
-        Time.timeScale = 0.5f;
         base.Awake();
         AnimatorCompo = GetComponentInChildren<Animator>();
         StateMachine = new PlayerStateMachine();

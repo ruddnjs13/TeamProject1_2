@@ -15,6 +15,11 @@ public class RotateMap : MonoBehaviour
 
     [SerializeField] private GameObject _map;
     private bool isRotate = false;
+
+    private void Awake()
+    {
+    }
+
     private void Update()
     {
         if (Keyboard.current.rKey.isPressed && !isRotate)
