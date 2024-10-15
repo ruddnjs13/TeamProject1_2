@@ -1,12 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
-using UnityEngine.Tilemaps;
 
 public class RotateMap : MonoBehaviour
 {
@@ -16,16 +10,21 @@ public class RotateMap : MonoBehaviour
     [SerializeField] private GameObject _map;
     private bool isRotate = false;
 
+    public void MapRotate()
+    {
+        StopAllCoroutines();
+        Debug.Log("회전");
+        isRotate = true;
+        Physics2D.gravity = new Vector2(0, 0);
+        _map.transform.SetParent(_playerAxis.transform);
+        StartCoroutine(MapRotateCoroutine());
+    }
+
     private void Update()
     {
-        if (Keyboard.current.rKey.isPressed && !isRotate)
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            StopAllCoroutines();
-            Debug.Log("회전");
-            isRotate = true;
-            Physics2D.gravity = new Vector2(0, 0);
-            _map.transform.SetParent(_playerAxis.transform);
-            StartCoroutine(MapRotateCoroutine());
+            MapRotate();
         }
     }
 
@@ -42,11 +41,9 @@ public class RotateMap : MonoBehaviour
         {
             current += Time.deltaTime;
             percent = current / time;
-            
-            Debug.Log(percent);
 
             _playerAxis.transform.rotation = Quaternion.Euler
-                (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z + Mathf.Lerp(start,target,percent)));
+                (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z - Mathf.Lerp(start,target,percent)));
             yield return null;
         }
 
