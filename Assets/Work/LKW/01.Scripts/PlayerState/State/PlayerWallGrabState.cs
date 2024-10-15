@@ -29,7 +29,7 @@ public class PlayerWallGrabState : PlayerWallSatate
         base.StateUpdate();
         if (Mathf.Abs(_player.playerInput.Movement.x) < 0.01f)
         {
-            _stateMachine.ChangeState(PlayerStateEnum.WallSlide);
+            //_stateMachine.ChangeState(PlayerStateEnum.WallSlide);
         }
     }
 }
