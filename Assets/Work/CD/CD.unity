@@ -301,8 +301,8 @@ MonoBehaviour:
   OnTimeSlowPlay:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 907127162}
-        m_TargetAssemblyTypeName: TimeSlowFeedback, Assembly-CSharp
+      - m_Target: {fileID: 907127163}
+        m_TargetAssemblyTypeName: FeedbackPlayer, Assembly-CSharp
         m_MethodName: PlayFeedback
         m_Mode: 1
         m_Arguments:

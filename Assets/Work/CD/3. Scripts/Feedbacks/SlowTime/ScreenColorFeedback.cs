@@ -14,11 +14,12 @@ public class ScreenColorFeedback : Feedback
             _light = GameObject.Find("Light 2D").GetComponent<Light2D>();
         }
         _previousColor = _light.color;
-        _light.color = Color.Lerp(_previousColor, Color.blue, 0.5f);
+        _light.color = Color.blue;
     }
 
     public override void StopFeedback()
     {
+        if (_light == null) return;
         _light.color = _previousColor;
     }
 }
