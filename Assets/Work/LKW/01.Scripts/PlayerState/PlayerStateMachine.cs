@@ -11,10 +11,6 @@ public enum PlayerStateEnum
     Move,
     Jump,
     Fall,
-    // Attack,
-    WallSlide,
-    WallGrab,
-    WallJump
 }
 
 public class PlayerStateMachine

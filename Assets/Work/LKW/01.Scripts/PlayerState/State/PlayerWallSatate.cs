@@ -24,7 +24,7 @@ public class PlayerWallSatate : PlayerState
 
     private void HandleJumpEvent()
     {
-        _stateMachine.ChangeState(PlayerStateEnum.WallJump);
+        //_stateMachine.ChangeState(PlayerStateEnum.WallJump);
     }
 
     public override void StateUpdate()

@@ -16,6 +16,7 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
 
     public Action JumpEvent;
     public Action DashEvent;
+    public Action InteractionEvent;
     
     public Vector2 Movement { get; private set; }
     private void OnEnable()
@@ -54,6 +55,14 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
         {
             Debug.Log("점프");
             JumpEvent?.Invoke();
+        }
+    }
+
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            InteractionEvent?.Invoke();
         }
     }
 }

@@ -25,7 +25,7 @@ public class PlayerAirState : PlayerState
         if (Mathf.Abs(_player.playerInput.Movement.x) > 0 && 
             _player.CheckWall(_player.playerInput.Movement.x))
         {
-            _stateMachine.ChangeState(PlayerStateEnum.WallGrab);
+            //_stateMachine.ChangeState(PlayerStateEnum.WallGrab);
         }
     }
 }
