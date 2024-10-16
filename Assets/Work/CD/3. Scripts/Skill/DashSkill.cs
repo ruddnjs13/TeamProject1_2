@@ -25,14 +25,17 @@ public class DashSkill : Skill
     private void SkillDash()
     {
         // 스킬 메서드
-        Debug.Log("Dash");
-        _owner.SetMovement(Vector2.zero);
-        Vector2 dir = _owner.transform.right * dashPower * 5f;
-        _owner._isDahing = true;
-        _owner.playerInput._isDashing = true;
-        _prevGravityScale = _owner.RbCompo.gravityScale;
-        _owner.RbCompo.gravityScale = 0f;
-        _owner.SetMovement(dir);
+        if (!_owner._isDashing)
+        {
+            Debug.Log("Dash");
+            _owner.SetMovement(Vector2.zero);
+            Vector2 dir = _owner.transform.right * dashPower * 5f;
+            _owner._isDashing = true;
+            _owner.playerInput._isDashing = true;
+            _prevGravityScale = _owner.RbCompo.gravityScale;
+            _owner.RbCompo.gravityScale = 0f;
+            _owner.SetMovement(dir);
+        }
     }
 
     private void DashEndCheck()
@@ -41,7 +44,7 @@ public class DashSkill : Skill
 
     private void Update()
     {
-        if (_owner._isDahing)
+        if (_owner._isDashing)
         {
             _dashtime += Time.deltaTime;
         }
@@ -51,7 +54,7 @@ public class DashSkill : Skill
             Debug.Log("대쉬엔드!");
             _dashtime = .0f;
             _owner.playerInput._isDashing = false;
-            _owner._isDahing = false;
+            _owner._isDashing = false;
             _owner.RbCompo.gravityScale = _prevGravityScale;
             _owner.SetMovement(Vector2.zero);
         }

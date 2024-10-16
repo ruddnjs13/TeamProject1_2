@@ -12,7 +12,7 @@ public class PlayerMoveState : PlayerGroundState
     public override void StateUpdate()
     {
         base.StateUpdate();
-        if (_player._isDahing) return;
+        if (_player._isDashing) return;
             _player.SetMovement(new Vector2(_player.playerInput.Movement.x * _player._moveSpeed,_player.RbCompo.velocity.y));
             
         if (Mathf.Abs(_player.playerInput.Movement.x) < 0.01f)
