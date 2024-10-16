@@ -19,10 +19,10 @@ public class FastDeadBlockDot : MonoBehaviour
 
     private void Update()
     {
-        CheckDo();
+        CheckBlock();
     }
 
-    private void CheckDo()
+    private void CheckBlock()
     {
         
     }
