@@ -8,37 +8,39 @@ using DG.Tweening.Plugins.Options;
 
 public class FastDeadBlockDot : MonoBehaviour
 {
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    public static void asdfjlksda()
+    {
+        Debug.Log("ㄴㅇㅁ러ㅣㅏㅁㄴ어리ㅏㄴㅁㅇㄹ ");
+    }
+    
     [SerializeField] private float _position;
     [SerializeField] private float _delayUpSecond, _delayDownSecond;
     
     public float _duration;
     private float _previousPosition;
 
-    private Tween _tween;
+    private Tween _tween, _tween2;
+    
+    private Sequence _sequence;
+    
     public void Start()
     {
         _previousPosition = transform.position.y;
-        StartCoroutine(MoveDot());
+        SetSequence();
     }
 
-    private void Update()
+    
+    public void SetSequence()
     {
-        CheckBlock();
-    }
+        _tween = transform.DOMove(new Vector2(transform.position.x, _position), _duration).SetEase(Ease.OutQuart);
+        _tween2 = transform.DOMove(new Vector2(transform.position.x, _previousPosition), _duration).SetEase(Ease.InQuart);
 
-    private void CheckBlock()
-    {
-    }
-
-    private IEnumerator DelayCall()
-    {
-        yield return new WaitForSeconds(_delayUpSecond);
-        _tween = transform.DOMove(new Vector2(transform.position.x, _previousPosition), _duration).SetEase(Ease.InQuart).OnComplete( () => StartCoroutine(MoveDot()) );
-    }
-
-    private IEnumerator MoveDot()
-    {
-        yield return new WaitForSeconds(_delayDownSecond);
-        _tween = transform.DOMove(new Vector2(transform.position.x, _position), _duration).SetEase(Ease.OutQuart).OnComplete( () => StartCoroutine(DelayCall()) );
+        _sequence = DOTween.Sequence();
+        _sequence.AppendInterval(_delayUpSecond);
+        _sequence.Append(_tween);
+        _sequence.AppendInterval(_delayDownSecond);
+        _sequence.Append(_tween2);
+        _sequence.OnComplete(() => _sequence.Restart()); 
     }
 }
