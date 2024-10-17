@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class RotateMap : MonoBehaviour
+public class RotateMap : MonoBehaviour,IInteractable
 {
     [SerializeField] private GameObject _playerAxis;
     [SerializeField] private float time;
@@ -50,5 +50,15 @@ public class RotateMap : MonoBehaviour
         Physics2D.gravity = new Vector2(0, -9.81f);
         _map.transform.SetParent(null);
         isRotate = false;
+    }
+
+    public string ShowInteratText()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Interact()
+    {
+        throw new NotImplementedException();
     }
 }

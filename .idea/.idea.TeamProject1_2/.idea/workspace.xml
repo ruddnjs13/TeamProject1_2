@@ -29,7 +29,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d08d097905344c54afd96d9e44e5355b20a00/e5/e9f2b918/Physics2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Skill/DashSkill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Interaction/PlayerInteraction.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -150,7 +152,8 @@
       <workItem from="1728788477383" duration="5883000" />
       <workItem from="1729000158731" duration="923000" />
       <workItem from="1729001101908" duration="211000" />
-      <workItem from="1729002196991" duration="2668000" />
+      <workItem from="1729002196991" duration="2803000" />
+      <workItem from="1729088586979" duration="3952000" />
     </task>
     <servers />
   </component>
