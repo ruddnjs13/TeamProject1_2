@@ -646,6 +646,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ecdb027932d5d4cb843083471b19b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 0
+  _overlapSize: 5.31
   _laserWidth: 14
   _laserCool: 0.2
   _laserSpeed: 5
