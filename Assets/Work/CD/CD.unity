@@ -807,7 +807,6 @@ Transform:
   - {fileID: 252478155}
   - {fileID: 281823586}
   - {fileID: 376207071}
-  - {fileID: 672030793}
   - {fileID: 1603138392}
   - {fileID: 487821744}
   m_Father: {fileID: 1980317153}
@@ -6888,11 +6887,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   _overlapSize: 5.31
-  _laserWidth: 14
-  _laserCool: 0.2
-  _laserSpeed: 5
   _target: {fileID: 1074027863}
   _rotateSpeed: 0.041
 --- !u!212 &672030792
@@ -6960,7 +6956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420927084}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &672030794
 LineRenderer:
@@ -7831,6 +7827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6342606030669036377, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6501029463714446903, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: _boxSize.x
       value: 0.6
@@ -8062,4 +8062,5 @@ SceneRoots:
   - {fileID: 1229195820}
   - {fileID: 1620640135}
   - {fileID: 324346725}
+  - {fileID: 672030793}
   - {fileID: 1980317153}

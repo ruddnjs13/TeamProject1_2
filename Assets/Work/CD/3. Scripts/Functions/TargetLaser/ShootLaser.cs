@@ -10,6 +10,7 @@ public class ShootLaser : MonoBehaviour
     
     private LineRenderer _line;
     private Collider2D _collider;
+    private RaycastHit2D _ray;
     
     
     public Transform _target;
@@ -28,6 +29,22 @@ public class ShootLaser : MonoBehaviour
     public void TargetFind()
     {
         _collider = Physics2D.OverlapCircle(transform.position, _size, _whatIsPlayer);
+
+        if (_collider != null)
+        {
+            TargetRay(_collider.transform);
+        }
     }
-    
+
+    private void TargetRay(Transform target = null)
+    {
+        if (!target) return;
+        float _dir = Vector3.Distance(transform.position, target.position);
+        _ray = Physics2D.Raycast(transform.position, target.position);
+
+        if (_ray)
+        {
+            _line.SetPosition(1, _ray.point);
+        }
+    }
 }
