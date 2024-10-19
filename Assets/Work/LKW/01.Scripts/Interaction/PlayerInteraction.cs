@@ -4,11 +4,28 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+   [SerializeField] private InputReaderSO _inputReader;
    [SerializeField] private Transform _interactionTrm;
    [SerializeField] private float _interactionRadius;
    [SerializeField] private LayerMask _interactionLayer;
 
+   public bool canInteract { get; private set; } = false;
+
    private IInteractable _interactableObject = null;
+
+   private void OnEnable()
+   {
+      _inputReader.InteractionEvent += HandleInteractEvent;
+   }
+
+   private void HandleInteractEvent()
+   {
+      if (canInteract && _interactableObject != null)
+      {
+         _interactableObject.Interact();
+      }
+   }
+
 
    private void Update()
    {
@@ -22,11 +39,13 @@ public class PlayerInteraction : MonoBehaviour
       if (collider != null && _interactableObject == null)
       {
          _interactableObject = collider.GetComponent<IInteractable>();
-         _interactableObject.ShowInteratText();
+         _interactableObject.ShowInteractText();
+         canInteract = true;
       }
       else
       {
          _interactableObject = null;
+         canInteract = false;
       }
    }
 
