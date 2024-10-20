@@ -32,6 +32,7 @@ public class ShootLaser : MonoBehaviour
 
         if (_collider != null)
         {
+            Debug.Log("아");
             TargetRay(_collider.transform);
         }
     }
@@ -47,4 +48,15 @@ public class ShootLaser : MonoBehaviour
             _line.SetPosition(1, _ray.point);
         }
     }
+    
+    #if UNITY_EDITOR
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        
+        Gizmos.DrawWireSphere(transform.position, _size);
+    }
+
+#endif
 }
