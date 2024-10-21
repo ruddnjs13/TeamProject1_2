@@ -8,6 +8,7 @@ public class PlayerInteraction : MonoBehaviour
    [SerializeField] private Transform _interactionTrm;
    [SerializeField] private float _interactionRadius;
    [SerializeField] private LayerMask _interactionLayer;
+   [SerializeField] private GameObject _interactMark;
 
    public bool canInteract { get; private set; } = false;
 
@@ -16,6 +17,11 @@ public class PlayerInteraction : MonoBehaviour
    private void OnEnable()
    {
       _inputReader.InteractionEvent += HandleInteractEvent;
+   }
+
+   private void OnDisable()
+   {
+      _inputReader.InteractionEvent -= HandleInteractEvent;
    }
 
    private void HandleInteractEvent()
@@ -36,14 +42,16 @@ public class PlayerInteraction : MonoBehaviour
    {
       Collider2D collider = Physics2D.OverlapCircle(_interactionTrm.position
          , _interactionRadius, _interactionLayer);
-      if (collider != null && _interactableObject == null)
+      if (collider != null)
       {
+         _interactMark.SetActive(true);
          _interactableObject = collider.GetComponent<IInteractable>();
          _interactableObject.ShowInteractText();
          canInteract = true;
       }
       else
       {
+         _interactMark.SetActive(false);
          _interactableObject = null;
          canInteract = false;
       }
