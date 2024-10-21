@@ -5,7 +5,13 @@ using UnityEngine;
 public class MirrorReflection : MonoBehaviour
 {
     Ray ray;
+    Ray ray2;
+    private BoxCollider2D col;
     // Vector.right가 법선벡터
+    private void Awake()
+    {
+        col = GetComponent<BoxCollider2D>();
+    }
     private void Start()
     {
         ray = new Ray(transform.position, transform.right);
@@ -13,22 +19,34 @@ public class MirrorReflection : MonoBehaviour
     }
     public void ReflectionLight(LineRenderer line,Vector2 dir)
     {
-        int count = line.positionCount+=1;
         Vector2 reflectionVector = Vector2.Reflect(dir, transform.right);
         Debug.Log(reflectionVector);
+        col.enabled = false;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, reflectionVector,20);
-        if (hit.collider != null && hit.transform.CompareTag("Mirror"))
+        ray2 = new Ray(transform.position, reflectionVector * 20);
+        int count = line.positionCount;
+        line.positionCount++;
+        if (hit.collider != null)
         {
-            Debug.Log("거울에또맞음");
+            line.SetPosition(count, hit.transform.position);
+            if (hit.transform.CompareTag("Mirror"))
+            {
+                Debug.Log(count);
+                Debug.Log("거울에또맞음");
+                Debug.Log(hit.transform.position);
+                hit.transform.GetComponent<MirrorReflection>().ReflectionLight(line, reflectionVector);
+            }
+            else
+            {
+
+            }
         }
-            //    line.SetPosition(count, hit.transform.position);
-            //    hit.transform.GetComponentInChildren<MirrorReflection>().ReflectionLight(line, reflectionVector);
-            //}
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(ray);
+        Gizmos.DrawRay(ray2);
     }
 }
