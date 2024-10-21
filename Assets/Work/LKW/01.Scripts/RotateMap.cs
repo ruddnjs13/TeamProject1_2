@@ -10,12 +10,7 @@ public class RotateMap : MonoBehaviour,IInteractable
     private PlayerInteraction _playerInteraction;
     private bool isRotate = false;
     private bool _readyUse = false;
-
-    private void Awake()
-    {
-        _playerInteraction = GameObject.Find("Player").GetComponentInChildren<PlayerInteraction>();
-    }
-
+    
     private void Update()
     {
         if (!_readyUse)
@@ -24,16 +19,17 @@ public class RotateMap : MonoBehaviour,IInteractable
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
-            MapRotate(1);
+            MapRotate(-1);
         }
         else if (Input.GetKeyUp(KeyCode.E))
         {
-            MapRotate(-1);
+            MapRotate(1);
         }
     }
 
     public void MapRotate(float directionX)
     {
+        if (isRotate) return;
         StopAllCoroutines();
         Debug.Log("회전");
         isRotate = true;
@@ -49,7 +45,7 @@ public class RotateMap : MonoBehaviour,IInteractable
         float percent = 0;
 
         Vector3 _axisAngle = _playerAxis.transform.eulerAngles;
-        float target = 90 * directionX;
+        float target =  90;
 
         while (percent < 1)
         {
@@ -57,7 +53,7 @@ public class RotateMap : MonoBehaviour,IInteractable
             percent = current / time;
 
             _playerAxis.transform.rotation = Quaternion.Euler
-                (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z + (Mathf.Lerp(start,target,percent) * directionX)));
+                (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z - (Mathf.Lerp(start,target,percent) * directionX)));
             yield return null;
         }
 
@@ -69,6 +65,7 @@ public class RotateMap : MonoBehaviour,IInteractable
 
     public void ShowInteractText()
     {
+        
     }
 
     public void Interact()
