@@ -26,6 +26,8 @@ public class TargetLaser : MonoBehaviour
 
     private Sequence _sequence;
 
+    private bool _isFirst;
+
     private void Awake()
     {
         _line = GetComponent<LineRenderer>();
@@ -44,6 +46,7 @@ public class TargetLaser : MonoBehaviour
         
         if (_collider != null)
         {
+            _isFirst = false;
             _sequence.Kill();
             Debug.Log("아");
             if (!_line.enabled) _line.enabled = true;
@@ -51,12 +54,15 @@ public class TargetLaser : MonoBehaviour
         }
         else
         {
+            if (!_isFirst)
+                DefaultAngle();
             DefaultRotate();
         }
     }
 
     private void DefaultAngle()
     {
+        _isFirst = true;
         transform.localRotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), _rotateSpeed);
     }
 
