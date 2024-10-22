@@ -40,39 +40,22 @@ public class RotateMap : MonoBehaviour,IInteractable
 
     private IEnumerator MapRotateCoroutine(float directionX)
     {
-        float start = 0;
+        Quaternion start = _playerAxis.transform.rotation;
         float current = 0;
         float percent = 0;
+        
+        Quaternion target = Quaternion.Euler(_playerAxis.transform.rotation.eulerAngles 
+                                             + new Vector3(0f,0f, 90 * directionX));
 
-        Vector3 _axisAngle = _playerAxis.transform.eulerAngles;
-        float target =  90;
 
-
-        if (directionX == 1)
+        while (percent < 1)
         {
-            while (percent < 1)
-            {
-                current += Time.deltaTime;
-                percent = current / time;
+            current += Time.deltaTime;
+            percent = current / time;
 
-                _playerAxis.transform.rotation = Quaternion.Euler
-                    (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z + Mathf.Lerp(start,target,percent)));
-                yield return null;
-            } 
-        }
-        else if (directionX == -1)
-        {
-
-            while (percent < 1)
-            {
-                current += Time.deltaTime;
-                percent = current / time;
-
-                _playerAxis.transform.rotation = Quaternion.Euler
-                    (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z - Mathf.Lerp(start,target,percent)));
-                yield return null;
-            } 
-        }
+            _playerAxis.transform.rotation = Quaternion.Lerp(start, target, percent);
+            yield return null;
+        } 
         
 
         Physics2D.gravity = new Vector2(0, -9.81f);
