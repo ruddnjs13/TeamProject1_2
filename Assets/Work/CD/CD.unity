@@ -6595,12 +6595,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ecdb027932d5d4cb843083471b19b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnHitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _isFirst: 1
+  _rotationEnable: 1
+  _defaultRotateDeley: 0.5
+  _rotationCool: 1
+  _rotationDuration: 5
+  _laserStartValue: 1
+  _laserEndValue: 20
+  _laserDuration: 5
+  _fireLaserDeley: 0.5
   _size: 5.17
   _whatIsPlayer:
     serializedVersion: 2
     m_Bits: 4096
   _target: {fileID: 1074027863}
-  _rotateSpeed: 0.32
+  _rotateSpeed: 0.116
 --- !u!212 &672030792
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6662,7 +6674,7 @@ Transform:
   m_GameObject: {fileID: 672030790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.3, y: 2.67, z: 0}
+  m_LocalPosition: {x: 4.3, y: 2.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6721,7 +6733,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.1139698
+        value: 0.016679764
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -7191,6 +7203,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25b31b0d1d3dfeb4fb86309afaae3521, type: 3}
+--- !u!1 &1612282670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4352204930521727829, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
+  m_PrefabInstance: {fileID: 1693977109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1620640134
 GameObject:
   m_ObjectHideFlags: 0
@@ -7361,11 +7378,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 366904179026438583, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.52
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 366904179026438583, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.38
+      value: -2.85
       objectReference: {fileID: 0}
     - target: {fileID: 366904179026438583, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7402,6 +7419,10 @@ PrefabInstance:
     - target: {fileID: 1655088607354986732, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352204930521727829, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5344064115325682332, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: m_GravityScale
@@ -7492,6 +7513,7 @@ MonoBehaviour:
   _interactionLayer:
     serializedVersion: 2
     m_Bits: 1024
+  _interactMark: {fileID: 1612282670}
 --- !u!4 &1927741488 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8004575800340196994, guid: 25b31b0d1d3dfeb4fb86309afaae3521, type: 3}
