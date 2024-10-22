@@ -33,15 +33,23 @@ public class ShootLaser : MonoBehaviour
         if (_collider != null)
         {
             Debug.Log("아");
-            TargetRay(_collider.transform);
+            if (!_line.enabled) _line.enabled = true;
+            TargetRay(_collider.gameObject.transform);
+        }
+        else
+        {
+            if (_line.enabled)
+                _line.enabled = false;
         }
     }
 
     private void TargetRay(Transform target = null)
     {
         if (!target) return;
-        float _dir = Vector3.Distance(transform.position, target.position);
-        _ray = Physics2D.Raycast(transform.position, target.position);
+        _target = target;
+        _line.SetPosition(1, _target.position);
+        float _dir = Vector3.Distance(transform.position, _target.position);
+        _ray = Physics2D.Raycast(transform.position, _target.position - transform.position);
 
         if (_ray)
         {
@@ -56,6 +64,10 @@ public class ShootLaser : MonoBehaviour
         Gizmos.color = Color.green;
         
         Gizmos.DrawWireSphere(transform.position, _size);
+        Gizmos.color = Color.white;
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, _target.position - transform.position);
     }
 
 #endif

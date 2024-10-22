@@ -47,20 +47,39 @@ public class RotateMap : MonoBehaviour,IInteractable
         Vector3 _axisAngle = _playerAxis.transform.eulerAngles;
         float target =  90;
 
-        while (percent < 1)
-        {
-            current += Time.deltaTime;
-            percent = current / time;
 
-            _playerAxis.transform.rotation = Quaternion.Euler
-                (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z - (Mathf.Lerp(start,target,percent) * directionX)));
-            yield return null;
+        if (directionX == 1)
+        {
+            while (percent < 1)
+            {
+                current += Time.deltaTime;
+                percent = current / time;
+
+                _playerAxis.transform.rotation = Quaternion.Euler
+                    (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z + Mathf.Lerp(start,target,percent)));
+                yield return null;
+            } 
         }
+        else if (directionX == -1)
+        {
+
+            while (percent < 1)
+            {
+                current += Time.deltaTime;
+                percent = current / time;
+
+                _playerAxis.transform.rotation = Quaternion.Euler
+                    (new Vector3(_axisAngle.x,_axisAngle.y,_axisAngle.z - Mathf.Lerp(start,target,percent)));
+                yield return null;
+            } 
+        }
+        
 
         Physics2D.gravity = new Vector2(0, -9.81f);
         _map.transform.SetParent(null);
         isRotate = false;
         _readyUse = false;
+        
     }
 
     public void ShowInteractText()
