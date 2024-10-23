@@ -10,7 +10,7 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     private BoxCollider2D col;
     private bool isCanReflection = true;
     private bool isCanRotate = true;
-    // Vector.right°¡ ¹ý¼±º¤ÅÍ
+    // Vector.rightï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private void Awake()
     {
         col = GetComponent<BoxCollider2D>();
@@ -23,21 +23,21 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     private IEnumerator ReflectionLight(LineRenderer line, Vector2 dir, LightShooter shooter)
     {
         yield return new WaitForSeconds(0.2f);
-        col.enabled = false; // ÀÌ °Å¿ïÀº ¸Â¾ÒÀ¸´Ï ´Ù½Ã ¹ÝÀÀ ¾ÈÇÏ°Ô ÇØµÒ(¾ÈÇØµÎ¸é ¸¶ÁÖº¸´Â °Å¿ï¿¡¼­ ¹«ÇÑÈ£Ãâ)
+        col.enabled = false; // ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½ ï¿½Â¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Øµï¿½(ï¿½ï¿½ï¿½ØµÎ¸ï¿½ ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ ï¿½Å¿ï¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½)
         StartCoroutine(LightColtime());
-        Vector3 reflectionVector = Vector2.Reflect(dir, transform.right); // ÀÔ»ç°¢°ú ¹ý¼±º¤ÅÍ·Î ¹Ý»ç°¢ ±¸ÇÔ.
+        Vector3 reflectionVector = Vector2.Reflect(dir, transform.right); // ï¿½Ô»ç°¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ ï¿½Ý»ç°¢ ï¿½ï¿½ï¿½ï¿½.
         RaycastHit2D hit = Physics2D.Raycast(transform.position, reflectionVector, 20);
-        // ShooterÃ³·³ Ray ½÷¼­ °Ë»ç
+        // ShooterÃ³ï¿½ï¿½ Ray ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
         int count = line.positionCount;
         line.positionCount++;
-        // Á¡ °³¼ö ´Ã¸®±â(°Å¿ï¿¡ ¾È¸Â´õ¶óµµ ¸ÂÀºµ¥¿¡ ¸¶Áö¸· Á¡ ±×·Á¾ß ÇÏ´Ï±ñ)
-        if (hit.collider != null) // Á¶°Ç
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã¸ï¿½ï¿½ï¿½(ï¿½Å¿ï¿¡ ï¿½È¸Â´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½Ï´Ï±ï¿½)
+        if (hit.collider != null) // ï¿½ï¿½ï¿½ï¿½
         {
-            line.SetPosition(count, shooter.transform.InverseTransformPoint(hit.point)); // ¸ÂÀºµ¥¿¡ Á¡ Âï±â
-            if (hit.transform.CompareTag("Mirror")) // °Å¿ï¿¡ ¸ÂÀº°ÅÀÓ?
+            line.SetPosition(count, shooter.transform.InverseTransformPoint(hit.point)); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
+            if (hit.transform.CompareTag("Mirror")) // ï¿½Å¿ï¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
             {
-                hit.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(line, reflectionVector, shooter); // ±×·¯¸é ´Ù½Ã ¹Ý»ç
-                hit.transform.GetComponent<LightSensor>()?.ExecutionEvent(); // ºû°¨Áö ÀåÄ¡¸é ½ÇÇà
+                hit.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(line, reflectionVector, shooter); // ï¿½×·ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ý»ï¿½
+                hit.transform.GetComponent<LightSensor>()?.ExecutionEvent();
             }
         }
         else
@@ -55,19 +55,28 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     }
 
 
+    public void StartInteract()
+    {
+    }
+
     public void Interact()
     {
         if (!isCanReflection) return;
         Sequence sequence = DOTween.Sequence();
         isCanRotate = false;
         col.enabled = false;
-        sequence.Append(transform.DORotate(transform.rotation.eulerAngles + new Vector3(0, 0, 45f), 0.25f));
+        sequence.Append(transform.DORotate(transform.rotation.eulerAngles + new Vector3(0, 0, 45f), 0.5f));
         sequence.OnComplete(() =>
         {
             isCanRotate = true;
             col.enabled = true;
         });
     }
+
+    public void EndInteract()
+    {
+    }
+
     public void ShowInteractText()
     {
     }

@@ -17,10 +17,6 @@ public class PlayerIdleState : PlayerGroundState
         _player.StopImmediately(false);
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
 
     public override void StateUpdate()
     {
@@ -31,6 +27,11 @@ public class PlayerIdleState : PlayerGroundState
         if (Mathf.Abs(xMove) > 0)
         {
             _stateMachine.ChangeState(PlayerStateEnum.Move);
+        }
+
+        if (!_player.IsGround.Value)
+        {
+            _player.StateMachine.ChangeState(PlayerStateEnum.Fall);
         }
     }
 }
