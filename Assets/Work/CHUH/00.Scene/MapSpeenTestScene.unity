@@ -6278,9 +6278,10 @@ GameObject:
   - component: {fileID: 685154788}
   - component: {fileID: 685154790}
   - component: {fileID: 685154789}
+  - component: {fileID: 685154791}
   m_Layer: 0
   m_Name: LightHolder
-  m_TagString: Untagged
+  m_TagString: Mirror
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6397,6 +6398,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &685154791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685154787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799cdc86bfb303c4595aeabcba9255ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &828221900
 GameObject:
   m_ObjectHideFlags: 0

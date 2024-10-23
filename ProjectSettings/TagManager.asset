@@ -54,3 +54,6 @@ TagManager:
   - name: BackGround
     uniqueID: 1836993493
     locked: 0
+  - name: FakeTiles
+    uniqueID: 1297044481
+    locked: 0
