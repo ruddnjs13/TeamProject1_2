@@ -37,7 +37,7 @@ public class MirrorReflection : MonoBehaviour, IInteractable
             if (hit.transform.CompareTag("Mirror")) // 거울에 맞은거임?
             {
                 hit.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(line, reflectionVector, shooter); // 그러면 다시 반사
-                hit.transform.GetComponent<LightSensor>()?.ExecutionEvent();
+                hit.transform.GetComponent<LightSensor>()?.ExecutionEvent(); // 빛감지 장치면 실행
             }
         }
         else
@@ -61,7 +61,7 @@ public class MirrorReflection : MonoBehaviour, IInteractable
         Sequence sequence = DOTween.Sequence();
         isCanRotate = false;
         col.enabled = false;
-        sequence.Append(transform.DORotate(transform.rotation.eulerAngles + new Vector3(0, 0, 45f), 0.5f));
+        sequence.Append(transform.DORotate(transform.rotation.eulerAngles + new Vector3(0, 0, 45f), 0.25f));
         sequence.OnComplete(() =>
         {
             isCanRotate = true;

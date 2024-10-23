@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LightShooter : MonoBehaviour, IInteractable
 {
-    [SerializeField] private float ShootTime = 1.0f; // 빛 쏘는 시간
-    [SerializeField] private float ColTime = 3.0f; // 빛 쿨타임
+    public float ShootTime = 1.0f; // 빛 쏘는 시간
+    public float ColTime = 3.0f; // 빛 쿨타임
     private bool isCanLightShoot = true;
     private LineRenderer _lineRenderer;
     private int positionCount = 1;
@@ -31,8 +31,10 @@ public class LightShooter : MonoBehaviour, IInteractable
             _lineRenderer.SetPosition(1,transform.InverseTransformPoint(hit.transform.position));
             // 다음 점을 맞은 거울의 위치로 설정(로컬로 전환한 이유는 LineRander의 그려지는걸 로컬로 설정해서)
             MirrorReflection hitMirror = hit.transform.GetComponent<MirrorReflection>();
-            hit.transform.GetComponent<MirrorReflection>().ReflectionMirror(_lineRenderer,Vector2.up,this);
+            hit.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(_lineRenderer,Vector2.up,this);
             // 맞은 거울의 반사 스크립트 실행(라인렌더러, 들어가는 방향, 이 오브젝트(local 포지션 계산 위함))
+            hit.transform.GetComponent<LightSensor>()?.ExecutionEvent();
+            // 빛감지 장치면 이벤트 실행
         }
     }
 
