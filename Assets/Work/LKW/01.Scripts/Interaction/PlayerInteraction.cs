@@ -12,7 +12,8 @@ public class PlayerInteraction : MonoBehaviour
 
    public bool canInteract { get; private set; } = false;
 
-   private IInteractable _interactableObject = null;
+   private IInteractable _interactItemObject = null;
+   private IInteractable _previousInteractItemObject = null;
 
    private void OnEnable()
    {
@@ -26,12 +27,11 @@ public class PlayerInteraction : MonoBehaviour
 
    private void HandleInteractEvent()
    {
-      if (canInteract && _interactableObject != null)
+      if (canInteract && _interactItemObject != null)
       {
-         _interactableObject.Interact();
+         _interactItemObject.Interact();
       }
    }
-
 
    private void Update()
    {
@@ -45,14 +45,16 @@ public class PlayerInteraction : MonoBehaviour
       if (collider != null)
       {
          _interactMark.SetActive(true);
-         _interactableObject = collider.GetComponent<IInteractable>();
-         _interactableObject.ShowInteractText();
+         _interactItemObject = collider.GetComponent<IInteractable>();
+         _previousInteractItemObject = _interactItemObject;
+         _interactItemObject.StartInteract();
          canInteract = true;
       }
       else
       {
+         _previousInteractItemObject.EndInteract();
          _interactMark.SetActive(false);
-         _interactableObject = null;
+         _interactItemObject = null;
          canInteract = false;
       }
    }
