@@ -47,12 +47,14 @@ public class PlayerInteraction : MonoBehaviour
          _interactMark.SetActive(true);
          _interactItemObject = collider.GetComponent<IInteractable>();
          _previousInteractItemObject = _interactItemObject;
-         _interactItemObject.StartInteract();
          canInteract = true;
       }
       else
       {
-         _previousInteractItemObject.EndInteract();
+         if (_previousInteractItemObject != null)
+         {
+            _previousInteractItemObject.EndInteract();
+         }
          _interactMark.SetActive(false);
          _interactItemObject = null;
          canInteract = false;
