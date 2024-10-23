@@ -268,9 +268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845f0e0a62c6c574ebe12ddba181bcbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAxis: {fileID: 0}
+  _rotateAxis: {fileID: 0}
+  _playerTrm: {fileID: 0}
   time: 1
   _map: {fileID: 0}
+  _isInteract: 0
 --- !u!61 &4092189528454888239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -376,7 +378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3030030835823660497
 Transform:
   m_ObjectHideFlags: 0
