@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
@@ -9,32 +10,33 @@ using DG.Tweening;
 public class TargetLaser : MonoBehaviour
 {
     public UnityEvent OnHitEvent;
-    
-    [Header("Rotation Settings")]
-    [SerializeField] private bool _isFirst = true;
+
+    [Header("Rotation Settings")] [SerializeField]
+    private bool _isFirst = true;
+
     [SerializeField] private bool _rotationEnable = true;
     [Space(10)] [SerializeField] private float _defaultRotateDeley;
     [SerializeField] private float _rotationCool;
     [SerializeField] private float _rotationDuration;
+
     [Header("Laser Settings")] [SerializeField]
     private float _laserStartValue;
 
     [SerializeField] private float _laserEndValue;
     [SerializeField] private float _laserDuration;
-    [SerializeField] private float _fireLaserDeley;
+    [SerializeField] private float _fireStartLaserDeley;
 
-    [Header("OverlapSize Settings")] [SerializeField]
-    private float _size;
+    [Header("Overlap And Raycast Settings")] [Space(10)] [SerializeField]
+    private LayerMask _rayLayer;
 
+    [SerializeField] private float _size;
     [SerializeField] LayerMask _whatIsPlayer;
-
     [SerializeField] private Transform _target;
-
     [Range(0, 1f)] [SerializeField] private float _rotateSpeed;
 
     private Vector3 _dir;
 
-    private RaycastHit2D _ray;
+    private RaycastHit2D[] _ray;
 
     private Collider2D _collider;
     private LineRenderer _line;
@@ -78,6 +80,7 @@ public class TargetLaser : MonoBehaviour
             {
                 if (!_laserSequence.IsComplete()) return;
             }
+
             if (!_isFirst)
             {
                 DefaultAngle();
@@ -126,17 +129,21 @@ public class TargetLaser : MonoBehaviour
 
     private void ShootRay()
     {
-        _ray = Physics2D.Raycast(transform.position, transform.right);
+        _ray = Physics2D.RaycastAll(transform.position, transform.right, 100, _rayLayer);
 
-        if (_ray)
+        if (_ray != null)
         {
-            _line.SetPosition(1, _ray.point);
+            if (_ray.First().collider.gameObject.layer != LayerMask.NameToLayer("Player"))
+                _line.SetPosition(1, _ray.First().point);
+            else
+                _line.SetPosition(1, _ray[1].point);
         }
     }
 
     private void TargetRotateObj(Transform target = null)
     {
-        if (!target || !_rotationEnable) return;
+        if (!target) return;
+        if (!_rotationEnable) return;
 
         _dir = target.position - transform.position;
 
@@ -144,30 +151,38 @@ public class TargetLaser : MonoBehaviour
 
         transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, angle), _rotateSpeed);
 
-        OnFireLaser();
+        GameObject obj = _ray.First().collider.gameObject;
+        if (obj.layer == LayerMask.NameToLayer("Player") && !_laserSequence.IsActive()) OnFireLaser();
     }
 
     private void OnFireLaser()
     {
         Debug.Log("트윈!");
-        
+
         if (!_laserTween.IsActive())
         {
-            _laserTween = DOTween.To(() => _laserStartValue, x => _line.widthMultiplier = x, _laserEndValue, _laserDuration);
-            _laserTween.Pause();
+            _laserTween = DOTween.To(() => _laserStartValue, x => _line.widthMultiplier = x, _laserEndValue,
+                _laserDuration);
+            // _laserTween.Pause();
         }
 
         if (_laserSequence.IsActive()) return;
+
         _laserSequence = DOTween.Sequence();
-        _laserSequence.AppendInterval(_fireLaserDeley)
-            .Append(_laserTween. OnStart(() => _rotationEnable = false))
-            .AppendInterval(_fireLaserDeley)
+        _laserSequence.PrependInterval(_fireStartLaserDeley / 2)
+            .AppendCallback( () => _rotationEnable = false)
+            .AppendInterval(_fireStartLaserDeley / 2)
+            .Append(_laserTween).OnComplete(() =>
+            {
+                if (_ray.First().collider.gameObject.layer == LayerMask.NameToLayer("Player"))
+                {
+                    OnHitEvent?.Invoke();
+                }
+            })
             .SetLoops(2, LoopType.Yoyo);
-        
         _laserSequence.OnComplete(() =>
         {
             _rotationEnable = true;
-            OnHitEvent?.Invoke();
             _laserTween.Kill();
         });
     }
@@ -182,7 +197,7 @@ public class TargetLaser : MonoBehaviour
         Gizmos.color = Color.white;
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, transform.right);
+        Gizmos.DrawRay(transform.position, transform.right * 100);
     }
 
 #endif
