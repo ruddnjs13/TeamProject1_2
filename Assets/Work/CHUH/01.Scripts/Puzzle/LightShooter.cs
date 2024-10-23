@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LightShooter : MonoBehaviour, IInteractable
 {
+    [SerializeField] private float ShootTime = 1.0f; // ºû ½î´Â ½Ã°£
+    [SerializeField] private float ColTime = 3.0f; // ºû ÄðÅ¸ÀÓ
     private bool isCanLightShoot = true;
     private LineRenderer _lineRenderer;
     private int positionCount = 1;
@@ -14,35 +16,36 @@ public class LightShooter : MonoBehaviour, IInteractable
     }
     private void Start()
     {
-        _lineRenderer.SetPosition(0, Vector3.zero); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½(local ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½Ì°ï¿½ï¿½ï¿½)
+        _lineRenderer.SetPosition(0, Vector3.zero); // ÃÖÃÊÀÇ Á¡ À§Ä¡ ÀÚ½ÅÀ¸·Î(local °è ¾²´Ï±ñ ÀÌ°ÅÀÓ)
     }
     private void FireLight()
     {
         if (!isCanLightShoot) return;
-        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        Debug.Log("ºûÀÌ ÀÖÀ¸¶ó");
         StartCoroutine(LightColtime());
-        _lineRenderer.SetPosition(0, Vector3.zero); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½(local ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½Ì°ï¿½ï¿½ï¿½)
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, 20); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½Ö³ï¿½ Ã¼Å©
-        if (hit.collider != null&&hit.transform.CompareTag("Mirror")) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½Ì¸ï¿½
+        _lineRenderer.SetPosition(0, Vector3.zero); // ÃÖÃÊÀÇ Á¡ À§Ä¡ ÀÚ½ÅÀ¸·Î(local °è ¾²´Ï±ñ ÀÌ°ÅÀÓ)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 20); // ·¹ÀÌ ½÷¼­ °Å·ê ÀÖ³ª Ã¼Å©
+        if (hit.collider != null&&hit.transform.CompareTag("Mirror")) // ´êÀº³ðÀÌ °Å¿ïÀÌ¸é
         {
-            _lineRenderer.positionCount = positionCount + 1; // lineRander ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½Ã¸ï¿½ï¿½ï¿½
-            _lineRenderer.SetPosition(1,transform.InverseTransformPoint(hit.transform.position)); 
-            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½Ã·ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LineRanderï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ï¿½Â°ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½)
-            hit.transform.GetComponent<MirrorReflection>().ReflectionLight(_lineRenderer,Vector2.up,this);
-            // ï¿½ï¿½ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½ ï¿½Ý»ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½Î·ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½î°¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®(local ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½))
+            _lineRenderer.positionCount = positionCount + 1; // lineRander Á¡ °³¼ö 1°³ ´Ã¸®±â
+            _lineRenderer.SetPosition(1,transform.InverseTransformPoint(hit.transform.position));
+            // ´ÙÀ½ Á¡À» ¸ÂÀº °Å¿ïÀÇ À§Ä¡·Î ¼³Á¤(·ÎÄÃ·Î ÀüÈ¯ÇÑ ÀÌÀ¯´Â LineRanderÀÇ ±×·ÁÁö´Â°É ·ÎÄÃ·Î ¼³Á¤ÇØ¼­)
+            MirrorReflection hitMirror = hit.transform.GetComponent<MirrorReflection>();
+            hit.transform.GetComponent<MirrorReflection>().ReflectionMirror(_lineRenderer,Vector2.up,this);
+            // ¸ÂÀº °Å¿ïÀÇ ¹Ý»ç ½ºÅ©¸³Æ® ½ÇÇà(¶óÀÎ·»´õ·¯, µé¾î°¡´Â ¹æÇâ, ÀÌ ¿ÀºêÁ§Æ®(local Æ÷Áö¼Ç °è»ê À§ÇÔ))
         }
     }
 
-    private IEnumerator LightColtime()
+    private IEnumerator LightColtime() // ºû ½î°í, ºûÀÌ ÀÏÁ¤½Ã°£ÈÄ ²¨Áö°í, ÀÏÁ¤½Ã°£ ÈÄ ´Ù½Ã »óÈ£ÀÛ¿ë °¡´É
     {
         isCanLightShoot = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(ShootTime);
         _lineRenderer.positionCount = 1;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(ColTime);
         isCanLightShoot = true;
     }
 
-    public void StartInteract()
+    public void ShowInteractText()
     {
 
     }
