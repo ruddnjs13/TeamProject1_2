@@ -131,7 +131,7 @@ public class TargetLaser : MonoBehaviour
     {
         _ray = Physics2D.RaycastAll(transform.position, transform.right, 100, _rayLayer);
 
-        if (_ray != null)
+        if (_ray.All(x => x.collider.gameObject))
         {
             if (_ray.First().collider.gameObject.layer != LayerMask.NameToLayer("Player"))
                 _line.SetPosition(1, _ray.First().point);
