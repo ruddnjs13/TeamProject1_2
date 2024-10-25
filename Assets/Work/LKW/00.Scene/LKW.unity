@@ -14768,6 +14768,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6501029463714446903, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
+      propertyPath: _jumpPower
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501029463714446903, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: OnDeadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1523298192}
