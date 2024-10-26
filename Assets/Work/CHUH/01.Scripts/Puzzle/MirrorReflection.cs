@@ -10,7 +10,6 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     private BoxCollider2D col;
     private bool isCanReflection = true;
     private bool isCanRotate = true;
-    // Vector.right�� ��������
     private void Awake()
     {
         col = GetComponent<BoxCollider2D>();
@@ -23,20 +22,18 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     private IEnumerator ReflectionLight(LineRenderer line, Vector2 dir, LightShooter shooter)
     {
         yield return new WaitForSeconds(0.2f);
-        col.enabled = false; // �� �ſ��� �¾����� �ٽ� ���� ���ϰ� �ص�(���صθ� ���ֺ��� �ſ￡�� ����ȣ��)
+        col.enabled = false; 
         StartCoroutine(LightColtime());
-        Vector3 reflectionVector = Vector2.Reflect(dir, transform.right); // �Ի簢�� �������ͷ� �ݻ簢 ����.
+        Vector3 reflectionVector = Vector2.Reflect(dir, transform.right); 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, reflectionVector, 20);
-        // Shooteró�� Ray ���� �˻�
         int count = line.positionCount;
         line.positionCount++;
-        // �� ���� �ø���(�ſ￡ �ȸ´��� �������� ������ �� �׷��� �ϴϱ�)
-        if (hit.collider != null) // ����
+        if (hit.collider != null)
         {
-            line.SetPosition(count, shooter.transform.InverseTransformPoint(hit.point)); // �������� �� ���
-            if (hit.transform.CompareTag("Mirror")) // �ſ￡ ��������?
+            line.SetPosition(count, shooter.transform.InverseTransformPoint(hit.point));
+            if (hit.transform.CompareTag("Mirror"))
             {
-                hit.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(line, reflectionVector, shooter); // �׷��� �ٽ� �ݻ�
+                hit.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(line, reflectionVector, shooter);
                 hit.transform.GetComponent<LightSensor>()?.ExecutionEvent();
             }
         }

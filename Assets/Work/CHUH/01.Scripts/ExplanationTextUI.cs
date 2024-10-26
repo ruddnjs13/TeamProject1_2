@@ -10,21 +10,34 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
 {
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private string TypingText;
+    private bool isExplanationUION = false;
 
     private void Start()
     {
         text.enabled = false;
     }
-    public void ShowExplanationText()
+    private void ShowExplanationText()
     {
         Sequence sequence = DOTween.Sequence();
+        text.text = TypingText;
         sequence.Append(image.DOFade(0.6f, 0.25f));
         sequence.OnComplete(() =>
         {
             text.enabled = true;
+            isExplanationUION = true;
             TMPDOText(text, 1.5f);
         });
-
+    }
+    private void HideExplanationText()
+    {
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(image.DOFade(0f, 0.25f));
+        text.enabled = false;
+        sequence.OnComplete(() =>
+        {
+            isExplanationUION = false;
+        });
     }
     
     private void TMPDOText(TextMeshProUGUI text, float duration)
@@ -33,13 +46,26 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
         DOTween.To(x => text.maxVisibleCharacters = (int)x, 0f, text.text.Length, duration).SetEase(Ease.Linear);
     }
 
-    public void ShowInteractText()
+
+    public void StartInteract()
+    {
+
+    }
+
+    public void EndInteract()
     {
 
     }
 
     public void Interact()
     {
-        ShowExplanationText();
+        if(!isExplanationUION)
+        {
+            ShowExplanationText();
+        }
+        else
+        {
+            HideExplanationText();
+        }
     }
 }

@@ -22072,6 +22072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1830554214}
   text: {fileID: 1467998565}
+  TypingText: The void, your power is power of repulsion. i will shackle you.
 --- !u!61 &1060896271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22469,12 +22470,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The void, your power is power of repulsion.
-
-    i will shackle you.'
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b508063fb9d12d4dbae9949e9a5a043, type: 2}
+  m_sharedMaterial: {fileID: 7718405272954342960, guid: 6b508063fb9d12d4dbae9949e9a5a043, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
