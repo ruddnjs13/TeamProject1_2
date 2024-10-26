@@ -12,10 +12,16 @@ public class Player : Agent
     #region MoveSettingRegion
     [Header("MoveSetting")] 
     public float _moveSpeed; 
-    public float _jumpPower;
     public float _wallJumpPower;
     #endregion
 
+    #region JumpSetting
+    public float _jumpPower;
+    public float timeInAir = 0;
+    public float _extraGravity = 10;
+    public float _gravityDelay = 0.2f;
+    #endregion
+    
     [SerializeField] private InputReaderSO _inputReader;
     public InputReaderSO playerInput => _inputReader;
 
