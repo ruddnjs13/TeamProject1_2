@@ -68,4 +68,5 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
             HideExplanationText();
         }
     }
+    // TODO 상호작용중 움직임 봉인(플레이어 건들어야 할 것 같아서 나중에 경원이 한테 말해야 함.)
 }

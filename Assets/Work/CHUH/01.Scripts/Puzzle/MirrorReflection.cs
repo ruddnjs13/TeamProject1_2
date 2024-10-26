@@ -8,7 +8,6 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     Ray ray;
     Ray ray2;
     private BoxCollider2D col;
-    private bool isCanReflection = true;
     private bool isCanRotate = true;
     private void Awake()
     {
@@ -44,11 +43,9 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     }
     private IEnumerator LightColtime()
     {
-        isCanReflection = false;
         yield return new WaitForSeconds(1);
         col.enabled = true;
         yield return new WaitForSeconds(3);
-        isCanReflection = true;
     }
 
 
@@ -58,7 +55,7 @@ public class MirrorReflection : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (!isCanReflection) return;
+        if (!isCanRotate) return;
         Sequence sequence = DOTween.Sequence();
         isCanRotate = false;
         col.enabled = false;

@@ -30,7 +30,8 @@ public class LightShooter : MonoBehaviour, IInteractable
             _lineRenderer.positionCount = positionCount + 1;
             _lineRenderer.SetPosition(1,transform.InverseTransformPoint(hit.transform.position));
             MirrorReflection hitMirror = hit.transform.GetComponent<MirrorReflection>();
-            hit.transform.GetComponent<MirrorReflection>().ReflectionMirror(_lineRenderer,Vector2.up,this);
+            hit.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(_lineRenderer, Vector2.up, this);
+            hit.transform.GetComponent<LightSensor>()?.ExecutionEvent();
         }
     }
 
