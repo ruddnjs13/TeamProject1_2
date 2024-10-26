@@ -178,10 +178,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3602671108239603216}
   - component: {fileID: 2622386754993283725}
-  - component: {fileID: 6392445894445344028}
   - component: {fileID: 4092189528454888239}
+  - component: {fileID: 5315096212762798809}
   m_Layer: 10
-  m_Name: RotateMap
+  m_Name: RotateMap2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +245,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.46511203, g: 0.64033616, b: 0.735849, a: 1}
+  m_Color: {r: 0.8867924, g: 0.34300452, b: 0.3633947, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -255,23 +255,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6392445894445344028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6548223034633274222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 845f0e0a62c6c574ebe12ddba181bcbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rotateAxis: {fileID: 0}
-  _playerTrm: {fileID: 0}
-  time: 1
-  _map: {fileID: 0}
-  _isInteract: 0
 --- !u!61 &4092189528454888239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -317,6 +300,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5315096212762798809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548223034633274222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7209a1ce45e1e419fad074a606fed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotateAxis: {fileID: 0}
+  _playerTrm: {fileID: 0}
+  time: 1.8
+  _map: {fileID: 0}
+  _isInteract: 0
 --- !u!1 &8254288714236663500
 GameObject:
   m_ObjectHideFlags: 0
