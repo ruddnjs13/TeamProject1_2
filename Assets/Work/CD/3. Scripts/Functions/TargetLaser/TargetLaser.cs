@@ -22,6 +22,8 @@ public class TargetLaser : MonoBehaviour
     [Header("Laser Settings")] [SerializeField]
     private float _laserStartValue;
 
+    [SerializeField] private float _laserRange;
+
     [SerializeField] private float _laserEndValue;
     [SerializeField] private float _laserDuration;
     [SerializeField] private float _fireStartLaserDeley;
@@ -129,7 +131,7 @@ public class TargetLaser : MonoBehaviour
 
     private void ShootRay()
     {
-        _ray = Physics2D.RaycastAll(transform.position, transform.right, 100, _rayLayer);
+        _ray = Physics2D.RaycastAll(transform.position, transform.right, _laserRange, _rayLayer);
 
         if (_ray.All(x => x.collider.gameObject))
         {
@@ -197,7 +199,7 @@ public class TargetLaser : MonoBehaviour
         Gizmos.color = Color.white;
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, transform.right * 100);
+        Gizmos.DrawRay(transform.position, transform.right * _laserRange);
     }
 
 #endif
