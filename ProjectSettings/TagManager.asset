@@ -40,20 +40,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 1836993493
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Agent
-    uniqueID: 3308201887
-    locked: 0
-  - name: Front
-    uniqueID: 1816825549
     locked: 0
   - name: Back
     uniqueID: 1550923491
     locked: 0
-  - name: BackGround
-    uniqueID: 1836993493
+  - name: Front
+    uniqueID: 1816825549
+    locked: 0
+  - name: Agent
+    uniqueID: 3308201887
     locked: 0
   - name: FakeTiles
     uniqueID: 1297044481

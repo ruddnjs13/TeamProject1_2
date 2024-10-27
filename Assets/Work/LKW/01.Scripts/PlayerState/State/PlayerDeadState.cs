@@ -14,6 +14,7 @@ public class PlayerDeadState : PlayerState
 
     public override void Enter()
     {
+        _player.StopImmediately(true);
         _player.OnDeadEvent?.Invoke();
     }
 }
