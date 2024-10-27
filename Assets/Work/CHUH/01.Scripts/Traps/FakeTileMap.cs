@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class FakeTileMap : MonoBehaviour
 {
     private Tilemap tilemap;
+    [SerializeField] private Tilemap subTile;
     private Color tilemapColor;
     private void Awake()
     {
@@ -30,17 +31,19 @@ public class FakeTileMap : MonoBehaviour
     {
         for (float i = 0; i <= 1.1f; i += 0.1f)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.015f);
             tilemapColor = tilemap.color;
             if (inOut)
             {
                 tilemapColor.a = i;
                 tilemap.color = tilemapColor;
+                subTile.color = tilemapColor;
             }
             else
             {
                 tilemapColor.a = 1 - i;
                 tilemap.color = tilemapColor;
+                subTile.color = tilemapColor;
             }
         }
     }

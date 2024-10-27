@@ -22,10 +22,29 @@ public class PlayerAirState : PlayerState
     public override void StateUpdate()
     {
         base.StateUpdate();
-        if (Mathf.Abs(_player.playerInput.Movement.x) > 0 && 
-            _player.CheckWall(_player.playerInput.Movement.x))
+        CalculateTime();
+        ApplyExtraGravity();
+        
+    }
+    
+    private void CalculateTime()
+    {
+        if (!_player.IsGround.Value)
         {
-            //_stateMachine.ChangeState(PlayerStateEnum.WallGrab);
+            _player.timeInAir += Time.deltaTime;
+        }
+        else
+        {
+            _player.timeInAir = 0;
+        }
+    }
+
+    private void ApplyExtraGravity()
+    {
+        if (_player.timeInAir > _player._gravityDelay)
+        {
+            _player.RbCompo.AddForce(Vector2.down * _player._extraGravity, ForceMode2D.Impulse);
+            _player.timeInAir = 0f;
         }
     }
 }

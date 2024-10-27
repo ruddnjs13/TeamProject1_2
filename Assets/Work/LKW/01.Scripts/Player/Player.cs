@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
 
@@ -11,12 +12,20 @@ public class Player : Agent
     #region MoveSettingRegion
     [Header("MoveSetting")] 
     public float _moveSpeed; 
-    public float _jumpPower;
     public float _wallJumpPower;
     #endregion
 
+    #region JumpSetting
+    public float _jumpPower;
+    public float timeInAir = 0;
+    public float _extraGravity = 10;
+    public float _gravityDelay = 0.2f;
+    #endregion
+    
     [SerializeField] private InputReaderSO _inputReader;
     public InputReaderSO playerInput => _inputReader;
+
+    public UnityEvent OnDeadEvent;
 
     [FormerlySerializedAs("_isDahing")] public bool _isDashing = false;
     
@@ -53,6 +62,12 @@ public class Player : Agent
         CheckGround();
         StateMachine.CurrentState.StateUpdate();
     }
-    
-   
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            StateMachine.ChangeState(PlayerStateEnum.Dead);
+        }
+    }
 }
