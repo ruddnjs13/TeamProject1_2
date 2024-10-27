@@ -1,18 +1,13 @@
-    using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using DG.Tweening;
-using DG.Tweening.Core;
-using DG.Tweening.Plugins.Options;
 
 public class FastDeadBlockDot : MonoBehaviour
 {
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    public static void asdfjlksda()
-    {
-        Debug.Log("ㄴㅇㅁ러ㅣㅏㅁㄴ어리ㅏㄴㅁㅇㄹ ");
-    }
+    public UnityEvent OnHit;
     
     [SerializeField] private float _position;
     [SerializeField] private float _delayUpSecond, _delayDownSecond;
@@ -41,6 +36,15 @@ public class FastDeadBlockDot : MonoBehaviour
         _sequence.Append(_tween);
         _sequence.AppendInterval(_delayDownSecond);
         _sequence.Append(_tween2);
-        _sequence.OnComplete(() => _sequence.Restart()); 
+        _sequence.OnComplete(() => _sequence.Restart());
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer ==LayerMask.NameToLayer("Player"))
+        {
+            OnHit?.Invoke();
+        }
     }
 }
