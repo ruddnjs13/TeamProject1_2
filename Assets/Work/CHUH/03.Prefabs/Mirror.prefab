@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2291227390963079131}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4822080983893284901}
   - component: {fileID: 7844243497608230375}
   - component: {fileID: 2279287117512926575}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Reflection
   m_TagString: Mirror
   m_Icon: {fileID: 0}

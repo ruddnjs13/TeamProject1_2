@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6022462660134429863}
   - component: {fileID: 3115030837876777027}
   - component: {fileID: 1098976435833269421}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LightHolder
   m_TagString: Mirror
   m_Icon: {fileID: 0}
@@ -143,6 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799cdc86bfb303c4595aeabcba9255ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Active:
-    m_PersistentCalls:
-      m_Calls: []
+  ActiveObj: {fileID: 0}
