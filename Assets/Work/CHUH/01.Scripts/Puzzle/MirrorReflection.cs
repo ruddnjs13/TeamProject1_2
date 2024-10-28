@@ -49,10 +49,6 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     }
 
 
-    public void StartInteract()
-    {
-    }
-
     public void Interact()
     {
         if (!isCanRotate) return;
