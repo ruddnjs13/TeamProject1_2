@@ -7,7 +7,6 @@ public class LightShooter : MonoBehaviour, IInteractable
 {
     [SerializeField] private float ShootTime = 1.0f; 
     [SerializeField] private float Colltime = 3.0f;
-    [SerializeField] private LayerMask WhatIsNotPlayer;
     private bool isCanLightShoot = true;
     private LineRenderer _lineRenderer;
     private int positionCount = 1;
@@ -25,7 +24,7 @@ public class LightShooter : MonoBehaviour, IInteractable
         Debug.Log("¹ßÁø");
         StartCoroutine(LightColtime());
         _lineRenderer.SetPosition(0, Vector3.zero);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position+transform.right, transform.right, 20, WhatIsNotPlayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position+transform.right, transform.right, 20);
         if (hit.collider != null)
         {
             if (hit.collider.transform.CompareTag("Mirror"))
