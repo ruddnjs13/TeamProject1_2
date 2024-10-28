@@ -47,11 +47,6 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     }
 
 
-    public void StartInteract()
-    {
-
-    }
-
     public void EndInteract()
     {
 
