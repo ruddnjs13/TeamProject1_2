@@ -4,7 +4,6 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void StartInteract();
     void Interact();
 
     void EndInteract();

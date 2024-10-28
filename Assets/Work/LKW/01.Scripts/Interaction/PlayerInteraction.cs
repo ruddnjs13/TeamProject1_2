@@ -10,7 +10,7 @@ public class PlayerInteraction : MonoBehaviour
    [SerializeField] private LayerMask _interactionLayer;
    [SerializeField] private GameObject _interactMark;
 
-   public bool canInteract { get; private set; } = false;
+   public bool canInteract { get; private set; } = true;
 
    private IInteractable _interactItemObject = null;
    private IInteractable _previousInteractItemObject = null;
@@ -29,6 +29,8 @@ public class PlayerInteraction : MonoBehaviour
    {
       if (canInteract && _interactItemObject != null)
       {
+         canInteract = false;
+         _interactMark.SetActive(false);
          _interactItemObject.Interact();
       }
    }
@@ -42,22 +44,21 @@ public class PlayerInteraction : MonoBehaviour
    {
       Collider2D collider = Physics2D.OverlapCircle(_interactionTrm.position
          , _interactionRadius, _interactionLayer);
-      if (collider != null)
+      if (canInteract && collider != null)
       {
          _interactMark.SetActive(true);
          _interactItemObject = collider.GetComponent<IInteractable>();
          _previousInteractItemObject = _interactItemObject;
-         canInteract = true;
       }
-      else
+      else if (collider == null)
       {
+         _interactMark.SetActive(false);
+         _interactItemObject = null;
+         canInteract = true;
          if (_previousInteractItemObject != null)
          {
             _previousInteractItemObject.EndInteract();
          }
-         _interactMark.SetActive(false);
-         _interactItemObject = null;
-         canInteract = false;
       }
    }
 

@@ -3,26 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
     [SerializeField] private float _reBirthTime = 2f;
     [SerializeField] private GameObject _rotateAxis;
     
-    public static GameManager instance;
 
     public CheckPoint currentCheckpoint;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void EnableCheckPoint(CheckPoint newCheckPoint)
     {
