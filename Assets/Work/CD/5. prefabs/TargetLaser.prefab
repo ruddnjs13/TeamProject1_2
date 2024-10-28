@@ -108,7 +108,7 @@ MonoBehaviour:
   _rotationCool: 1
   _rotationDuration: 8
   _laserStartValue: 1
-  _laserRange: 10
+  _laserRange: 100
   _laserEndValue: 40
   _laserDuration: 0.2
   _fireStartLaserDeley: 2
