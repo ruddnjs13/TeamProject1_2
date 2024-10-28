@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
+using UnityEngine.Serialization;
 
 
 public class TargetLaser : MonoBehaviour
@@ -33,12 +34,13 @@ public class TargetLaser : MonoBehaviour
 
     [SerializeField] private float _size;
     [SerializeField] LayerMask _whatIsPlayer;
-    [SerializeField] private Transform _target;
+    [SerializeField] private Transform _rangeTarget;
+    [SerializeField] private Transform _checkTarget;
     [Range(0, 1f)] [SerializeField] private float _rotateSpeed;
 
     private Vector3 _dir;
 
-    private RaycastHit2D[] _ray;
+    private RaycastHit2D[] _ray = new RaycastHit2D[10];
 
     private Collider2D _collider;
     private LineRenderer _line;
@@ -56,6 +58,11 @@ public class TargetLaser : MonoBehaviour
         _line.SetPosition(0, transform.position);
     }
 
+    private void OnEnable()
+    {
+        _rangeTarget.localScale = new Vector3(_size * 2, _size * 2, 1);
+    }
+
     private void Update()
     {
         ShootRay();
@@ -65,7 +72,7 @@ public class TargetLaser : MonoBehaviour
     public void TargetFind()
     {
         _collider = Physics2D.OverlapCircle(transform.position, _size, _whatIsPlayer);
-
+        
         if (_collider != null)
         {
             if (_isFirst) _isFirst = false;
@@ -131,14 +138,16 @@ public class TargetLaser : MonoBehaviour
 
     private void ShootRay()
     {
-        _ray = Physics2D.RaycastAll(transform.position, transform.right, _laserRange, _rayLayer);
+        int filterRay = Physics2D.RaycastNonAlloc(transform.position, transform.right, _ray, _laserRange, _rayLayer);
 
-        if (_ray.All(x => x.collider.gameObject))
+        if (filterRay > 0)
         {
-            if (_ray.First().collider.gameObject.layer != LayerMask.NameToLayer("Player"))
-                _line.SetPosition(1, _ray.First().point);
-            else
-                _line.SetPosition(1, _ray[1].point);
+            _line.SetPosition(1,
+                _ray.FirstOrDefault(a => a.collider.gameObject).collider.gameObject.layer !=
+                LayerMask.NameToLayer("Player")
+                    ? _ray.FirstOrDefault(a => a.collider.gameObject).point
+                    : _ray[1].point
+            );
         }
     }
 

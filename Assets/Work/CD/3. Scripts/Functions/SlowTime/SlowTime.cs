@@ -6,27 +6,37 @@ using UnityEngine.Events;
  
 public class SlowTime : MonoBehaviour
 {
-    public UnityEvent OnTimeSlowPlay;
-    public UnityEvent OnTimeSlowStop;
+    [SerializeField] private float _duration;
+    
+    public UnityEvent OnUse;
 
-    private void Update()
+    [SerializeField] private bool _isUse;
+    
+    private Coroutine _myCoroutine;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        InputSet();
+        if (_isUse) return;
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            OnUse?.Invoke();
+            _myCoroutine = StartCoroutine(SkillDuration());
+        }
+
     }
 
-    private void InputSet()
+    private IEnumerator SkillDuration()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            OnTimeSlowPlay?.Invoke();
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            OnTimeSlowStop?.Invoke();
-        }
-        else
-        {
-            return;
-        }
+        _isUse = true;
+        
+        yield return new WaitForSeconds(_duration);
+
+        DestroyItem();
+    }
+        
+    private void DestroyItem()
+    {
+        this._isUse = false;
+        this.gameObject.SetActive(false);
     }
 }
