@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotateAxis: {fileID: 0}
   _playerTrm: {fileID: 0}
-  time: 1.8
+  time: 1.4
   _map: {fileID: 0}
   _isInteract: 0
 --- !u!1 &8254288714236663500

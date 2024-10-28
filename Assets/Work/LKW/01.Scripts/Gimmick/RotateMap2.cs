@@ -2,18 +2,19 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RotateMap2 : MonoBehaviour,IInteractable
 {
-    [SerializeField] private Transform _rotateAxis;
-    [SerializeField] private Transform _playerTrm;
-    [SerializeField] private float time;
-    [SerializeField] private GameObject _map;
+    private Transform _rotateAxis;
+    private Transform _playerTrm;
+    private float _time;
+    private GameObject _grid;
     private GameObject _showDirection;
     
     private PlayerInteraction _playerInteraction;
     private bool isRotate = false;
-    public bool _isInteract = false;
+    [FormerlySerializedAs("_isInteract")] public bool _canRotate = false;
 
     private Quaternion _leftRot, _rightRot;
 
@@ -30,16 +31,27 @@ public class RotateMap2 : MonoBehaviour,IInteractable
 
     private void Update()
     {
-        if (!_isInteract)
+        ChooseDirectionAndStart();
+    }
+    private void ChooseDirectionAndStart()
+    {
+        if (!_canRotate)
         {
             return;
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+
+        if (Input.GetKeyDown(KeyCode.Q))
         {
+            RotateManager.Instance.CurrentRotationIdx = (RotateManager.Instance.CurrentRotationIdx + 2) % 4;
             MapRotate(_leftRot);
         }
         else if (Input.GetKeyUp(KeyCode.E))
         {
+            RotateManager.Instance.CurrentRotationIdx -= 2;
+            if (RotateManager.Instance.CurrentRotationIdx < 0)
+            {
+                RotateManager.Instance.CurrentRotationIdx = 3+ RotateManager.Instance.CurrentRotationIdx;
+            }
             MapRotate(_rightRot);
         }
     }
@@ -51,11 +63,11 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         
         StopAllCoroutines();
         
-        Vector3 previousPos = _map.transform.position;
+        Vector3 previousPos = _grid.transform.position;
 
         _rotateAxis.transform.position = _playerTrm.position;
         
-        _map.transform.position = previousPos;
+        _grid.transform.position = previousPos;
         
         isRotate = true;
         
@@ -76,7 +88,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         while (percent < 1)
         {
             current += Time.deltaTime;
-            percent = current / time;
+            percent = current / _time;
 
             _rotateAxis.transform.rotation = Quaternion.Lerp(start, target, percent);
             yield return null;
@@ -86,25 +98,34 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         yield return new WaitForSeconds(0.4f);
         Physics2D.gravity = new Vector2(0, -9.81f);
         isRotate = false;
-        _isInteract = false;
+        _canRotate = false;
         
-    }
-
-    public void StartInteract()
-    {
-        _isInteract = true;
-        _showDirection.SetActive(true);
     }
 
     public void Interact()
     {
-        Debug.Log("상호작용가능");
-        StartInteract();
+        Debug.Log(transform.localEulerAngles.z);
+        Debug.Log(RotateManager.Instance.CurrentRotationIdx);
+        Debug.Log(RotateManager.Instance._rotations1[RotateManager.Instance.CurrentRotationIdx]);
+        if (transform.localEulerAngles.z ==
+            RotateManager.Instance._rotations1[RotateManager.Instance.CurrentRotationIdx])
+        {
+            _canRotate = true;
+            _showDirection.SetActive(true);
+        }
     }
 
     public void EndInteract()
     {
-        _isInteract = false;
+        _canRotate = false;
         _showDirection.SetActive(false);
+    }
+    
+    public void Initialize(Transform playerTrm, Transform rotateAxis, GameObject grid, float time)
+    {
+        _playerTrm = playerTrm;
+        _rotateAxis = rotateAxis;
+        _grid = grid;
+        _time = time;
     }
 }
