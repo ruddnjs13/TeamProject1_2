@@ -30,10 +30,10 @@ public class MirrorReflection : MonoBehaviour, IInteractable
         if (hit.collider != null)
         {
             line.SetPosition(count, shooter.transform.InverseTransformPoint(hit.point));
-            if (hit.transform.CompareTag("Mirror"))
+            if (hit.collider.transform.CompareTag("Mirror"))
             {
-                hit.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(line, reflectionVector, shooter);
-                hit.transform.GetComponent<LightSensor>()?.ExecutionEvent();
+                hit.collider.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(line, reflectionVector, shooter);
+                hit.collider.transform.GetComponent<LightSensor>()?.ExecutionEvent();
             }
         }
         else
