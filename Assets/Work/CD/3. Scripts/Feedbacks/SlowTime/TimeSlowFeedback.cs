@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TimeSlowFeedback : Feedback
 {
-    private float previousTimeScale = .0f;
-    private float previousFixedDelta = .0f;
+    private float _previousTimeScale = .0f;
+    private float _previousFixedDelta = .0f;
     
     public override void PlayFeedback()
     {
@@ -20,15 +20,15 @@ public class TimeSlowFeedback : Feedback
     private void StopSlow()
     {
         Debug.Log("그만!");
-        Time.timeScale = previousTimeScale;
-        Time.fixedDeltaTime = previousFixedDelta;
+        Time.timeScale = _previousTimeScale;
+        Time.fixedDeltaTime = _previousFixedDelta;
     }
 
     private void Slow()
     {
         Debug.Log("얍!");
-        previousTimeScale = Time.timeScale;
-        previousFixedDelta = Time.fixedDeltaTime;
+        _previousTimeScale = Time.timeScale;
+        _previousFixedDelta = Time.fixedDeltaTime;
         Time.timeScale = 0.5f;
         Time.fixedDeltaTime = Time.timeScale * .02f;
     }

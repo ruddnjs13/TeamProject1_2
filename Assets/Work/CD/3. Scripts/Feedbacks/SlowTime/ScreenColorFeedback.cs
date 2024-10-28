@@ -14,7 +14,7 @@ public class ScreenColorFeedback : Feedback
             _light = GameObject.Find("Light 2D").GetComponent<Light2D>();
         }
         _previousColor = _light.color;
-        _light.color = Color.blue;
+        _light.color = Color.cyan;
     }
 
     public override void StopFeedback()
