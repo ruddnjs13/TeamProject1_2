@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class RotateManager : MonoSingleton<RotateManager>
 {
-    
+    public Action MapRotateEvent;
     
     [SerializeField] private RotateMap1[] _rotateMap1s;
     [SerializeField] private RotateMap2[] _rotateMap2s;
@@ -37,4 +37,6 @@ public class RotateManager : MonoSingleton<RotateManager>
             item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime2);
         }
     }
+    
+    
 }
