@@ -11,6 +11,7 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private string TypingText;
+    [SerializeField] private float TypingTime;
     private bool isExplanationUION = false;
 
     private void Start()
@@ -26,7 +27,7 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
         {
             text.enabled = true;
             isExplanationUION = true;
-            TMPDOText(text, 1.5f);
+            TMPDOText(text, TypingTime);
         });
     }
     private void HideExplanationText()
