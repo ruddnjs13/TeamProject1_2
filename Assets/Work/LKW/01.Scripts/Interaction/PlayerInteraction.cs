@@ -1,4 +1,5 @@
 using System;
+using Cinemachine;
 using Cinemachine.Utility;
 using UnityEngine;
 
@@ -10,10 +11,17 @@ public class PlayerInteraction : MonoBehaviour
    [SerializeField] private LayerMask _interactionLayer;
    [SerializeField] private GameObject _interactMark;
 
+   private Player _player;
+
    public bool canInteract { get; private set; } = true;
 
    private IInteractable _interactItemObject = null;
    private IInteractable _previousInteractItemObject = null;
+
+   private void Awake()
+   {
+      _player = GetComponentInParent<Player>();
+   }
 
    private void OnEnable()
    {

@@ -14,7 +14,7 @@ public class RotateMap1 : MonoBehaviour,IInteractable
     
     private PlayerInteraction _playerInteraction;
     private bool isRotate = false;
-    [FormerlySerializedAs("_isInteract")] public bool _canRotate = false;
+    public bool _canRotate = false;
 
     private Quaternion _leftRot, _rightRot;
 
@@ -40,12 +40,9 @@ public class RotateMap1 : MonoBehaviour,IInteractable
         {
             return;
         }
-
         if (Input.GetKeyDown(KeyCode.Q))
         {
             RotateManager.Instance.CurrentRotationIdx = ++RotateManager.Instance.CurrentRotationIdx % 4;
-
-            
             MapRotate(_leftRot);
         }
         else if (Input.GetKeyUp(KeyCode.E))
@@ -101,7 +98,7 @@ public class RotateMap1 : MonoBehaviour,IInteractable
         Physics2D.gravity = new Vector2(0, -9.81f);
         isRotate = false;
         _canRotate = false;
-        
+        RotateManager.Instance.MapRotateEvent?.Invoke();
     }
 
     public void Interact()
@@ -115,7 +112,6 @@ public class RotateMap1 : MonoBehaviour,IInteractable
             _canRotate = true;
             _showDirection.SetActive(true);
         }
-        
     }
 
     public void EndInteract()

@@ -23,11 +23,13 @@ public class Player : Agent
     #endregion
     
     [SerializeField] private InputReaderSO _inputReader;
+
     public InputReaderSO playerInput => _inputReader;
+    
 
     public UnityEvent OnDeadEvent;
 
-    [FormerlySerializedAs("_isDahing")] public bool _isDashing = false;
+    public bool _isDashing = false;
     
     public PlayerStateMachine StateMachine { get; private set; }
 
@@ -50,7 +52,25 @@ public class Player : Agent
             }
         }
     }
-    
+
+    private void OnEnable()
+    {
+        RotateManager.Instance.MapRotateEvent += HandleMapRotateEvent;
+    }
+
+    private void OnDisable()
+    {
+        if (RotateManager.Instance != null)
+        {
+            RotateManager.Instance.MapRotateEvent -= HandleMapRotateEvent;
+        }
+    }
+
+    private void HandleMapRotateEvent()
+    {
+        playerInput.RockInput(true);
+    }
+
     private void Start()
     {
         StateMachine.Initialize(this, PlayerStateEnum.Idle);
@@ -70,4 +90,6 @@ public class Player : Agent
             StateMachine.ChangeState(PlayerStateEnum.Dead);
         }
     }
+
+    
 }
