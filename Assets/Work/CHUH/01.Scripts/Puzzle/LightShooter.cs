@@ -49,14 +49,6 @@ public class LightShooter : MonoBehaviour, IInteractable
         isCanLightShoot = true;
     }
 
-    public void ShowInteractText()
-    {
-
-    }
-
-    public void StartInteract()
-    {
-    }
 
     public void Interact()
     {
