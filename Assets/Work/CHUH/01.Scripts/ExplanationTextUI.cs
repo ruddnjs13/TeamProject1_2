@@ -11,6 +11,7 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private string TypingText;
+    [SerializeField] private float TypingTime;
     private bool isExplanationUION = false;
 
     private void Start()
@@ -26,7 +27,7 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
         {
             text.enabled = true;
             isExplanationUION = true;
-            TMPDOText(text, 1.5f);
+            TMPDOText(text, TypingTime);
         });
     }
     private void HideExplanationText()
@@ -46,11 +47,6 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
         DOTween.To(x => text.maxVisibleCharacters = (int)x, 0f, text.text.Length, duration).SetEase(Ease.Linear);
     }
 
-
-    public void StartInteract()
-    {
-
-    }
 
     public void EndInteract()
     {

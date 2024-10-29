@@ -39,7 +39,6 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         {
             return;
         }
-
         if (Input.GetKeyDown(KeyCode.Q))
         {
             RotateManager.Instance.CurrentRotationIdx = (RotateManager.Instance.CurrentRotationIdx + 2) % 4;
@@ -50,7 +49,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
             RotateManager.Instance.CurrentRotationIdx -= 2;
             if (RotateManager.Instance.CurrentRotationIdx < 0)
             {
-                RotateManager.Instance.CurrentRotationIdx = 3+ RotateManager.Instance.CurrentRotationIdx;
+                RotateManager.Instance.CurrentRotationIdx = 3+ RotateManager.Instance.CurrentRotationIdx+1;
             }
             MapRotate(_rightRot);
         }
@@ -99,7 +98,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         Physics2D.gravity = new Vector2(0, -9.81f);
         isRotate = false;
         _canRotate = false;
-        
+        RotateManager.Instance.MapRotateEvent?.Invoke();
     }
 
     public void Interact()

@@ -11,6 +11,7 @@ public enum PlayerStateEnum
     Move,
     Jump,
     Fall,
+    FallDown,
     Dead
 }
 

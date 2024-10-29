@@ -27,12 +27,11 @@ public class LightShooter : MonoBehaviour, IInteractable
         RaycastHit2D hit = Physics2D.Raycast(transform.position+transform.right, transform.right, 20);
         if (hit.collider != null)
         {
+            _lineRenderer.positionCount = positionCount + 1;
+            _lineRenderer.SetPosition(1, transform.InverseTransformPoint(hit.collider.transform.position));
             if (hit.collider.transform.CompareTag("Mirror"))
             {
                 Debug.Log("거울에맞음");
-                _lineRenderer.positionCount = positionCount + 1;
-                _lineRenderer.SetPosition(1, transform.InverseTransformPoint(hit.collider.transform.position));
-                MirrorReflection hitMirror = hit.transform.GetComponent<MirrorReflection>();
                 hit.collider.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(_lineRenderer, Vector2.right, this);
                 hit.collider.transform.GetComponent<LightSensor>()?.ExecutionEvent();
             }
@@ -49,14 +48,6 @@ public class LightShooter : MonoBehaviour, IInteractable
         isCanLightShoot = true;
     }
 
-    public void ShowInteractText()
-    {
-
-    }
-
-    public void StartInteract()
-    {
-    }
 
     public void Interact()
     {
