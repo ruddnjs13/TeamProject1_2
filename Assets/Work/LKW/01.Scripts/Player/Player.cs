@@ -23,7 +23,6 @@ public class Player : Agent
     #endregion
     
     [SerializeField] private InputReaderSO _inputReader;
-
     public InputReaderSO playerInput => _inputReader;
     
 
@@ -51,24 +50,6 @@ public class Player : Agent
                 StateMachine.AddState(stateEnum, state);
             }
         }
-    }
-
-    private void OnEnable()
-    {
-        RotateManager.Instance.MapRotateEvent += HandleMapRotateEvent;
-    }
-
-    private void OnDisable()
-    {
-        if (RotateManager.Instance != null)
-        {
-            RotateManager.Instance.MapRotateEvent -= HandleMapRotateEvent;
-        }
-    }
-
-    private void HandleMapRotateEvent()
-    {
-        playerInput.RockInput(true);
     }
 
     private void Start()
