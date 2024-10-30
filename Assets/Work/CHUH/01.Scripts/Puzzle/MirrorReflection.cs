@@ -43,7 +43,7 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     }
     private IEnumerator LightColtime()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         col.enabled = true;
         yield return new WaitForSeconds(3);
     }
