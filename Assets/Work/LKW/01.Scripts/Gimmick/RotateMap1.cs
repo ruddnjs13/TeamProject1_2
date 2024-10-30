@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class RotateMap1 : MonoBehaviour,IInteractable
 {
+    public UnityEvent EndRotateEvent;
+    public UnityEvent StartRotateEvent;
     private Transform _playerTrm;
     private float _time;
     private GameObject _grid;
@@ -31,10 +34,10 @@ public class RotateMap1 : MonoBehaviour,IInteractable
 
     private void Update()
     {
-        ChoosDirectionAndStart();
+        ChooseDirectionAndStart();
     }
 
-    private void ChoosDirectionAndStart()
+    private void ChooseDirectionAndStart()
     {
         if (!_canRotate)
         {
@@ -56,10 +59,10 @@ public class RotateMap1 : MonoBehaviour,IInteractable
         }
     }
 
-    public void MapRotate(Quaternion direction)
+    private void MapRotate(Quaternion direction)
     {
         if (isRotate) return;
-        
+        StartRotateEvent?.Invoke();
         
         StopAllCoroutines();
         
@@ -98,7 +101,7 @@ public class RotateMap1 : MonoBehaviour,IInteractable
         Physics2D.gravity = new Vector2(0, -9.81f);
         isRotate = false;
         _canRotate = false;
-        RotateManager.Instance.MapRotateEvent?.Invoke();
+        EndRotateEvent?.Invoke();
     }
 
     public void Interact()

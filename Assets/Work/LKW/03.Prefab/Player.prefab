@@ -470,7 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _whatIsGround:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 33024
   _boxSize: {x: 0.5, y: 0.2}
   _boxTrm: {fileID: 264613250602415233}
   _whatIsWall:

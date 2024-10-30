@@ -9,18 +9,26 @@ public class LightSensor : MonoBehaviour
     private ISwitchble active;
     private void OnValidate()
     {
-        if(ActiveObj as ISwitchble == null)
+        if (ActiveObj !=null && ActiveObj as ISwitchble == null)
         {
-            Debug.LogError("This Object is not succession ISwitchble. Put in ISwitchble Obj");
+            ActiveObj = null;
+            Debug.LogWarning("This Object is not succession ISwitchble. Put in ISwitchble Obj");
         }
     }
     private void Awake()
     {
-        active = ActiveObj as ISwitchble;
+        try
+        {
+            active = (ISwitchble)ActiveObj;
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"ActiveObj is not succession ISwitchble. Message : {ex}");
+        }
     }
     public void ExecutionEvent()
     {
         active.SwitchOnoff(true);
     }
-    
+
 }

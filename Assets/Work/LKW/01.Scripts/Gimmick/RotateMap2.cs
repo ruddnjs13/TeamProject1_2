@@ -2,10 +2,14 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class RotateMap2 : MonoBehaviour,IInteractable
 {
+    public UnityEvent EndRotateEvent;
+    public UnityEvent StartRotateEvent;
+    
     private Transform _rotateAxis;
     private Transform _playerTrm;
     private float _time;
@@ -59,7 +63,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
     {
         if (isRotate) return;
         
-        
+        StartRotateEvent?.Invoke();
         StopAllCoroutines();
         
         Vector3 previousPos = _grid.transform.position;
@@ -98,7 +102,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         Physics2D.gravity = new Vector2(0, -9.81f);
         isRotate = false;
         _canRotate = false;
-        RotateManager.Instance.MapRotateEvent?.Invoke();
+        EndRotateEvent?.Invoke();
     }
 
     public void Interact()
