@@ -3,25 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour, ISwitchble
+public class OpenDoor : MonoBehaviour, ISwitchable
 {
     private SpriteRenderer spriteRenderer;
     [SerializeField] private float moveRange = 5f;
     [SerializeField] private float duration = 1f;
+    [SerializeField] private Vector2 StartPos;
     private void Awake()
     {
+        StartPos = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    public void SwitchOnoff(bool onoff)
+
+    public void Activate()
     {
-        if (onoff == true)
-        {
-            Debug.Log("작동");
-            transform.DOLocalMove(transform.position + transform.up * moveRange, duration);
-        }
-        else
-        {
-            Debug.Log("꺼지");
-        }
+        Debug.Log("작동");
+        transform.DOLocalMove(transform.position + transform.up * moveRange, duration);
+    }
+    public void Deactivate()
+    {
+        Debug.Log("작동 해제");
+        transform.DOLocalMove(StartPos, duration);
     }
 }
