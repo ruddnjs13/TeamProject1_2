@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class Multiplexer : MonoBehaviour, ISwitchable
 {
-    [SerializeField] private List<ISwitchable> SwitchList = new List<ISwitchable>();
     [SerializeField] private int maxActiveCount;
     [SerializeField] private int nowActiveCount;
     public UnityEvent ActiveObj;
