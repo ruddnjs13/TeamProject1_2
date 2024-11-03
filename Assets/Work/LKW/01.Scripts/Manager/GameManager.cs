@@ -8,6 +8,17 @@ public class GameManager : MonoSingleton<GameManager>
 {
     [SerializeField] private float _reBirthTime = 2f;
     [SerializeField] private GameObject _rotateAxis;
+    public GameObject RotateAxis
+    {
+        get
+        {
+            return _rotateAxis;
+        }
+        set
+        {
+            _rotateAxis = value;
+        }
+    }
     
 
     public CheckPoint currentCheckpoint;
