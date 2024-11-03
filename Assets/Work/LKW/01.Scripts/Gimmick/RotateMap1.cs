@@ -7,8 +7,6 @@ using UnityEngine.Serialization;
 
 public class RotateMap1 : MonoBehaviour,IInteractable
 {
-    public UnityEvent EndRotateEvent;
-    public UnityEvent StartRotateEvent;
     private Transform _playerTrm;
     private float _time;
     private GameObject _grid;
@@ -61,8 +59,8 @@ public class RotateMap1 : MonoBehaviour,IInteractable
 
     private void MapRotate(Quaternion direction)
     {
+        RotateManager.Instance.StartRotateEvent?.Invoke();
         if (isRotate) return;
-        StartRotateEvent?.Invoke();
         
         StopAllCoroutines();
         
@@ -101,7 +99,7 @@ public class RotateMap1 : MonoBehaviour,IInteractable
         Physics2D.gravity = new Vector2(0, -9.81f);
         isRotate = false;
         _canRotate = false;
-        EndRotateEvent?.Invoke();
+        RotateManager.Instance.EndRotateEvent?.Invoke();
     }
 
     public void Interact()
