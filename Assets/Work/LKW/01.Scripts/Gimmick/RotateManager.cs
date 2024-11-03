@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class RotateManager : MonoSingleton<RotateManager>
 {
-    public Action MapRotateEvent;
+    
+    public UnityEvent StartRotateEvent;
+    public UnityEvent EndRotateEvent;
     
     [SerializeField] private RotateMap1[] _rotateMap1s;
     [SerializeField] private RotateMap2[] _rotateMap2s;
@@ -33,13 +36,11 @@ public class RotateManager : MonoSingleton<RotateManager>
         foreach (RotateMap1 item in _rotateMap1s)
         {
             item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime1);
-            item.StartRotateEvent.AddListener(() =>_player.playerInput.RockInput(true));
         }
 
         foreach (RotateMap2 item in _rotateMap2s)
         {
             item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime2);
-            item.StartRotateEvent.AddListener(() =>_player.playerInput.RockInput(true));
         }
     }
     
