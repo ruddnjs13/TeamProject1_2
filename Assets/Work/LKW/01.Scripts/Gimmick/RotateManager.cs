@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -11,6 +12,7 @@ public class RotateManager : MonoSingleton<RotateManager>
     public UnityEvent StartRotateEvent;
     public UnityEvent EndRotateEvent;
     
+    
     [SerializeField] private RotateMap1[] _rotateMap1s;
     [SerializeField] private RotateMap2[] _rotateMap2s;
     [SerializeField] private Transform _playerTrm;
@@ -18,7 +20,6 @@ public class RotateManager : MonoSingleton<RotateManager>
     [SerializeField] private GameObject _grid;
     [SerializeField] private float _rotateTime1;
     [SerializeField] private float _rotateTime2;
-    [SerializeField] private InputReaderSO _inputReaderSO;
     private Player _player;
 
     public float[] _rotations1 = { 0,90,180,270 };
@@ -29,6 +30,20 @@ public class RotateManager : MonoSingleton<RotateManager>
     {
         _player = FindObjectOfType<Player>();
         InitializeRotateMaps();
+    }
+
+    private void OnEnable()
+    {
+        StartRotateEvent.AddListener(()=> _player.playerInput.RockInput(true));
+        StartRotateEvent.AddListener(()=> _player.StopImmediately());
+        EndRotateEvent.AddListener(()=> _player.playerInput.RockInput(false));
+    }
+
+    private void OnDisable()
+    {
+        InitializeRotateMaps();StartRotateEvent.RemoveListener(()=> _player.playerInput.RockInput(true));
+        StartRotateEvent.RemoveListener(()=> _player.StopImmediately());
+        EndRotateEvent.RemoveListener(()=> _player.playerInput.RockInput(false));
     }
 
     private void InitializeRotateMaps()
