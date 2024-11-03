@@ -10,10 +10,9 @@ public class FastDeadBlockDot : MonoBehaviour
     public UnityEvent OnHit;
     
     [SerializeField] private float _position;
-    [SerializeField] private float _delayUpSecond, _delayDownSecond;
+    [SerializeField] private float _delayUpSecond;
     
     public float _duration;
-    private float _previousPosition;
 
     private Tween _tween, _tween2;
     
@@ -21,23 +20,18 @@ public class FastDeadBlockDot : MonoBehaviour
     
     public void Start()
     {
-        _previousPosition = transform.position.y;
         SetSequence();
     }
 
     
     public void SetSequence()
     {
-        _tween = transform.DOMove(new Vector2(transform.position.x, _position), _duration).SetEase(Ease.OutQuart);
-        _tween2 = transform.DOMove(new Vector2(transform.position.x, _previousPosition), _duration).SetEase(Ease.InQuart);
+        _tween = transform.DOMove(new Vector2(transform.localPosition.x, _position), _duration).SetEase(Ease.OutQuart);
 
         _sequence = DOTween.Sequence();
-        _sequence.AppendInterval(_delayUpSecond);
-        _sequence.Append(_tween);
-        _sequence.AppendInterval(_delayDownSecond);
-        _sequence.Append(_tween2);
-        _sequence.OnComplete(() => _sequence.Restart());
-        
+        _sequence.AppendInterval(_delayUpSecond)
+            .Append(_tween)
+            .AppendInterval(_delayUpSecond);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
