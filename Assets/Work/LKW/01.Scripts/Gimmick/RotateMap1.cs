@@ -59,9 +59,9 @@ public class RotateMap1 : MonoBehaviour,IInteractable
 
     private void MapRotate(Quaternion direction)
     {
-        RotateManager.Instance.StartRotateEvent?.Invoke();
         if (isRotate) return;
-        
+        RotateManager.Instance.StartRotateEvent?.Invoke();
+
         StopAllCoroutines();
         
         Vector3 previousPos = _grid.transform.position;

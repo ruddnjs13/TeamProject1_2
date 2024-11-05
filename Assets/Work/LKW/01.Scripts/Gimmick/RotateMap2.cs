@@ -14,7 +14,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
     private float _time;
     private GameObject _grid;
     private GameObject _showDirection;
-    [SerializeField] private InputReaderSO _inputReaderSO;
+    private Vector2 _originGravity;
     
     private PlayerInteraction _playerInteraction;
     private bool isRotate = false;
@@ -25,6 +25,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
     private void Awake()
     {
         _showDirection = transform.Find("ShowDirection").gameObject;
+        _originGravity = Physics2D.gravity;
     }
 
     private void Start()
@@ -61,8 +62,8 @@ public class RotateMap2 : MonoBehaviour,IInteractable
 
     public void MapRotate(Quaternion direction)
     {
-        RotateManager.Instance.StartRotateEvent?.Invoke();
         if (isRotate) return;
+        RotateManager.Instance.StartRotateEvent?.Invoke();
         
         StopAllCoroutines();
         
@@ -74,7 +75,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         
         isRotate = true;
         
-        Physics2D.gravity = new Vector2(0, 0);
+        Physics2D.gravity = Vector2.zero;
         
         StartCoroutine(MapRotateCoroutine(direction));
     }
@@ -98,8 +99,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         }
 
 
-        yield return new WaitForSeconds(0.4f);
-        Physics2D.gravity = new Vector2(0, -9.81f);
+        Physics2D.gravity = _originGravity;
         isRotate = false;
         _canRotate = false;
         RotateManager.Instance.EndRotateEvent?.Invoke();

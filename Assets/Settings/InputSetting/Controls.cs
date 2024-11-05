@@ -88,7 +88,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""7b5f0ce2-586a-4313-b186-8c4052f8515f"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyMouse"",
@@ -99,7 +99,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""e3308ba3-954a-4508-8631-719596811f5f"",
-                    ""path"": ""<Keyboard>/downArrow"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyMouse"",
@@ -110,7 +110,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""f60834f3-72db-4997-a7af-a5e6537ae40b"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyMouse"",
@@ -121,7 +121,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""fc44204f-0ad1-42a1-8b17-ef6f46dbb429"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyMouse"",
@@ -154,7 +154,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""36ac742c-44ca-4725-83d7-7c449a49a4e5"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyMouse"",

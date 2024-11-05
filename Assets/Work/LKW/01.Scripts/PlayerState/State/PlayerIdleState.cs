@@ -14,7 +14,6 @@ public class PlayerIdleState : PlayerGroundState
     public override void Enter()
     {
         base.Enter();
-        _player.playerInput.RockInput(false);
         _player.StopImmediately(false);
     }
 

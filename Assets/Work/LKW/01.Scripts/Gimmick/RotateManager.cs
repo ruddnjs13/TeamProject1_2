@@ -20,7 +20,9 @@ public class RotateManager : MonoSingleton<RotateManager>
     [SerializeField] private GameObject _grid;
     [SerializeField] private float _rotateTime1;
     [SerializeField] private float _rotateTime2;
+    
     private Player _player;
+    private FeedbackPlayer _feedbackPlayer;
 
     public float[] _rotations1 = { 0,90,180,270 };
 
@@ -29,21 +31,35 @@ public class RotateManager : MonoSingleton<RotateManager>
     private void Awake()
     {
         _player = FindObjectOfType<Player>();
+        _feedbackPlayer = GetComponentInChildren<FeedbackPlayer>();
         InitializeRotateMaps();
     }
 
-    private void OnEnable()
+    // private void OnEnable()
+    // {
+    //     StartRotateEvent.AddListener(_feedbackPlayer.PlayFeedback);
+    // }
+
+
+    public void StopPlayer()
     {
-        StartRotateEvent.AddListener(()=> _player.playerInput.RockInput(true));
-        StartRotateEvent.AddListener(()=> _player.StopImmediately());
-        EndRotateEvent.AddListener(()=> _player.playerInput.RockInput(false));
+        _player.StateMachine.ChangeState(PlayerStateEnum.Idle);
+        _player.playerInput.RockInput(true);
+        _player.StopImmediately();
     }
+
+    public void MovePlayer()
+    {
+        _player.playerInput.RockInput(false);
+    }
+
 
     private void OnDisable()
     {
-        InitializeRotateMaps();StartRotateEvent.RemoveListener(()=> _player.playerInput.RockInput(true));
-        StartRotateEvent.RemoveListener(()=> _player.StopImmediately());
-        EndRotateEvent.RemoveListener(()=> _player.playerInput.RockInput(false));
+        InitializeRotateMaps();
+        // StartRotateEvent.RemoveListener(()=> _player.playerInput.RockInput(true));
+        // StartRotateEvent.RemoveListener(()=> _player.StopImmediately());
+        // EndRotateEvent.RemoveListener(()=> _player.playerInput.RockInput(false));
     }
 
     private void InitializeRotateMaps()

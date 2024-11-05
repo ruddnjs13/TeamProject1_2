@@ -59,9 +59,17 @@ public class Player : Agent
 
     protected void Update()
     {
-        Flip(playerInput.Movement.x);
         CheckGround();
         StateMachine.CurrentState.StateUpdate();
+    }
+
+    private void LateUpdate()
+    {
+    }
+
+    private void FixedUpdate()
+    {
+        Flip(playerInput.Movement.x);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

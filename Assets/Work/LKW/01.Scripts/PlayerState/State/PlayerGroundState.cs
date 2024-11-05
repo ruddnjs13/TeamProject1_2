@@ -28,4 +28,12 @@ public class PlayerGroundState : PlayerState
             _stateMachine.ChangeState(PlayerStateEnum.Jump);
         }
     }
+
+    public override void StateUpdate()
+    {
+        if (!_player.IsGround.Value)
+        {
+            _stateMachine.ChangeState(PlayerStateEnum.Fall);
+        }
+    }
 }

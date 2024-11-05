@@ -35,11 +35,12 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
     {
         if (isRock)
         {
-            _controls.Disable();
+            Movement = Vector3.zero;
+            _controls.Player.Disable();
         }
         else
         {
-            _controls.Enable();
+            _controls.Player.Enable();
         }
     }
     
