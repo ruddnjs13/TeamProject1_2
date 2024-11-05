@@ -18,7 +18,7 @@ public class OpenDoor : MonoBehaviour, ISwitchable
     public void Activate()
     {
         Debug.Log("¿€µø");
-        transform.DOLocalMove(transform.position + GameManager.Instance.RotateAxis.transform.up * moveRange, duration);
+        transform.DOMove(transform.position + transform.up * moveRange, duration);
     }
     public void Deactivate()
     {

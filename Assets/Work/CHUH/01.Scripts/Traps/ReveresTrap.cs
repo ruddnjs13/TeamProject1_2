@@ -21,7 +21,7 @@ public class ReveresTrap : MonoBehaviour
     {
         isCol = true;
         yield return new WaitForSeconds(waitTime);
-        transform.DOShakePosition(waitTime, new Vector3(0.05f, 0, 0), 15, 50f, false);
+        transform.DOShakePosition(waitTime, new Vector3(0.1f, 0, 0), 15, 50f, false);
         yield return new WaitForSeconds(shakeTime);
         ReveresGround(isFilp);
         yield return new WaitForSeconds(returnTime);
