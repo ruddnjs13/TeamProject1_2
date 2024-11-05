@@ -22,28 +22,16 @@ public class FastDeadBlockDot : MonoBehaviour
     {
         SetSequence();
     }
-
-    public void StopMove()
-    {
-        Debug.Log("Invoke");
-        _tween.Kill();
-        _sequence.Kill();
-    }
     
     public void SetSequence()
     {
-        _tween = transform.DOMove(new Vector2(transform.position.x, _position), _duration).SetEase(Ease.OutQuart);
+        _tween = transform.DOLocalMove(new Vector2(transform.localPosition.x, _position), _duration).SetEase(Ease.OutQuart);
 
         _sequence = DOTween.Sequence();
         _sequence.AppendInterval(_delayUpSecond)
             .Append(_tween)
             .AppendInterval(_delayUpSecond);
-        _sequence.SetLoops(-1, LoopType.Restart);
-    }
-
-    public void StartMove()
-    {
-        SetSequence();
+        _sequence.SetLoops(-1, LoopType.Yoyo);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
