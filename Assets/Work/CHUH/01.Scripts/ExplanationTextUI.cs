@@ -13,7 +13,12 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     [SerializeField] private string TypingText;
     [SerializeField] private float TypingTime;
     private bool isExplanationUION = false;
+    private BoxCollider2D ColCompo;
 
+    private void Awake()
+    {
+        ColCompo = GetComponent<BoxCollider2D>();
+    }
     private void Start()
     {
         text.enabled = false;
@@ -22,7 +27,9 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     {
         Sequence sequence = DOTween.Sequence();
         text.text = TypingText;
+        ColCompo.enabled = false;
         sequence.Append(image.DOFade(0.6f, 0.25f));
+
         sequence.OnComplete(() =>
         {
             text.enabled = true;
@@ -44,7 +51,12 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     private void TMPDOText(TextMeshProUGUI text, float duration)
     {
         text.maxVisibleCharacters = 0;
-        DOTween.To(x => text.maxVisibleCharacters = (int)x, 0f, text.text.Length, duration).SetEase(Ease.Linear);
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(DOTween.To(x => text.maxVisibleCharacters = (int)x, 0f, text.text.Length, duration).SetEase(Ease.Linear));
+        sequence.OnComplete(() =>
+        {
+            ColCompo.enabled = true;
+        });
     }
 
 

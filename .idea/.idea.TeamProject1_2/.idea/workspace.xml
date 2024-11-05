@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66529809-aa60-4f1e-86bf-2c24d9fcadf9" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/LKW.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/LKW.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/03.Prefab/Gimick/RotateMap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/03.Prefab/Gimick/RotateMap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/03.Prefab/Gimick/Spike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/03.Prefab/Gimick/Spike.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/Map1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/Map1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/FastDeadBlock/FastDeadBlockDot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/FastDeadBlock/FastDeadBlockDot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TargetLaser/TargetLaser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TargetLaser/TargetLaser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/5. prefabs/Piston.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/5. prefabs/Piston.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD/Camera Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD/Camera Profile.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +42,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/6e/ea8d62c5/Tween.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/ec/fe27cbbf/DOTween.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/f7/4ba0d1bd/ShortcutExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -167,6 +175,10 @@
       <workItem from="1730244502456" duration="12000" />
       <workItem from="1730370567882" duration="3216000" />
       <workItem from="1730544263092" duration="2662000" />
+      <workItem from="1730647902549" duration="1016000" />
+      <workItem from="1730679464457" duration="9000" />
+      <workItem from="1730679498035" duration="7443000" />
+      <workItem from="1730798077413" duration="1659000" />
     </task>
     <servers />
   </component>
