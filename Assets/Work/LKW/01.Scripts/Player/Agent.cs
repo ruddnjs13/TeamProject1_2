@@ -20,14 +20,6 @@ public abstract class Agent : MonoBehaviour
     [SerializeField] private Transform _boxTrm;
     #endregion
 
-    #region WallCheckerSetting
-
-    [SerializeField] private LayerMask _whatIsWall;
-    [SerializeField] private Transform _checkerTrm;
-    [SerializeField] private float _distance;
-
-    #endregion
-
     [SerializeField]
     public NotifyValue<bool> IsGround = new NotifyValue<bool>();
     public float facingDirection { get; protected set; }
@@ -73,16 +65,6 @@ public abstract class Agent : MonoBehaviour
 
     #endregion
 
-    #region WallCheckRegion
-
-    public bool CheckWall(float direction)
-    {
-        return (Physics2D.Raycast(_checkerTrm.position,
-            new Vector2(direction, 0), _distance, _whatIsWall));
-
-    }
-
-    #endregion
 
     #region FlipRegion
 

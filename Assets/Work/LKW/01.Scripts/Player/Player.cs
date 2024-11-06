@@ -28,7 +28,6 @@ public class Player : Agent
 
     public UnityEvent OnDeadEvent;
 
-    public bool _isDashing = false;
     
     public PlayerStateMachine StateMachine { get; private set; }
 
@@ -60,6 +59,7 @@ public class Player : Agent
     protected void Update()
     {
         CheckGround();
+        Flip(playerInput.Movement.x);
         StateMachine.CurrentState.StateUpdate();
     }
 
@@ -69,7 +69,6 @@ public class Player : Agent
 
     private void FixedUpdate()
     {
-        Flip(playerInput.Movement.x);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
