@@ -22,6 +22,7 @@ public class PlayerAirState : PlayerState
     public override void StateUpdate()
     {
         base.StateUpdate();
+        _player.SetMovement(new Vector2(_player.playerInput.Movement.x * _player._moveSpeed,_player.RbCompo.velocity.y));
         CalculateTime();
         ApplyExtraGravity();
         

@@ -588,7 +588,6 @@ GameObject:
   m_Component:
   - component: {fileID: 394326925}
   - component: {fileID: 394326924}
-  - component: {fileID: 394326926}
   - component: {fileID: 394326927}
   m_Layer: 0
   m_Name: FollowCam
@@ -619,7 +618,7 @@ MonoBehaviour:
   m_Follow: {fileID: 5704738929782642949}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 4.2
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -645,25 +644,13 @@ Transform:
   m_GameObject: {fileID: 394326923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9, y: -0.5, z: -10}
+  m_LocalPosition: {x: -10.3, y: -2.3000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1044813362}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &394326926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394326923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &394326927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15926,7 +15913,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 17
-      m_TileSpriteIndex: 22
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16317,6 +16304,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 17
       m_TileSpriteIndex: 28
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -7, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 17
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -40828,7 +40825,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 3996
+  - m_RefCount: 3997
     m_Data: {fileID: 11400000, guid: 702aebea6e564584683585d5fa7a0347, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -40863,10 +40860,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -150227193, guid: cf81b8cecc135a94582f343a398fe3b1, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 567525224, guid: e90451480e27ac244bf1303bea9f5d81, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -287060142, guid: cf81b8cecc135a94582f343a398fe3b1, type: 3}
   - m_RefCount: 1
@@ -40877,7 +40874,7 @@ Tilemap:
     m_Data: {fileID: -51377112, guid: e90451480e27ac244bf1303bea9f5d81, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: -788883640, guid: e90451480e27ac244bf1303bea9f5d81, type: 3}
-  - m_RefCount: 10
+  - m_RefCount: 9
     m_Data: {fileID: 1485589701, guid: cf81b8cecc135a94582f343a398fe3b1, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 1607312040, guid: cf81b8cecc135a94582f343a398fe3b1, type: 3}
@@ -40902,7 +40899,7 @@ Tilemap:
   - m_RefCount: 11
     m_Data: {fileID: 16786695, guid: e90451480e27ac244bf1303bea9f5d81, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4001
+  - m_RefCount: 4002
     m_Data:
       e00: 1
       e01: 0
@@ -40957,7 +40954,7 @@ Tilemap:
       e32: 0
       e33: 0
   m_TileColorArray:
-  - m_RefCount: 4001
+  - m_RefCount: 4002
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -41092,8 +41089,12 @@ CompositeCollider2D:
         Y: -80000000
       - X: 30000000
         Y: -30000000
-      - X: -70000000
+      - X: -60000000
         Y: -30000000
+      - X: -60000000
+        Y: -20000000
+      - X: -70000000
+        Y: -20000000
       - X: -70000000
         Y: -50000000
       - X: -300000000
@@ -41244,7 +41245,9 @@ CompositeCollider2D:
       - {x: 19.999971, y: -8}
       - {x: 3, y: -7.9999704}
       - {x: 2.999971, y: -3}
-      - {x: -7, y: -3.0000293}
+      - {x: -6, y: -2.9999707}
+      - {x: -6.000029, y: -2}
+      - {x: -7, y: -2.0000293}
       - {x: -7.0000296, y: -5}
       - {x: -30, y: -4.9999704}
       - {x: -29.999971, y: 1}
@@ -42763,10 +42766,10 @@ MonoBehaviour:
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.35
-  m_SoftZoneHeight: 0.51
+  m_SoftZoneWidth: 0.59
+  m_SoftZoneHeight: 0.79
   m_BiasX: 0
-  m_BiasY: 0.434
+  m_BiasY: 0.203
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
@@ -43581,7 +43584,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -43606,7 +43609,7 @@ Transform:
   m_GameObject: {fileID: 1296982913}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9, y: -0.5, z: -10}
+  m_LocalPosition: {x: -10.3, y: -2.3000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118764,11 +118767,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 366904179026438583, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.9
+      value: -10.3
       objectReference: {fileID: 0}
     - target: {fileID: 366904179026438583, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 366904179026438583, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: m_LocalPosition.z
@@ -118807,11 +118810,20 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6501029463714446903, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
+      propertyPath: _jumpPower
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501029463714446903, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
+      propertyPath: _gravityDelay
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501029463714446903, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
       propertyPath: OnDeadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1523298192}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1974284825189456719, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b8e998bb2787ba4cbfe727bea6fcd20, type: 3}
