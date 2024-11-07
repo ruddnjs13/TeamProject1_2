@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4822080983893284901}
   - component: {fileID: 7844243497608230375}
   - component: {fileID: 2279287117512926575}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Reflection
   m_TagString: Mirror
   m_Icon: {fileID: 0}

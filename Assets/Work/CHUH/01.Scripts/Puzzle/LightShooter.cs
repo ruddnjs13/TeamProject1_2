@@ -28,11 +28,11 @@ public class LightShooter : MonoBehaviour, IInteractable
         if (hit.collider != null)
         {
             _lineRenderer.positionCount = positionCount + 1;
-            _lineRenderer.SetPosition(1, transform.InverseTransformPoint(hit.collider.transform.position));
+            _lineRenderer.SetPosition(1, transform.InverseTransformPoint(hit.point));
             if (hit.collider.transform.CompareTag("Mirror"))
             {
                 Debug.Log("거울에맞음");
-                hit.collider.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(_lineRenderer, Vector2.right, this);
+                hit.collider.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(_lineRenderer, transform.right, this);
                 hit.collider.transform.GetComponent<LightSensor>()?.ExecutionEvent();
             }
             
