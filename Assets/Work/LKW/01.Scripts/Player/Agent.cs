@@ -68,15 +68,14 @@ public abstract class Agent : MonoBehaviour
 
     #region FlipRegion
 
-    public void Flip(float facingDirection)
+    public void Flip(Vector2 direction)
     {
-        this.facingDirection = facingDirection;
         if(!canFlip) return;
-        if (facingDirection > 0)
+        if (direction.x > 0)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0,0,0));
         }
-        else if (facingDirection < 0)
+        else if (direction.x < 0)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
