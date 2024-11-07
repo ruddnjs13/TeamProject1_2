@@ -14,6 +14,7 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     [SerializeField] private float TypingTime;
     private bool isExplanationUION = false;
     private BoxCollider2D ColCompo;
+    private Player _player;
 
     private void Awake()
     {
@@ -23,8 +24,17 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     {
         text.enabled = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        _player = collision.GetComponentInParent<Player>();
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+    }
     private void ShowExplanationText()
     {
+        _player.playerInput.RockInput(true);
         Sequence sequence = DOTween.Sequence();
         text.text = TypingText;
         ColCompo.enabled = false;
@@ -55,6 +65,7 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
         sequence.Append(DOTween.To(x => text.maxVisibleCharacters = (int)x, 0f, text.text.Length, duration).SetEase(Ease.Linear));
         sequence.OnComplete(() =>
         {
+            _player.playerInput.RockInput(false);
             ColCompo.enabled = true;
         });
     }
@@ -76,5 +87,4 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
             HideExplanationText();
         }
     }
-    // TODO 상호작용중 움직임 봉인(플레이어 건들어야 할 것 같아서 나중에 경원이 한테 말해야 함.)
 }
