@@ -23,6 +23,13 @@ public abstract class Agent : MonoBehaviour
     [SerializeField]
     public NotifyValue<bool> IsGround = new NotifyValue<bool>();
     public float facingDirection { get; protected set; }
+    
+    public readonly float coyoteTime = 0.1f;
+    public float coyoteCount { get; set; } = 0f;
+
+    public readonly float jumpBuffer = 0.2f;
+    
+    public float bufferCount { get; set; } = 0f; 
 
     public bool canFlip = true;
     
@@ -56,10 +63,12 @@ public abstract class Agent : MonoBehaviour
         if (Physics2D.OverlapBox(_boxTrm.position, _boxSize, 0f, _whatIsGround))
         {
             IsGround.Value = true;
+            coyoteCount = coyoteTime;
         }
         else
         {
             IsGround.Value = false;
+            coyoteCount -= Time.deltaTime;
         }
     }
 
@@ -80,6 +89,12 @@ public abstract class Agent : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
     }
+    #endregion
+
+    #region CoyoteTime
+
+    
+
     #endregion
     
     
