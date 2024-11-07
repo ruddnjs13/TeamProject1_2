@@ -56,10 +56,19 @@ public class Player : Agent
         StateMachine.Initialize(this, PlayerStateEnum.Idle);
     }
 
+    private void OnEnable()
+    {
+        playerInput.OnMoveEvent += Flip;
+    }
+
+    private void OnDisable()
+    {
+        playerInput.OnMoveEvent -= Flip;
+    }
+
     protected void Update()
     {
         CheckGround();
-        Flip(playerInput.Movement.x);
         StateMachine.CurrentState.StateUpdate();
     }
 
