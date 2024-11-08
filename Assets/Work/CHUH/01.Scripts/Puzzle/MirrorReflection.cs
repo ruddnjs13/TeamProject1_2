@@ -29,12 +29,13 @@ public class MirrorReflection : MonoBehaviour, IInteractable
         line.positionCount++;
         if (hit.collider != null)
         {
-            line.SetPosition(count, shooter.transform.InverseTransformPoint(hit.point));
             if (hit.collider.transform.CompareTag("Mirror"))
             {
+                line.SetPosition(count, shooter.transform.InverseTransformPoint(hit.collider.transform.position));
                 hit.collider.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(line, reflectionVector, shooter);
                 hit.collider.transform.GetComponent<LightSensor>()?.ExecutionEvent();
             }
+            else line.SetPosition(count, shooter.transform.InverseTransformPoint(hit.point));
         }
         else
         {
