@@ -23,6 +23,6 @@ public class OpenDoor : MonoBehaviour, ISwitchable
     public void Deactivate()
     {
         Debug.Log("작동 해제");
-        transform.DOLocalMove(StartPos, duration);
+        transform.DOMove(StartPos, duration);
     }
 }

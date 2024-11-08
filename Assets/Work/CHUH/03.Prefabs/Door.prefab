@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 39999918750444707}
   - component: {fileID: 5800312092353973620}
   - component: {fileID: 3101482660745232634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveRange: 7
   duration: 3
+  StartPos: {x: 0, y: 0}
 --- !u!212 &5800312092353973620
 SpriteRenderer:
   m_ObjectHideFlags: 0
