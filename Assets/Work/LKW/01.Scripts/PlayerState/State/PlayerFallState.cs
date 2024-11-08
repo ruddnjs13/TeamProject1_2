@@ -8,6 +8,19 @@ public class PlayerFallState : PlayerAirState
     {
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+        _player.playerInput.JumpEvent += HandleJumpEvent;
+    }
+
+    public override void Exit()
+    {
+        _player.playerInput.JumpEvent -= HandleJumpEvent;
+
+        base.Exit();
+    }
+
     public override void StateUpdate()
     {
         base.StateUpdate();
@@ -15,5 +28,17 @@ public class PlayerFallState : PlayerAirState
         {
             _stateMachine.ChangeState(PlayerStateEnum.Idle);
         }
+        
     }
+
+    public void HandleJumpEvent()
+    {
+        if (_player.coyoteCount > 0)
+        {
+            _stateMachine.ChangeState(PlayerStateEnum.Jump);
+            _player.coyoteCount = 0;
+        }
+    }
+    
+  
 }

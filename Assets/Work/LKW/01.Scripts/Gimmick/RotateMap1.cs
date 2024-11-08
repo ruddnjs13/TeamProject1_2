@@ -41,12 +41,12 @@ public class RotateMap1 : MonoBehaviour,IInteractable
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             RotateManager.Instance.CurrentRotationIdx = ++RotateManager.Instance.CurrentRotationIdx % 4;
             MapRotate(_leftRot);
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetKeyUp(KeyCode.Q))
         {
             RotateManager.Instance.CurrentRotationIdx = --RotateManager.Instance.CurrentRotationIdx;
             if (RotateManager.Instance.CurrentRotationIdx < 0)
