@@ -8,11 +8,13 @@ public class LightShooter : MonoBehaviour, IInteractable
     [SerializeField] private float ShootTime = 1.0f; 
     [SerializeField] private float Colltime = 3.0f;
     private bool isCanLightShoot = true;
+    private BoxCollider2D _colider;
     private LineRenderer _lineRenderer;
     private int positionCount = 1;
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
+        _colider = GetComponent<BoxCollider2D>();
     }
     private void Start()
     {
@@ -28,14 +30,15 @@ public class LightShooter : MonoBehaviour, IInteractable
         if (hit.collider != null)
         {
             _lineRenderer.positionCount = positionCount + 1;
-            _lineRenderer.SetPosition(1, transform.InverseTransformPoint(hit.point));
             if (hit.collider.transform.CompareTag("Mirror"))
             {
                 Debug.Log("거울에맞음");
+                _lineRenderer.SetPosition(1, transform.InverseTransformPoint(hit.collider.transform.position));
                 hit.collider.transform.GetComponent<MirrorReflection>()?.ReflectionMirror(_lineRenderer, transform.right, this);
                 hit.collider.transform.GetComponent<LightSensor>()?.ExecutionEvent();
             }
-            
+            else _lineRenderer.SetPosition(1, transform.InverseTransformPoint(hit.point));
+
         }
     }
 
@@ -46,12 +49,14 @@ public class LightShooter : MonoBehaviour, IInteractable
         _lineRenderer.positionCount = 1;
         yield return new WaitForSeconds(Colltime);
         isCanLightShoot = true;
+        _colider.enabled = true;
     }
 
 
     public void Interact()
     {
         FireLight();
+        _colider.enabled = false;
     }
 
     public void EndInteract()

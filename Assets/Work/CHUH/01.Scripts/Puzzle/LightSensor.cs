@@ -28,7 +28,7 @@ public class LightSensor : MonoBehaviour
     }
     public void ExecutionEvent()
     {
-        active.Activate();
+        active?.Activate();
     }
 
 }
