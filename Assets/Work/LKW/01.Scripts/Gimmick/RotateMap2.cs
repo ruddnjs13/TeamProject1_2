@@ -44,13 +44,15 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && !isRotate)
         {
+            isRotate = true;
             RotateManager.Instance.CurrentRotationIdx = (RotateManager.Instance.CurrentRotationIdx + 2) % 4;
             MapRotate(_leftRot);
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetKeyUp(KeyCode.E) && !isRotate)
         {
+            isRotate = true;
             RotateManager.Instance.CurrentRotationIdx -= 2;
             if (RotateManager.Instance.CurrentRotationIdx < 0)
             {
@@ -62,21 +64,14 @@ public class RotateMap2 : MonoBehaviour,IInteractable
 
     public void MapRotate(Quaternion direction)
     {
-        if (isRotate) return;
         RotateManager.Instance.StartRotateEvent?.Invoke();
-        
         StopAllCoroutines();
-        
         Vector3 previousPos = _grid.transform.position;
-
         _rotateAxis.transform.position = _playerTrm.position;
-        
         _grid.transform.position = previousPos;
         
-        isRotate = true;
         
         Physics2D.gravity = Vector2.zero;
-        
         StartCoroutine(MapRotateCoroutine(direction));
     }
 
@@ -87,7 +82,6 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         float percent = 0;
         
         Quaternion target = start * direction;
-
 
         while (percent < 1)
         {
