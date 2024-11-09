@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="66529809-aa60-4f1e-86bf-2c24d9fcadf9" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/FastDeadBlock/FastDeadBlockDot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/FastDeadBlock/FastDeadBlockDot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TargetLaser/TargetLaser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TargetLaser/TargetLaser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/5. prefabs/Piston.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/5. prefabs/Piston.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD/Camera Profile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/CD/Camera Profile.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +172,9 @@
       <workItem from="1730679464457" duration="9000" />
       <workItem from="1730679498035" duration="7443000" />
       <workItem from="1730798077413" duration="1659000" />
+      <workItem from="1730851136386" duration="4909000" />
+      <workItem from="1730959054388" duration="16000" />
+      <workItem from="1730959087969" duration="6077000" />
     </task>
     <servers />
   </component>
