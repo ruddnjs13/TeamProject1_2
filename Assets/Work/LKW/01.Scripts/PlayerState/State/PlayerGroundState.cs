@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerGroundState : PlayerState
 {
+    
+    
     public PlayerGroundState(Player player, PlayerStateMachine stateMachine, string animBoolName) : base(player, stateMachine, animBoolName)
     {
     }
@@ -11,6 +13,11 @@ public class PlayerGroundState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        if (_player.bufferCount > 0)
+        {
+            _player.StateMachine.ChangeState(PlayerStateEnum.Jump);
+            _player.bufferCount = 0f;
+        }
         _player.playerInput.JumpEvent += HandleJumpEvent;
         _player.canFlip = true;
     }
@@ -36,4 +43,6 @@ public class PlayerGroundState : PlayerState
             _stateMachine.ChangeState(PlayerStateEnum.Fall);
         }
     }
+
+    
 }

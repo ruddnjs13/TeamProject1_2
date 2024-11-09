@@ -20,17 +20,16 @@ public abstract class Agent : MonoBehaviour
     [SerializeField] private Transform _boxTrm;
     #endregion
 
-    #region WallCheckerSetting
-
-    [SerializeField] private LayerMask _whatIsWall;
-    [SerializeField] private Transform _checkerTrm;
-    [SerializeField] private float _distance;
-
-    #endregion
-
     [SerializeField]
     public NotifyValue<bool> IsGround = new NotifyValue<bool>();
     public float facingDirection { get; protected set; }
+    
+    public readonly float coyoteTime = 0.1f;
+    public float coyoteCount { get; set; } = 0f;
+
+    public readonly float jumpBuffer = 0.2f;
+    
+    public float bufferCount { get; set; } = 0f; 
 
     public bool canFlip = true;
     
@@ -64,41 +63,38 @@ public abstract class Agent : MonoBehaviour
         if (Physics2D.OverlapBox(_boxTrm.position, _boxSize, 0f, _whatIsGround))
         {
             IsGround.Value = true;
+            coyoteCount = coyoteTime;
         }
         else
         {
             IsGround.Value = false;
+            coyoteCount -= Time.deltaTime;
         }
     }
 
     #endregion
 
-    #region WallCheckRegion
-
-    public bool CheckWall(float direction)
-    {
-        return (Physics2D.Raycast(_checkerTrm.position,
-            new Vector2(direction, 0), _distance, _whatIsWall));
-
-    }
-
-    #endregion
 
     #region FlipRegion
 
-    public void Flip(float facingDirection)
+    public void Flip(Vector2 direction)
     {
-        this.facingDirection = facingDirection;
         if(!canFlip) return;
-        if (facingDirection > 0)
+        if (direction.x > 0)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0,0,0));
         }
-        else if (facingDirection < 0)
+        else if (direction.x < 0)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
     }
+    #endregion
+
+    #region CoyoteTime
+
+    
+
     #endregion
     
     

@@ -11,20 +11,39 @@ public class PlayerAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        _player.playerInput.JumpEvent += HandleJumpEvent;
         _player.canFlip = true;
+    }
+
+    private void HandleJumpEvent()
+    {
+        _player.bufferCount = _player.jumpBuffer;
     }
 
     public override void Exit()
     {
+        _player.playerInput.JumpEvent -= HandleJumpEvent;
         base.Exit();
     }
+    
+    
 
     public override void StateUpdate()
     {
         base.StateUpdate();
+        CalculateBufferTime();
+        
+        _player.SetMovement(new Vector2(_player.playerInput.Movement.x * _player._moveSpeed,_player.RbCompo.velocity.y));
         CalculateTime();
         ApplyExtraGravity();
-        
+    }
+
+    private void CalculateBufferTime()
+    {
+        if (_player.bufferCount >= 0)
+        {
+            _player.bufferCount -= Time.deltaTime;
+        }
     }
     
     private void CalculateTime()

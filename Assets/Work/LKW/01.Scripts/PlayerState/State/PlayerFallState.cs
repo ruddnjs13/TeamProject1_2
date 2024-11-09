@@ -8,13 +8,37 @@ public class PlayerFallState : PlayerAirState
     {
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+        _player.playerInput.JumpEvent += HandleJumpEvent;
+    }
+
+    public override void Exit()
+    {
+        _player.playerInput.JumpEvent -= HandleJumpEvent;
+
+        base.Exit();
+    }
+
     public override void StateUpdate()
     {
         base.StateUpdate();
-        _player.SetMovement(new Vector2(_player.playerInput.Movement.x * _player._moveSpeed,_player.RbCompo.velocity.y));
         if (_player.IsGround.Value)
         {
             _stateMachine.ChangeState(PlayerStateEnum.Idle);
         }
+        
     }
+
+    public void HandleJumpEvent()
+    {
+        if (_player.coyoteCount > 0)
+        {
+            _stateMachine.ChangeState(PlayerStateEnum.Jump);
+            _player.coyoteCount = 0;
+        }
+    }
+    
+  
 }

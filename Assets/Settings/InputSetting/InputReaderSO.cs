@@ -1,11 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.Intrinsics;
-using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 [CreateAssetMenu(menuName = "SO/InputReader")]
 public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
@@ -17,6 +12,7 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
     public Action JumpEvent;
     public Action DashEvent;
     public Action InteractionEvent;
+    public event Action<Vector2> OnMoveEvent;
     
     public Vector2 Movement { get; private set; }
     private void OnEnable()
@@ -48,6 +44,7 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
     public void OnMovement(InputAction.CallbackContext context)
     {
         Movement = context.ReadValue<Vector2>();
+        OnMoveEvent?.Invoke(Movement);
     }
 
     public void OnDash(InputAction.CallbackContext context)
