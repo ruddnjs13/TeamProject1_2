@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 6afb184478c487d44a3a03792b42f365, type: 2}
   _interactionTrm: {fileID: 663779062968041480}
-  _interactionRadius: 0.4
+  _interactionRadius: 0.6
   _interactionLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -401,10 +401,10 @@ MonoBehaviour:
   canFlip: 1
   _moveSpeed: 5
   _wallJumpPower: 0
-  _jumpPower: 8
+  _jumpPower: 18
   timeInAir: 0
-  _extraGravity: 1.6
-  _gravityDelay: 0.12
+  _extraGravity: 1.2
+  _gravityDelay: 1.8
   _inputReader: {fileID: 11400000, guid: 6afb184478c487d44a3a03792b42f365, type: 2}
   OnDeadEvent:
     m_PersistentCalls:
