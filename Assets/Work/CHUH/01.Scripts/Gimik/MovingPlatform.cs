@@ -28,7 +28,6 @@ public class MovingPlatform : MonoBehaviour
         switch (HowToMove)
         {
             case MoveType.LeftRight:
-                Debug.Log("AA");
                 _Sequnce = DOTween.Sequence();
                 _Sequnce.AppendInterval(waitTime).
                     Append(transform.DOLocalMove(transform.position + (Vector3)moveEndPos, _duration).SetEase(Ease.Linear)).
