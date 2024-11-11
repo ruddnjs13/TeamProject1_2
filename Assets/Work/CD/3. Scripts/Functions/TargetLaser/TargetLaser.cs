@@ -5,7 +5,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
-using UnityEngine.Serialization;
 
 
 public class TargetLaser : MonoBehaviour
@@ -50,7 +49,6 @@ public class TargetLaser : MonoBehaviour
     private Sequence _sequence;
     private Sequence _defaultTween;
     private Sequence _laserSequence;
-
 
     private void Awake()
     {
@@ -114,7 +112,7 @@ public class TargetLaser : MonoBehaviour
 
         Debug.Log("기본값");
         _defaultTween = DOTween.Sequence();
-        _defaultTween.Append(transform.DOLocalRotate(Vector3.zero, _rotationDuration, RotateMode.Fast)
+        _defaultTween.Append(transform.DORotate(Vector3.zero, _rotationDuration, RotateMode.Fast)
             .OnComplete(() => _isFirst = true));
     }
 
@@ -131,7 +129,7 @@ public class TargetLaser : MonoBehaviour
     {
         _sequence = DOTween.Sequence();
         _sequence.AppendInterval(_rotationCool)
-            .Append(transform.DOLocalRotate(new Vector3(0, 0, -180), _rotationDuration, RotateMode.WorldAxisAdd))
+            .Append(transform.DORotate(new Vector3(0, 0, -180), _rotationDuration))
             .AppendInterval(_rotationCool)
             .SetLoops(2, LoopType.Yoyo);
     }
@@ -158,7 +156,7 @@ public class TargetLaser : MonoBehaviour
 
         _dir = target.position - transform.position;
 
-        float angle = Mathf.Atan2(_dir.y, _dir.x) * Mathf.Rad2Deg;
+        float angle = transform.parent.transform.parent.transform.parent.transform.parent.rotation.eulerAngles.z >= 180 ? Mathf.Atan2(-_dir.y, -_dir.x) * Mathf.Rad2Deg : Mathf.Atan2(_dir.y, _dir.x) * Mathf.Rad2Deg;
 
         transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, angle), _rotateSpeed);
 
