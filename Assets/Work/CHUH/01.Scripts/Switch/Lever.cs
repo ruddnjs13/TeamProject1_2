@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour, IInteractable
 {
-    public MonoBehaviour ActiveObj;
     [Header("ISwitchable »ó¼Ó")]
+    public MonoBehaviour ActiveObj;
+
     private ISwitchable active;
     private void OnValidate()
     {
