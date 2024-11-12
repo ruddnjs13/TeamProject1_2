@@ -20,7 +20,10 @@ public class TurnBlockGroup : MonoBehaviour
     public void CorrectCheck()
     {
         if (Check() == true)
+        {
+            Debug.Log("<color=green>전부 정답!</color>");
             OnCorrect?.Invoke();
+        }
 
     }
 
@@ -28,6 +31,7 @@ public class TurnBlockGroup : MonoBehaviour
     {
         foreach (TurnBlock block in _turnBlockGroup)
         {
+            if (block == null) return false;
             if (block.IsCorrect == false) return false;
         }
 
