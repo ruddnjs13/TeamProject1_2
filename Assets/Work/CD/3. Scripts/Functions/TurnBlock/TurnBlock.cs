@@ -74,7 +74,7 @@ public class TurnBlock : MonoBehaviour, IInteractable
         {
             if (Mathf.Approximately(_correctTrm.eulerAngles.z, _rotateArr[_rotateIdx]))
             {
-                Debug.LogError("일치");
+                Debug.Log("일치");
                 IsCorrect = true;
             }
             RotateIdx++;

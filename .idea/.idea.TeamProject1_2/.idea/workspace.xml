@@ -30,6 +30,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TurnBlock/TurnBlockCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TurnBlock/TurnBlockGroup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/UI/Keymaping.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Interaction/PlayerInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerDeadState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/4a/41dc8a46/UnityEvent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -177,7 +178,7 @@
       <workItem from="1730959054388" duration="16000" />
       <workItem from="1730959087969" duration="6077000" />
       <workItem from="1731336377131" duration="3761000" />
-      <workItem from="1731391658049" duration="7200000" />
+      <workItem from="1731391658049" duration="10276000" />
     </task>
     <servers />
   </component>
