@@ -11,8 +11,8 @@ public class TurnBlock : MonoBehaviour, IInteractable
     private int[] _rotateArr = { 90, 180, 270, 0 };
     
     // 배열을 하나하나 돌려줄 인덱스값 (프로퍼티)
-    [SerializeField] private int _rotateIdx = 0;
-
+    private int _rotateIdx = 0;
+    
     public int RotateIdx
     {
         get => _rotateIdx;
@@ -24,6 +24,15 @@ public class TurnBlock : MonoBehaviour, IInteractable
             else _rotateIdx = value;
         }
     }
+    
+    // 정답 체크 해줄 부울값
+    public bool IsCorrect { get; private set; } = false;
+    
+    public void Initialize()
+    {
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
+    }
+    
     
     // 정답인 값을 받아옴.
     [SerializeField] private Transform _correctTrm;
@@ -65,7 +74,8 @@ public class TurnBlock : MonoBehaviour, IInteractable
         {
             if (Mathf.Approximately(_correctTrm.eulerAngles.z, _rotateArr[_rotateIdx]))
             {
-                Debug.LogError("일치");
+                Debug.Log("일치");
+                IsCorrect = true;
             }
             RotateIdx++;
         });
