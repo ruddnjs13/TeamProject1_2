@@ -36,7 +36,7 @@ public class LightShooter : MonoBehaviour, IInteractable
         Debug.Log("¹ßÁø");
         StartCoroutine(LightColtime());
         _lineRenderer.SetPosition(0, Vector3.zero);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position+transform.right, transform.right, 20);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position+transform.right, transform.right, 30);
         if (hit.collider != null)
         {
             _lineRenderer.positionCount = positionCount + 1;
