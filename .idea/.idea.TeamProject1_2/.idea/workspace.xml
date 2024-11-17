@@ -28,6 +28,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/EventBlock/EventBlock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/EventBlock/MoveEventBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TurnBlock/TurnBlockCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TurnBlock/TurnBlockGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/UI/Keymaping.cs" root0="FORCE_HIGHLIGHTING" />
@@ -180,6 +182,8 @@
       <workItem from="1731336377131" duration="3761000" />
       <workItem from="1731391658049" duration="10276000" />
       <workItem from="1731481527540" duration="1275000" />
+      <workItem from="1731813112407" duration="5266000" />
+      <workItem from="1731853827783" duration="4266000" />
     </task>
     <servers />
   </component>

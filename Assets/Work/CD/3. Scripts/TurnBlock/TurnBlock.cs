@@ -11,7 +11,7 @@ public class TurnBlock : MonoBehaviour, IInteractable
     private int[] _rotateArr = { 90, 180, 270, 0 };
     
     // 배열을 하나하나 돌려줄 인덱스값 (프로퍼티)
-    private int _rotateIdx = 0;
+    [SerializeField] private int _rotateIdx = 0;
     
     public int RotateIdx
     {
@@ -62,17 +62,17 @@ public class TurnBlock : MonoBehaviour, IInteractable
     public void HandleTurnEvent()
     {
         //회전 기능
-        _tween = transform.DOLocalRotate(new Vector3(0, 0, _rotateArr[_rotateIdx]), _duration);
+        _tween = transform.DOLocalRotate(new Vector3(0, 0, Mathf.Approximately(_rotateArr[_rotateIdx], transform.localRotation.eulerAngles.z) ? _rotateArr[++_rotateIdx] : _rotateArr[_rotateIdx]), _duration);
         // 기능을 작동시켜줄 시퀀스.
         _sequence = DOTween.Sequence();
         _sequence.Append(_tween);
-
+    
         _sequence.OnComplete(() => Debug.Log("<color=blue>시퀀스 끝</color>"));
 
         // 시퀀스가 끝났을 때에 정답 확인
         _sequence.OnComplete(() =>
         {
-            if (Mathf.Approximately(_correctTrm.eulerAngles.z, _rotateArr[_rotateIdx]))
+            if (Mathf.Approximately(_correctTrm.localRotation.eulerAngles.z, _rotateArr[_rotateIdx]))
             {
                 Debug.Log("일치");
                 IsCorrect = true;

@@ -507,6 +507,10 @@ PrefabInstance:
       propertyPath: _correctTrm
       value: 
       objectReference: {fileID: 1046074884}
+    - target: {fileID: 3655805451013225505, guid: a13c8b9e5ab7e70449122d784144f8f1, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.28866667
+      objectReference: {fileID: 0}
     - target: {fileID: 4534618970044603402, guid: a13c8b9e5ab7e70449122d784144f8f1, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -121124,6 +121128,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1172961284}
+  m_Father: {fileID: 1971846328}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &742675158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742675159}
+  m_Layer: 0
+  m_Name: EventBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &742675159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742675158}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
   - {fileID: 1300439768}
   m_Father: {fileID: 1971846328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121720,6 +121755,10 @@ PrefabInstance:
       propertyPath: _correctTrm
       value: 
       objectReference: {fileID: 1374424196}
+    - target: {fileID: 3655805451013225505, guid: a13c8b9e5ab7e70449122d784144f8f1, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.28866667
+      objectReference: {fileID: 0}
     - target: {fileID: 4534618970044603402, guid: a13c8b9e5ab7e70449122d784144f8f1, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -121760,8 +121799,9 @@ GameObject:
   - component: {fileID: 1300439768}
   - component: {fileID: 1300439770}
   - component: {fileID: 1300439769}
+  - component: {fileID: 1300439771}
   m_Layer: 0
-  m_Name: Square
+  m_Name: MoveBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121780,7 +121820,7 @@ Transform:
   m_LocalScale: {x: 9.2398, y: 1.6866966, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 733814254}
+  m_Father: {fileID: 742675159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1300439769
 BoxCollider2D:
@@ -121879,6 +121919,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1300439771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300439767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35debfd87dd80ef4a8ff6b6781179c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 3
 --- !u!1001 &1301553845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122017,7 +122070,19 @@ MonoBehaviour:
   - {fileID: 1859970298}
   OnCorrect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1300439771}
+        m_TargetAssemblyTypeName: MoveEventBlock, Assembly-CSharp
+        m_MethodName: VoidEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1350698246
 GameObject:
   m_ObjectHideFlags: 0
@@ -122745,6 +122810,10 @@ PrefabInstance:
       propertyPath: _correctTrm
       value: 
       objectReference: {fileID: 692959307}
+    - target: {fileID: 3655805451013225505, guid: a13c8b9e5ab7e70449122d784144f8f1, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.28866667
+      objectReference: {fileID: 0}
     - target: {fileID: 4534618970044603402, guid: a13c8b9e5ab7e70449122d784144f8f1, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -122952,6 +123021,7 @@ Transform:
   m_Children:
   - {fileID: 43787033}
   - {fileID: 733814254}
+  - {fileID: 742675159}
   m_Father: {fileID: 1096253953}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1989317255 stripped
