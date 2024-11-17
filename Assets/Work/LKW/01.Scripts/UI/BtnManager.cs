@@ -14,6 +14,13 @@ public enum BtnType
 public class BtnManager : MonoSingleton<BtnManager>
 {
     BtnType _btnType = BtnType.None;
+    
+    private FeedbackPlayer _feedbackPlayer;
+
+    private void Awake()
+    {
+        _feedbackPlayer = GetComponentInChildren<FeedbackPlayer>();
+    }
 
     private void BtnClick()
     {
@@ -33,10 +40,5 @@ public class BtnManager : MonoSingleton<BtnManager>
     {
         _btnType = btnType;
         BtnClick();
-    }
-
-    public void PlayEffect(Vector3 position)
-    {
-        
     }
 }

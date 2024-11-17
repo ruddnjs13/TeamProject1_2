@@ -29,6 +29,8 @@ public class PoolManager : MonoSingleton<PoolManager>
             Debug.LogError($"This is not Pool {item.prefab.name}");
             return;
         }
+        Debug.Log(poolable);
+        Debug.Log(item);
 
         Pool pool = new Pool(poolable, transform, item.count);
         
