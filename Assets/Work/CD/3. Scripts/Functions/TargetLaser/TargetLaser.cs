@@ -53,7 +53,7 @@ public class TargetLaser : MonoBehaviour
     private void Awake()
     {
         _line = GetComponent<LineRenderer>();
-        _line.SetPosition(0, transform.position);
+        _line.SetPosition(0, transform.localPosition);
     }
 
     private void OnEnable()
@@ -140,6 +140,7 @@ public class TargetLaser : MonoBehaviour
 
         if (filterRay > 0)
         {
+            // 이부분 보안 좀 필요함 (FSM 리펙토링 후 수정)
             _line.SetPosition(1,
                 _ray.FirstOrDefault(a => a.collider.gameObject).collider.gameObject.layer !=
                 LayerMask.NameToLayer("Player")

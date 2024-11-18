@@ -5,16 +5,26 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LightShooter : MonoBehaviour, IInteractable
 {
+    [Header("Sprite Setting")]
+    [SerializeField] private Sprite cantOnSprite;
+    [SerializeField] private Sprite offSprite;
+    [SerializeField] protected Sprite onSprite;
+
+    [Header("Light Setting")]
     [SerializeField] private float ShootTime = 1.0f; 
     [SerializeField] private float Colltime = 3.0f;
+
     private bool isCanLightShoot = true;
+
     private BoxCollider2D _colider;
     private LineRenderer _lineRenderer;
+    private SpriteRenderer spriteRenderer;
     private int positionCount = 1;
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
         _colider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
     private void Start()
     {
@@ -26,7 +36,7 @@ public class LightShooter : MonoBehaviour, IInteractable
         Debug.Log("¹ßÁø");
         StartCoroutine(LightColtime());
         _lineRenderer.SetPosition(0, Vector3.zero);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position+transform.right, transform.right, 20);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position+transform.right, transform.right, 30);
         if (hit.collider != null)
         {
             _lineRenderer.positionCount = positionCount + 1;
@@ -45,9 +55,12 @@ public class LightShooter : MonoBehaviour, IInteractable
     private IEnumerator LightColtime()
     {
         isCanLightShoot = false;
+        spriteRenderer.sprite = onSprite;
         yield return new WaitForSeconds(ShootTime);
         _lineRenderer.positionCount = 1;
+        spriteRenderer.sprite = cantOnSprite;
         yield return new WaitForSeconds(Colltime);
+        spriteRenderer.sprite = offSprite;
         isCanLightShoot = true;
         _colider.enabled = true;
     }
