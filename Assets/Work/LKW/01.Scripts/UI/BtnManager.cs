@@ -8,11 +8,16 @@ public enum BtnType
     None,
     Start,
     Setting,
-    Exit
+    Exit,
+    Video,
+    Audio,
+    KeySetting
 }
 
 public class BtnManager : MonoSingleton<BtnManager>
 {
+    [SerializeField] private GameObject _settingUI;
+    [SerializeField] private GameObject _titleUI;
     BtnType _btnType = BtnType.None;
     
     private FeedbackPlayer _feedbackPlayer;
@@ -30,8 +35,16 @@ public class BtnManager : MonoSingleton<BtnManager>
                 SceneManager.LoadScene(1);
                 break;
             case BtnType.Setting:
+                _titleUI.SetActive(false);
+                _settingUI.SetActive(true);
                 break;
             case BtnType.Exit:
+                break;
+            case BtnType.Video:
+                break;
+            case BtnType.Audio:
+                break;
+            case BtnType.KeySetting:
                 break;
         }
     }

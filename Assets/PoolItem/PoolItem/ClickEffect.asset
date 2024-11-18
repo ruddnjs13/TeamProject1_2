@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolName: ClickEffect
   prefab: {fileID: 6497536558796529416, guid: 4cccc09afc1c6ff45a35ca1f93e09103, type: 3}
-  count: 10
+  count: 40
