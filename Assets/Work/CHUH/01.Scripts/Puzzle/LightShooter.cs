@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(LineRenderer))]
 public class LightShooter : MonoBehaviour, IInteractable
@@ -13,6 +14,9 @@ public class LightShooter : MonoBehaviour, IInteractable
     [Header("Light Setting")]
     [SerializeField] private float ShootTime = 1.0f; 
     [SerializeField] private float Colltime = 3.0f;
+
+    public UnityEvent OnEvent;
+    public UnityEvent OffEvent;
 
     private bool isCanLightShoot = true;
 
@@ -56,9 +60,11 @@ public class LightShooter : MonoBehaviour, IInteractable
     {
         isCanLightShoot = false;
         spriteRenderer.sprite = onSprite;
+        OnEvent?.Invoke();
         yield return new WaitForSeconds(ShootTime);
         _lineRenderer.positionCount = 1;
         spriteRenderer.sprite = cantOnSprite;
+        OffEvent?.Invoke();
         yield return new WaitForSeconds(Colltime);
         spriteRenderer.sprite = offSprite;
         isCanLightShoot = true;
