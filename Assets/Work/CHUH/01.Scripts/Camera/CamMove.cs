@@ -12,6 +12,15 @@ public class CamMove : MonoBehaviour
     [SerializeField] private Transform nowCamMovePoint;
     [SerializeField] protected float nowCamScale;
 
+    public void SetPoint(Transform point)
+    {
+        nowCamMovePoint = point;
+    }
+    public void SetSize(float size)
+    {
+        nowCamScale = size;
+    }
+
     public void SetCam()
     {
         // DOTween.To(() => cinemachine.m_Lens.OrthographicSize, x => cinemachine.m_Lens.OrthographicSize = x, CamScale, 5f);

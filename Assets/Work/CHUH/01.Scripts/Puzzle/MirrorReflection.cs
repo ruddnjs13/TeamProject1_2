@@ -39,7 +39,7 @@ public class MirrorReflection : MonoBehaviour, IInteractable
         }
         else
         {
-            line.SetPosition(count, reflectionVector * 20 + transform.position);
+            line.SetPosition(count, shooter.transform.InverseTransformPoint(reflectionVector * 20 + transform.position));
         }
     }
     private IEnumerator LightColtime()
