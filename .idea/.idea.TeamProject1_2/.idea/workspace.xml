@@ -31,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/EventBlock/Close/CloseEventBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/EventBlock/EventBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/EventBlock/MoveEventBlock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/TurnBlock/ChangeSprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/UI/Keymaping.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Interaction/PlayerInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/PlayerState/State/PlayerDeadState.cs" root0="FORCE_HIGHLIGHTING" />

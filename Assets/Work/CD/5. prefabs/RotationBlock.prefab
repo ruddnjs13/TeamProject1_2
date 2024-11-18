@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1783437921103039981}
   - component: {fileID: 4534618970044603402}
+  - component: {fileID: 1119274905309819517}
   - component: {fileID: 2108710772703109798}
   - component: {fileID: 3655805451013225505}
   m_Layer: 10
@@ -86,6 +87,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1119274905309819517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983143748208466966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12139536930b97428ff5b08e7f12a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2108710772703109798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,12 +111,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e2ab804ebc7474fbff374c89853dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 21300000, guid: 3901ad5bf3507e8429b4904f7b99bc73, type: 3}
   _rotateIdx: 0
   _correctTrm: {fileID: 0}
   _duration: 3
   OnInputEvent:
     m_PersistentCalls:
       m_Calls: []
+  OnChangeSprite:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1119274905309819517}
+        m_TargetAssemblyTypeName: ChangeSprite, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &3655805451013225505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +169,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
