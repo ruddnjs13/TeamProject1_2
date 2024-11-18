@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class MoveEventBlock : EventBlock
 {
+    [SerializeField] private Vector2 _moveDir;
     [SerializeField] private float _duration;
 
     public override void VoidEvent()
@@ -15,6 +16,15 @@ public class MoveEventBlock : EventBlock
 
     protected override void EventFunc()
     {
-        transform.DOMove(new Vector2(transform.position.x, 10), _duration);
+        Vector2 dir = _moveDir;
+        if (_moveDir.x == 0)
+        {
+            dir = new Vector2(transform.position.x, _moveDir.y);
+        }
+        else if (_moveDir.y == 0)
+        {
+            dir = new Vector2(_moveDir.x, transform.position.y);
+        }
+        transform.DOMove(dir, _duration);
     }
 }
