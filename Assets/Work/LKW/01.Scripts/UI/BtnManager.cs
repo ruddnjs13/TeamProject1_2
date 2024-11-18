@@ -11,13 +11,19 @@ public enum BtnType
     Exit,
     Video,
     Audio,
-    KeySetting
+    KeySetting,
+    Quit,
+    OptionQuit
 }
 
 public class BtnManager : MonoSingleton<BtnManager>
 {
     [SerializeField] private GameObject _settingUI;
     [SerializeField] private GameObject _titleUI;
+    [SerializeField] private GameObject _videoPanel;
+    [SerializeField] private GameObject _audioPanel;
+    [SerializeField] private GameObject _KeyboardPanel;
+    [SerializeField] private GameObject _optionPanel;
     BtnType _btnType = BtnType.None;
     
     private FeedbackPlayer _feedbackPlayer;
@@ -41,10 +47,22 @@ public class BtnManager : MonoSingleton<BtnManager>
             case BtnType.Exit:
                 break;
             case BtnType.Video:
+                _videoPanel.SetActive(true);
+                _optionPanel.SetActive(false);
                 break;
             case BtnType.Audio:
                 break;
             case BtnType.KeySetting:
+                break;
+            case BtnType.Quit:
+                _titleUI.SetActive(true);
+                _settingUI.SetActive(false);
+                break;
+            case BtnType.OptionQuit:
+                _videoPanel.SetActive(false);
+                _audioPanel.SetActive(false);
+                _KeyboardPanel.SetActive(false);
+                _optionPanel.SetActive(true);
                 break;
         }
     }
