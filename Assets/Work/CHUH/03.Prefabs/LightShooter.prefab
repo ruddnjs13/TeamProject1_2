@@ -237,8 +237,14 @@ MonoBehaviour:
   cantOnSprite: {fileID: 7340524061113627676, guid: 096345c81c98b764b8eb1223110129b5, type: 3}
   offSprite: {fileID: 3938541086622524624, guid: 096345c81c98b764b8eb1223110129b5, type: 3}
   onSprite: {fileID: -7880077512667661244, guid: 096345c81c98b764b8eb1223110129b5, type: 3}
-  ShootTime: 1
-  Colltime: 3
+  ShootTime: 1.5
+  Colltime: 1.5
+  OnEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OffEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &6831497156643184798
 BoxCollider2D:
   m_ObjectHideFlags: 0

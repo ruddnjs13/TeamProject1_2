@@ -34,15 +34,5 @@ public class CamMove : MonoBehaviour
     {
         Cam2.Priority = 0;
     }
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SetCam();
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            UnSetCam();
-        }
-    }
+    
 }
