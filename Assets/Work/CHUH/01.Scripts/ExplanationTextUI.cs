@@ -30,7 +30,7 @@ public class ExplanationTextUI : MonoBehaviour, IInteractable
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        if (isExplanationUION) HideExplanationText();
     }
     private void ShowExplanationText()
     {
