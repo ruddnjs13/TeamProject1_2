@@ -12,7 +12,7 @@ public class LightSensor : MonoBehaviour
         if (ActiveObj !=null && ActiveObj as ISwitchable == null)
         {
             ActiveObj = null;
-            Debug.LogWarning("This Object is not succession ISwitchble. Put in ISwitchble Obj");
+            Debug.LogWarning("This Object is not succession ISwitchble. Put in ISwitchble Objexct");
         }
     }
     private void Awake()
