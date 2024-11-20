@@ -9,12 +9,11 @@ public class CamMove : MonoBehaviour
     public CinemachineVirtualCamera cinemachine;
     public CinemachineVirtualCamera Cam2;
 
-    [SerializeField] private Transform nowCamMovePoint;
     [SerializeField] protected float nowCamScale;
 
     public void SetPoint(Transform point)
     {
-        nowCamMovePoint = point;
+        Cam2.Follow = point;
     }
     public void SetSize(float size)
     {
@@ -28,7 +27,6 @@ public class CamMove : MonoBehaviour
 
         Cam2.Priority = 100;
         Cam2.m_Lens.OrthographicSize = nowCamScale;
-        Cam2.Follow = nowCamMovePoint;
     }
     public void UnSetCam()
     {
