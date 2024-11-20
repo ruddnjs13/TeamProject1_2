@@ -126,103 +126,19 @@ TextureImporter:
       name: tile11_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 14
+        x: 23
+        y: 13
         width: 8
-        height: 8
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 7, z: 3, w: 8}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: cb257d3454bcc5741933c599de676c2b
       internalID: -1093303495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile11_1
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 14
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc810debee47225439cf25d85a32d439
-      internalID: -2036427040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile11_2
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 21
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbd858b77826d2c4e9c9b4f5dfeb916a
-      internalID: 115283087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile11_3
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 13
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3a4dff0096b03d4281f5850bb95fc1d
-      internalID: -1924787408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile11_4
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70ca4a4db808f0141a7c149b9c47988b
-      internalID: -1710977100
       vertices: []
       indices: 
       edges: []
