@@ -51,6 +51,8 @@ public class BtnManager : MonoSingleton<BtnManager>
                 _optionPanel.SetActive(false);
                 break;
             case BtnType.Audio:
+                _audioPanel.SetActive(true);
+                _optionPanel.SetActive(false);
                 break;
             case BtnType.KeySetting:
                 break;
