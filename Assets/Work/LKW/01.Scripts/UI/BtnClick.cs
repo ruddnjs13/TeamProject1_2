@@ -13,11 +13,6 @@ public class BtnClick : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     
     private FeedbackPlayer _feedbackPlayer;
 
-    private void Awake()
-    {
-        _feedbackPlayer = GetComponentInChildren<FeedbackPlayer>();
-    }
-
     private void Start()
     {
         originScale = transform.localScale;
@@ -25,18 +20,15 @@ public class BtnClick : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 
     public void BtnClicked()
     {
-        BtnManager.Instance.SetBtnAndClick(btnType);
+        BtnManager.Instance.SetBtnAndClick(btnType);        
+        transform.localScale = originScale;
+
     }
 
-    public void EnterFeedback()
-    {
-        _feedbackPlayer.PlayFeedback();
-    }
-
+   
     public void OnPointerEnter(PointerEventData eventData)
     {
         transform.localScale = originScale * 1.2f;
-        EnterFeedback();
     }
 
 
