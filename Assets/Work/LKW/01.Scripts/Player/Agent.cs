@@ -27,7 +27,7 @@ public abstract class Agent : MonoBehaviour
     public readonly float coyoteTime = 0.1f;
     public float coyoteCount { get; set; } = 0f;
 
-    public readonly float jumpBuffer = 0.2f;
+    public readonly float jumpBuffer = 0.12f;
     
     public float bufferCount { get; set; } = 0f; 
 

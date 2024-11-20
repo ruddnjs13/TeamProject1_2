@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(LineRenderer))]
 public class LightShooter : MonoBehaviour, IInteractable
@@ -14,21 +16,27 @@ public class LightShooter : MonoBehaviour, IInteractable
     [SerializeField] private float ShootTime = 1.0f; 
     [SerializeField] private float Colltime = 3.0f;
 
+    public UnityEvent OnEvent;
+    public UnityEvent OffEvent;
+
     private bool isCanLightShoot = true;
 
     private BoxCollider2D _colider;
     private LineRenderer _lineRenderer;
     private SpriteRenderer spriteRenderer;
+    private Light2D _light;
     private int positionCount = 1;
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
         _colider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _light = GetComponentInChildren<Light2D>();
     }
     private void Start()
     {
         _lineRenderer.SetPosition(0, Vector3.zero);
+        _light.enabled = false;
     }
     private void FireLight()
     {
@@ -56,9 +64,13 @@ public class LightShooter : MonoBehaviour, IInteractable
     {
         isCanLightShoot = false;
         spriteRenderer.sprite = onSprite;
+        _light.enabled = true;
+        OnEvent?.Invoke();
         yield return new WaitForSeconds(ShootTime);
         _lineRenderer.positionCount = 1;
         spriteRenderer.sprite = cantOnSprite;
+        _light.enabled = false;
+        OffEvent?.Invoke();
         yield return new WaitForSeconds(Colltime);
         spriteRenderer.sprite = offSprite;
         isCanLightShoot = true;
