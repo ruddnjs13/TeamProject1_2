@@ -18,7 +18,7 @@ public class TargetLaserStateMachine : MonoBehaviour
             try
             {
                 Type type = Type.GetType(state.className);
-                var targetLaser = Activator.CreateInstance(type, (object)owner) as TargetLaserState;
+                var targetLaser = Activator.CreateInstance(type, owner, state.loopType, state._easeType) as TargetLaserState;
                 
                 _states.Add(state.stateName, targetLaser);
             }

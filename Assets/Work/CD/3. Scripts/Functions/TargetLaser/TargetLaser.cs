@@ -83,6 +83,7 @@ public class TargetLaser : MonoBehaviour
     {
         ShootRay();
         TargetFind();
+        _stateMachine.UpdateState();
     }
 
     public void TargetFind()
