@@ -9,6 +9,8 @@ using DG.Tweening;
 
 public class TargetLaser : MonoBehaviour
 {
+    [SerializeField] private TargetLaserStatesSO _fsmSO;
+    
     public UnityEvent OnHitEvent;
 
     [Header("Rotation Settings")] [SerializeField]
@@ -37,6 +39,8 @@ public class TargetLaser : MonoBehaviour
     [SerializeField] private Transform _checkTarget;
     [Range(0, 1f)] [SerializeField] private float _rotateSpeed;
 
+    private TargetLaserStateMachine _stateMachine;
+    
     private Vector3 _dir;
 
     private RaycastHit2D[] _ray = new RaycastHit2D[10];
@@ -50,10 +54,19 @@ public class TargetLaser : MonoBehaviour
     private Sequence _defaultTween;
     private Sequence _laserSequence;
 
+
     private void Awake()
     {
+        
         _line = GetComponent<LineRenderer>();
         _line.SetPosition(0, transform.localPosition);
+
+        AfterInit();
+    }
+
+    private void AfterInit()
+    {
+        _stateMachine = new TargetLaserStateMachine(_fsmSO, this);
     }
 
     private void OnEnable()
@@ -61,10 +74,16 @@ public class TargetLaser : MonoBehaviour
         _rangeTarget.localScale = new Vector3(_size * 2, _size * 2, 1);
     }
 
+    private void Start()
+    {
+        _stateMachine.Initialize("Idle");
+    }
+
     private void Update()
     {
         ShootRay();
         TargetFind();
+        _stateMachine.UpdateState();
     }
 
     public void TargetFind()
