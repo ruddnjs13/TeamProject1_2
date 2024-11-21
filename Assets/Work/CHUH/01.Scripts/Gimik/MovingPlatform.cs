@@ -7,11 +7,11 @@ public class MovingPlatform : MonoBehaviour
 {
     [SerializeField] private bool isCanMoveing;
 
-    [Header("Move Type")]
-    [SerializeField] private MoveType HowToMove;
-
     [Header("Move Setting(local pos)")]
+    [Space]
     [SerializeField] private bool isStartingToStart;
+    [Space]
+
     [SerializeField] private Vector2 moveStartPos;
     [SerializeField] private Vector2 moveEndPos;
     [SerializeField] private float waitTime;
@@ -25,15 +25,25 @@ public class MovingPlatform : MonoBehaviour
     public void Moveing()
     {
         if (!isCanMoveing) return;
-        switch (HowToMove)
+        _Sequnce = DOTween.Sequence();
+        _Sequnce.AppendInterval(waitTime).
+            Append(transform.DOLocalMove(transform.position + (Vector3)moveEndPos, _duration).SetEase(Ease.Linear)).
+            AppendInterval(waitTime);
+        _Sequnce.SetLoops(-1, LoopType.Yoyo);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            case MoveType.LeftRight:
-                _Sequnce = DOTween.Sequence();
-                _Sequnce.AppendInterval(waitTime).
-                    Append(transform.DOLocalMove(transform.position + (Vector3)moveEndPos, _duration).SetEase(Ease.Linear)).
-                    AppendInterval(waitTime);
-                _Sequnce.SetLoops(-1, LoopType.Yoyo);
-                break;
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
         }
     }
 }
