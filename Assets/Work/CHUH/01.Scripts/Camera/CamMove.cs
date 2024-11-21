@@ -32,5 +32,5 @@ public class CamMove : MonoBehaviour
     {
         Cam2.Priority = 0;
     }
-    
+
 }

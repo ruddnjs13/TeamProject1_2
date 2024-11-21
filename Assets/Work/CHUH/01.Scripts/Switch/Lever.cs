@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Lever : MonoBehaviour, IInteractable
 {
     [Header("ISwitchable »ó¼Ó")]
     public MonoBehaviour ActiveObj;
+
+    public UnityEvent OnEvent;
+    public UnityEvent OffEvent;
 
     private ISwitchable active;
     private void OnValidate()
@@ -29,6 +33,7 @@ public class Lever : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
+        StartCoroutine(WaitAndOff());
         active.Activate();
     }
     public void EndInteract()
@@ -36,5 +41,10 @@ public class Lever : MonoBehaviour, IInteractable
 
     }
 
-    
+    private IEnumerator WaitAndOff()
+    {
+        OnEvent?.Invoke();
+        yield return new WaitForSeconds(2);
+        OffEvent?.Invoke();
+    }
 }
