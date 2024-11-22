@@ -8,13 +8,14 @@ using UnityEngine.InputSystem;
 public class KeyMapping : MonoSingleton<KeyMapping>
 {
     private Controls _controls;
-    public String RebindInfo {get; private set;}
+    public string RebindInfo {get; private set;}
     [SerializeField] private InputReaderSO _inputReaderSO;
     [SerializeField] private List<TextMeshProUGUI> _moveKeyBindingTexts;
     [SerializeField] private TextMeshProUGUI _jumpKeyBindingTexts;
     [SerializeField] private TextMeshProUGUI _interactKeyBindingTexts;
     [SerializeField] private TextMeshProUGUI _clockwiseKeyBindingTexts;
     [SerializeField] private TextMeshProUGUI _counterClockwiseKeyBindingTexts;
+    public KeyMappingSaveLord saveLord;
     
     private bool _isRebinding = false;
     
@@ -26,20 +27,23 @@ public class KeyMapping : MonoSingleton<KeyMapping>
 
     private void InitInputSetting()
     {
+        saveLord.LoadKeyDataFromJson();
+        RebindInfo = saveLord.KeyData.keyString;
         _controls = new Controls();
         _controls.Player.Enable();
+        _controls.LoadBindingOverridesFromJson(RebindInfo);
+        
         _moveKeyBindingTexts[0].text = _controls.Player.Movement.GetBindingDisplayString(4);
         _moveKeyBindingTexts[1].text = _controls.Player.Movement.GetBindingDisplayString(3);
 
         
-        _controls.LoadBindingOverridesFromJson(RebindInfo);
         _jumpKeyBindingTexts.text = _controls.Player.Jump.GetBindingDisplayString(0);
         _interactKeyBindingTexts.text = _controls.Player.Interaction.GetBindingDisplayString(0);               
         _clockwiseKeyBindingTexts.text = _controls.Player.MapRotateClockwise.GetBindingDisplayString(0);               
         _counterClockwiseKeyBindingTexts.text = _controls.Player.MapRotateCounterClockwise.GetBindingDisplayString(0);               
 
     }
-
+    
     public void MovementRebinding(int bindIdx)
     {
         if(_isRebinding) return;
@@ -52,6 +56,8 @@ public class KeyMapping : MonoSingleton<KeyMapping>
             .OnComplete( op =>
             {
                 RebindInfo = _controls.SaveBindingOverridesAsJson();
+                saveLord.KeyData.keyString = RebindInfo;
+                saveLord.SaveKeyDataToJson();
                 _controls.LoadBindingOverridesFromJson(RebindInfo);
                  _moveKeyBindingTexts[4-bindIdx].text =  _controls.Player.Movement.GetBindingDisplayString(bindIdx);
                  _inputReaderSO.RebindInputReader(RebindInfo);
@@ -79,6 +85,8 @@ public class KeyMapping : MonoSingleton<KeyMapping>
             .OnComplete( op =>
             {
                 RebindInfo = _controls.SaveBindingOverridesAsJson();
+                saveLord.KeyData.keyString = RebindInfo;
+                saveLord.SaveKeyDataToJson();
                 _controls.LoadBindingOverridesFromJson(RebindInfo);
                 _jumpKeyBindingTexts.text =  _controls.Player.Jump.GetBindingDisplayString();
                 _isRebinding = false;
@@ -105,6 +113,8 @@ public class KeyMapping : MonoSingleton<KeyMapping>
             .OnComplete( op =>
             {
                 RebindInfo = _controls.SaveBindingOverridesAsJson();
+                saveLord.KeyData.keyString = RebindInfo;
+                saveLord.SaveKeyDataToJson();
                 _controls.LoadBindingOverridesFromJson(RebindInfo);
                 _interactKeyBindingTexts.text =  _controls.Player.Interaction.GetBindingDisplayString();
                 _isRebinding = false;
@@ -131,6 +141,8 @@ public class KeyMapping : MonoSingleton<KeyMapping>
             .OnComplete( op =>
             {
                 RebindInfo = _controls.SaveBindingOverridesAsJson();
+                saveLord.KeyData.keyString = RebindInfo;
+                saveLord.SaveKeyDataToJson();
                 _controls.LoadBindingOverridesFromJson(RebindInfo);
                 _clockwiseKeyBindingTexts.text =  _controls.Player.MapRotateClockwise.GetBindingDisplayString();
                 _isRebinding = false;
@@ -157,6 +169,8 @@ public class KeyMapping : MonoSingleton<KeyMapping>
             .OnComplete( op =>
             {
                 RebindInfo = _controls.SaveBindingOverridesAsJson();
+                saveLord.KeyData.keyString = RebindInfo;
+                saveLord.SaveKeyDataToJson();
                 _controls.LoadBindingOverridesFromJson(RebindInfo);
                 _counterClockwiseKeyBindingTexts.text =  _controls.Player.MapRotateCounterClockwise.GetBindingDisplayString();
                 _isRebinding = false;
