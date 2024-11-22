@@ -11,8 +11,8 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
 
     public Action JumpEvent;
     public Action InteractionEvent;
-    public Action LeftRotateEvent;
-    public Action RightRotateEvent;
+    public Action ClockwiseRotateEvent;
+    public Action CounterClockwiseRotateEvent;
     public event Action<Vector2> OnMoveEvent;
     
     public Vector2 Movement { get; private set; }
@@ -71,16 +71,19 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
         }
     }
 
-    public void OnMapRotateRight(InputAction.CallbackContext context)
+    public void OnMapRotateCounterClockwise(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            RightRotateEvent?.Invoke();
+            CounterClockwiseRotateEvent?.Invoke();
         }
     }
 
-    public void OnMapRotateLeft(InputAction.CallbackContext context)
+    public void OnMapRotateClockwise(InputAction.CallbackContext context)
     {
-        LeftRotateEvent?.Invoke();
+        if (context.performed)
+        {
+            ClockwiseRotateEvent?.Invoke();
+        }
     }
 }

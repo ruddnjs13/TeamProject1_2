@@ -55,7 +55,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""MapRotateRight"",
+                    ""name"": ""MapRotateCounterClockwise"",
                     ""type"": ""Button"",
                     ""id"": ""0653b370-fc98-40da-b283-731e814627b0"",
                     ""expectedControlType"": ""Button"",
@@ -64,7 +64,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""MapRotateLeft"",
+                    ""name"": ""MapRotateClockwise"",
                     ""type"": ""Button"",
                     ""id"": ""6cf4d376-0b21-4c5b-8fdb-a8563634e3ef"",
                     ""expectedControlType"": ""Button"",
@@ -158,7 +158,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MapRotateRight"",
+                    ""action"": ""MapRotateCounterClockwise"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -169,7 +169,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MapRotateLeft"",
+                    ""action"": ""MapRotateClockwise"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -200,8 +200,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
-        m_Player_MapRotateRight = m_Player.FindAction("MapRotateRight", throwIfNotFound: true);
-        m_Player_MapRotateLeft = m_Player.FindAction("MapRotateLeft", throwIfNotFound: true);
+        m_Player_MapRotateCounterClockwise = m_Player.FindAction("MapRotateCounterClockwise", throwIfNotFound: true);
+        m_Player_MapRotateClockwise = m_Player.FindAction("MapRotateClockwise", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -266,8 +266,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Interaction;
-    private readonly InputAction m_Player_MapRotateRight;
-    private readonly InputAction m_Player_MapRotateLeft;
+    private readonly InputAction m_Player_MapRotateCounterClockwise;
+    private readonly InputAction m_Player_MapRotateClockwise;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -275,8 +275,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
-        public InputAction @MapRotateRight => m_Wrapper.m_Player_MapRotateRight;
-        public InputAction @MapRotateLeft => m_Wrapper.m_Player_MapRotateLeft;
+        public InputAction @MapRotateCounterClockwise => m_Wrapper.m_Player_MapRotateCounterClockwise;
+        public InputAction @MapRotateClockwise => m_Wrapper.m_Player_MapRotateClockwise;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -295,12 +295,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interaction.started += instance.OnInteraction;
             @Interaction.performed += instance.OnInteraction;
             @Interaction.canceled += instance.OnInteraction;
-            @MapRotateRight.started += instance.OnMapRotateRight;
-            @MapRotateRight.performed += instance.OnMapRotateRight;
-            @MapRotateRight.canceled += instance.OnMapRotateRight;
-            @MapRotateLeft.started += instance.OnMapRotateLeft;
-            @MapRotateLeft.performed += instance.OnMapRotateLeft;
-            @MapRotateLeft.canceled += instance.OnMapRotateLeft;
+            @MapRotateCounterClockwise.started += instance.OnMapRotateCounterClockwise;
+            @MapRotateCounterClockwise.performed += instance.OnMapRotateCounterClockwise;
+            @MapRotateCounterClockwise.canceled += instance.OnMapRotateCounterClockwise;
+            @MapRotateClockwise.started += instance.OnMapRotateClockwise;
+            @MapRotateClockwise.performed += instance.OnMapRotateClockwise;
+            @MapRotateClockwise.canceled += instance.OnMapRotateClockwise;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -314,12 +314,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interaction.started -= instance.OnInteraction;
             @Interaction.performed -= instance.OnInteraction;
             @Interaction.canceled -= instance.OnInteraction;
-            @MapRotateRight.started -= instance.OnMapRotateRight;
-            @MapRotateRight.performed -= instance.OnMapRotateRight;
-            @MapRotateRight.canceled -= instance.OnMapRotateRight;
-            @MapRotateLeft.started -= instance.OnMapRotateLeft;
-            @MapRotateLeft.performed -= instance.OnMapRotateLeft;
-            @MapRotateLeft.canceled -= instance.OnMapRotateLeft;
+            @MapRotateCounterClockwise.started -= instance.OnMapRotateCounterClockwise;
+            @MapRotateCounterClockwise.performed -= instance.OnMapRotateCounterClockwise;
+            @MapRotateCounterClockwise.canceled -= instance.OnMapRotateCounterClockwise;
+            @MapRotateClockwise.started -= instance.OnMapRotateClockwise;
+            @MapRotateClockwise.performed -= instance.OnMapRotateClockwise;
+            @MapRotateClockwise.canceled -= instance.OnMapRotateClockwise;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -351,7 +351,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnInteraction(InputAction.CallbackContext context);
-        void OnMapRotateRight(InputAction.CallbackContext context);
-        void OnMapRotateLeft(InputAction.CallbackContext context);
+        void OnMapRotateCounterClockwise(InputAction.CallbackContext context);
+        void OnMapRotateClockwise(InputAction.CallbackContext context);
     }
 }

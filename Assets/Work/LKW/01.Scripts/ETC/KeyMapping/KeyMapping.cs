@@ -13,6 +13,8 @@ public class KeyMapping : MonoSingleton<KeyMapping>
     [SerializeField] private List<TextMeshProUGUI> _moveKeyBindingTexts;
     [SerializeField] private TextMeshProUGUI _jumpKeyBindingTexts;
     [SerializeField] private TextMeshProUGUI _interactKeyBindingTexts;
+    [SerializeField] private TextMeshProUGUI _clockwiseKeyBindingTexts;
+    [SerializeField] private TextMeshProUGUI _counterClockwiseKeyBindingTexts;
     
     private bool _isRebinding = false;
     
@@ -33,6 +35,8 @@ public class KeyMapping : MonoSingleton<KeyMapping>
         _controls.LoadBindingOverridesFromJson(RebindInfo);
         _jumpKeyBindingTexts.text = _controls.Player.Jump.GetBindingDisplayString(0);
         _interactKeyBindingTexts.text = _controls.Player.Interaction.GetBindingDisplayString(0);               
+        _clockwiseKeyBindingTexts.text = _controls.Player.MapRotateClockwise.GetBindingDisplayString(0);               
+        _counterClockwiseKeyBindingTexts.text = _controls.Player.MapRotateCounterClockwise.GetBindingDisplayString(0);               
 
     }
 
@@ -103,6 +107,58 @@ public class KeyMapping : MonoSingleton<KeyMapping>
                 RebindInfo = _controls.SaveBindingOverridesAsJson();
                 _controls.LoadBindingOverridesFromJson(RebindInfo);
                 _interactKeyBindingTexts.text =  _controls.Player.Interaction.GetBindingDisplayString();
+                _isRebinding = false;
+                _inputReaderSO.RebindInputReader(RebindInfo);
+            })
+            .OnCancel(op =>
+            {
+                op.Dispose();
+                _isRebinding = false;
+            }).Start();
+        _controls.Player.Enable();
+    }
+    
+    public void MapRotateClockwiseRebinding()
+    {
+        if(_isRebinding) return;
+        _isRebinding = true;
+        
+        _clockwiseKeyBindingTexts.text = "New Key";
+        _controls.Player.Disable();
+
+        _controls.Player.MapRotateClockwise.PerformInteractiveRebinding(0)
+            .WithControlsExcluding("Mouse")
+            .OnComplete( op =>
+            {
+                RebindInfo = _controls.SaveBindingOverridesAsJson();
+                _controls.LoadBindingOverridesFromJson(RebindInfo);
+                _clockwiseKeyBindingTexts.text =  _controls.Player.MapRotateClockwise.GetBindingDisplayString();
+                _isRebinding = false;
+                _inputReaderSO.RebindInputReader(RebindInfo);
+            })
+            .OnCancel(op =>
+            {
+                op.Dispose();
+                _isRebinding = false;
+            }).Start();
+        _controls.Player.Enable();
+    }
+    
+    public void MapRotateCounterClockwiseRebinding()
+    {
+        if(_isRebinding) return;
+        _isRebinding = true;
+        
+        _counterClockwiseKeyBindingTexts.text = "New Key";
+        _controls.Player.Disable();
+
+        _controls.Player.MapRotateCounterClockwise.PerformInteractiveRebinding(0)
+            .WithControlsExcluding("Mouse")
+            .OnComplete( op =>
+            {
+                RebindInfo = _controls.SaveBindingOverridesAsJson();
+                _controls.LoadBindingOverridesFromJson(RebindInfo);
+                _counterClockwiseKeyBindingTexts.text =  _controls.Player.MapRotateCounterClockwise.GetBindingDisplayString();
                 _isRebinding = false;
                 _inputReaderSO.RebindInputReader(RebindInfo);
             })
