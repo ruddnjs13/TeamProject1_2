@@ -16,7 +16,14 @@ public class TurnBlock : MonoBehaviour, IInteractable
     // 배열을 하나하나 돌려줄 인덱스값 (프로퍼티)
     [SerializeField] private int _rotateIdx = 0;
 
-    
+    private Collider2D _collider;
+
+
+    private void Awake()
+    {
+        _collider = GetComponent<Collider2D>();
+    }
+
     public int RotateIdx
     {
         get => _rotateIdx;
@@ -67,6 +74,15 @@ public class TurnBlock : MonoBehaviour, IInteractable
     // 구독받을 메서드 만들기
     public void HandleTurnEvent()
     {
+        try
+        {
+            _collider.enabled = false;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Collider2D Load ERRO\n ERROR Name{e.Message}");
+        }
+        
         //회전 기능
         _tween = transform.DOLocalRotate(new Vector3(0, 0, Mathf.Approximately(_rotateArr[_rotateIdx], transform.localRotation.eulerAngles.z) ? _rotateArr[++_rotateIdx] : _rotateArr[_rotateIdx]), _duration);
         // 기능을 작동시켜줄 시퀀스.
@@ -84,6 +100,7 @@ public class TurnBlock : MonoBehaviour, IInteractable
                 IsCorrect = true;
                 OnChangeSprite?.Invoke(_sprite);
             }
+            _collider.enabled = true;
             RotateIdx++;
         });
     }
@@ -91,7 +108,7 @@ public class TurnBlock : MonoBehaviour, IInteractable
     public void Interact()
     {
         Debug.Log("나 인풋받음");
-        if (_sequence.IsActive()) return;
+        if (_sequence.IsActive() || IsCorrect) return;
         OnInputEvent?.Invoke();
     }
 
