@@ -177,9 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29f0b419d104b740b540bef2ccd1379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 1.5
+  waitTime: 0.75
   shakeTime: 0.5
-  returnTime: 3
+  returnTime: 2
 --- !u!61 &8270558615713842284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -269,9 +269,9 @@ GameObject:
   - component: {fileID: 8200782989583167824}
   - component: {fileID: 239246086534812572}
   - component: {fileID: 6398686431654328336}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: HitGround
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +375,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.31566876}
+  m_Offset: {x: -0.031809226, y: -0.31566876}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.6}
@@ -386,7 +386,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.36866245}
+  m_Size: {x: 0.9363816, y: 0.36866248}
   m_EdgeRadius: 0
 --- !u!1 &7443102175476308280
 GameObject:
@@ -399,9 +399,9 @@ GameObject:
   - component: {fileID: 8203715900295990454}
   - component: {fileID: 6163141895803308407}
   - component: {fileID: 4462290954984910476}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: HitGround (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +505,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.31566876}
+  m_Offset: {x: 0.029592201, y: -0.31566876}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.6}
@@ -516,7 +516,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.36866245}
+  m_Size: {x: 0.94081557, y: 0.36866248}
   m_EdgeRadius: 0
 --- !u!1 &8786371581258384005
 GameObject:
@@ -527,9 +527,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6923435685225405592}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: HitGrounds
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

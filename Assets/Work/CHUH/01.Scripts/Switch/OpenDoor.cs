@@ -13,7 +13,7 @@ public class OpenDoor : MonoBehaviour, ISwitchable
     private bool isActived = false;
     private void Awake()
     {
-        StartPos = transform.position;
+        StartPos = transform.localPosition;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
