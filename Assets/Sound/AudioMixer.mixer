@@ -40,7 +40,7 @@ AudioMixerController:
   - guid: c1251a8f53802ca47b1612e797aedbf3
     name: MASTER
   - guid: 3e56c0a8c7c528541b725bd509f306f2
-    name: SFXVol
+    name: SFX
   m_AudioMixerGroupViews:
   - guids:
     - 6251e24515f71fa478bdc70528d56adc
