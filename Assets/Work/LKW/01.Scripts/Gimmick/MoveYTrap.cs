@@ -9,13 +9,22 @@ public class MoveYTrap : MonoBehaviour
     [SerializeField] private float moveYDistance = 2f;
     [SerializeField] private float moveDuration = 1.5f;
     
-    private Sequence moveSequence;
+    private Sequence _moveSequence;
 
-    private void OnEnable()
+    private void Start()
     {
-        moveSequence.Append(transform.DOLocalMoveY(transform.localPosition.y + moveYDistance
-            , moveDuration,false).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo));
-        moveSequence.AppendInterval(0.2f);
+        Init();
+    }
+
+    private void Init()
+    {
+        _moveSequence = DOTween.Sequence();
+        _moveSequence.Append(transform.DOLocalMoveY(transform.localPosition.y + moveYDistance
+            , moveDuration,false).SetEase(Ease.Linear));
+        _moveSequence.Append(transform.DOLocalMoveY(transform.localPosition.y
+            , moveDuration, false).SetEase(Ease.Linear));
+        _moveSequence.AppendInterval(0.2f);
+        _moveSequence.SetLoops(-1);
     }
 
     private void OnDisable()

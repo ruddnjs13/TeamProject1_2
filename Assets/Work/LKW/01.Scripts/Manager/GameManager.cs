@@ -44,4 +44,6 @@ public class GameManager : MonoSingleton<GameManager>
         player.transform.position = currentCheckpoint.transform.position;
         player.StateMachine.ChangeState(PlayerStateEnum.Idle);
     }
+    
+    
 }

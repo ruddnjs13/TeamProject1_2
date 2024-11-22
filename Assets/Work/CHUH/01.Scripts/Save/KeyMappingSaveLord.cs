@@ -10,7 +10,7 @@ public class KeyMappingSaveLord : MonoBehaviour
     // 저장할때 호출
     public void SaveKeyDataToJson()
     {
-        string jsonData = JsonUtility.ToJson(KeyData);
+        string jsonData = JsonUtility.ToJson(KeyData,true);
         string path = Path.Combine(Application.dataPath, "keyData.json");
         File.WriteAllText(path, jsonData);
     }

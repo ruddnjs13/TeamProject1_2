@@ -5,20 +5,20 @@ using UnityEngine.Events;
 
 public class Multiplexer : MonoBehaviour, ISwitchable
 {
-    [SerializeField] private int maxActiveCount;
-    [SerializeField] private int nowActiveCount;
+    public List<MonoBehaviour> switchList = new List<MonoBehaviour>();
     public UnityEvent ActiveObj;
     public void Activate()
     {
-        nowActiveCount++;
-        if(nowActiveCount >= maxActiveCount)
+        foreach (var t in switchList)
         {
-            ActiveObj?.Invoke();
+            ISwitchable switchable = t as ISwitchable;
+            if (switchable != null)
+                switchable.Activate();
         }
+        ActiveObj?.Invoke();
     }
 
     public void Deactivate()
     {
-        nowActiveCount--;
     }
 }
