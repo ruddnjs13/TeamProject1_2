@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2046054632281752672}
   - component: {fileID: 3824359805842203945}
   - component: {fileID: 2021641428122277519}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Piston
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
