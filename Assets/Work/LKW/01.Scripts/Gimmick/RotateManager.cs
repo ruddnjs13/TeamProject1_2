@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 public class RotateManager : MonoSingleton<RotateManager>
 {
-    
+    [SerializeField] private InputReaderSO _inputReaderSO;
     public UnityEvent StartRotateEvent;
     public UnityEvent EndRotateEvent;
     
@@ -66,12 +66,12 @@ public class RotateManager : MonoSingleton<RotateManager>
     {
         foreach (RotateMap1 item in _rotateMap1s)
         {
-            item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime1);
+            item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime1,_inputReaderSO);
         }
 
         foreach (RotateMap2 item in _rotateMap2s)
         {
-            item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime2);
+            item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime2,_inputReaderSO);
         }
     }
     

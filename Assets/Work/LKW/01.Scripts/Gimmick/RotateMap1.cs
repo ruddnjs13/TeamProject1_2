@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 
 public class RotateMap1 : MonoBehaviour,IInteractable
 {
+    private InputReaderSO _inputReader;
     private Transform _playerTrm;
     private float _time;
     private GameObject _grid;
@@ -29,25 +30,20 @@ public class RotateMap1 : MonoBehaviour,IInteractable
         _leftRot = Quaternion.Euler(0, 0, -90f);
         _rightRot = Quaternion.Euler(0, 0, 90f);
     }
-
-    private void Update()
+    private void OnEnable()
     {
-        ChooseDirectionAndStart();
+        _inputReader.LeftRotateEvent += HandleLeftRotate;
+        _inputReader.RightRotateEvent += HandleRightRotate;
     }
 
-    private void ChooseDirectionAndStart()
+    private void HandleRightRotate()
     {
         if (!_canRotate)
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.E) && !isRotate)
-        {
-            isRotate = true;
-            RotateManager.Instance.CurrentRotationIdx = ++RotateManager.Instance.CurrentRotationIdx % 4;
-            MapRotate(_leftRot);
-        }
-        else if (Input.GetKeyUp(KeyCode.Q) && !isRotate)
+        
+        if (!isRotate)
         {
             isRotate = true;
             RotateManager.Instance.CurrentRotationIdx = --RotateManager.Instance.CurrentRotationIdx;
@@ -57,6 +53,33 @@ public class RotateMap1 : MonoBehaviour,IInteractable
             }
             MapRotate(_rightRot);
         }
+    }
+
+    private void HandleLeftRotate()
+    {
+        if (!_canRotate)
+        {
+            return;
+        }
+
+        if (!isRotate)
+        {
+            isRotate = true;
+            RotateManager.Instance.CurrentRotationIdx = ++RotateManager.Instance.CurrentRotationIdx % 4;
+            MapRotate(_leftRot);
+        }
+
+}
+
+
+    private void Update()
+    {
+        ChooseDirectionAndStart();
+    }
+
+    private void ChooseDirectionAndStart()
+    {
+        
     }
 
     private void MapRotate(Quaternion direction)
@@ -114,8 +137,9 @@ public class RotateMap1 : MonoBehaviour,IInteractable
         _showDirection.SetActive(false);
     }
 
-    public void Initialize(Transform playerTrm, Transform rotateAxis, GameObject grid, float time)
+    public void Initialize(Transform playerTrm, Transform rotateAxis, GameObject grid, float time,InputReaderSO inputReader)
     {
+        _inputReader = inputReader;
         _playerTrm = playerTrm;
         _rotateAxis = rotateAxis;
         _grid = grid;

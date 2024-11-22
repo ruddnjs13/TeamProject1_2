@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 public class RotateMap2 : MonoBehaviour,IInteractable
 {
-   
+   private InputReaderSO _inputReader;
     private Transform _rotateAxis;
     private Transform _playerTrm;
     private float _time;
@@ -34,32 +34,47 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         _rightRot = Quaternion.Euler(0, 0, 180f);
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        ChooseDirectionAndStart();
+        _inputReader.LeftRotateEvent += HandleLeftRotate;
+        _inputReader.RightRotateEvent += HandleRightRotate;
     }
-    private void ChooseDirectionAndStart()
+
+    private void HandleRightRotate()
     {
         if (!_canRotate)
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Q) && !isRotate)
+
+        if (!isRotate)
         {
-            isRotate = true;
-            RotateManager.Instance.CurrentRotationIdx = (RotateManager.Instance.CurrentRotationIdx + 2) % 4;
+            
+            if (!isRotate)
+            {
+                isRotate = true;
+                RotateManager.Instance.CurrentRotationIdx = (RotateManager.Instance.CurrentRotationIdx+2) % 4;
+                MapRotate(_rightRot);
+            }
+        }
+    }
+
+    private void HandleLeftRotate()
+    {
+        if (!_canRotate)
+        {
+            return;
+        }
+        
+        isRotate = true;
+        RotateManager.Instance.CurrentRotationIdx += 2;
+        if (RotateManager.Instance.CurrentRotationIdx < 0)
+        {
+            RotateManager.Instance.CurrentRotationIdx = 2;
             MapRotate(_leftRot);
         }
-        else if (Input.GetKeyUp(KeyCode.E) && !isRotate)
-        {
-            isRotate = true;
-            RotateManager.Instance.CurrentRotationIdx -= 2;
-            if (RotateManager.Instance.CurrentRotationIdx < 0)
-            {
-                RotateManager.Instance.CurrentRotationIdx = 3+ RotateManager.Instance.CurrentRotationIdx+1;
-            }
-            MapRotate(_rightRot);
-        }
+        
+        
     }
 
     public void MapRotate(Quaternion direction)
@@ -118,8 +133,9 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         _showDirection.SetActive(false);
     }
     
-    public void Initialize(Transform playerTrm, Transform rotateAxis, GameObject grid, float time)
+    public void Initialize(Transform playerTrm, Transform rotateAxis, GameObject grid, float time,InputReaderSO inputReaderSo)
     {
+        _inputReader = inputReaderSo;
         _playerTrm = playerTrm;
         _rotateAxis = rotateAxis;
         _grid = grid;

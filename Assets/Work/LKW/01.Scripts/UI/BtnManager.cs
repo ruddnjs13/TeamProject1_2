@@ -55,6 +55,8 @@ public class BtnManager : MonoSingleton<BtnManager>
                 _optionPanel.SetActive(false);
                 break;
             case BtnType.KeySetting:
+                _KeyboardPanel.SetActive(true);
+                _optionPanel.SetActive(false);
                 break;
             case BtnType.Quit:
                 _titleUI.SetActive(true);
