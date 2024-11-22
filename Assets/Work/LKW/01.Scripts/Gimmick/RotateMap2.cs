@@ -53,8 +53,8 @@ public class RotateMap2 : MonoBehaviour,IInteractable
             if (!isRotate)
             {
                 isRotate = true;
-                RotateManager.Instance.CurrentRotationIdx = (RotateManager.Instance.CurrentRotationIdx+2) % 4;
-                MapRotate(_rightRot);
+                RotateManager.Instance.CurrentRotationIdx = (RotateManager.Instance.CurrentRotationIdx + 2) % 4;
+                MapRotate(_leftRot);
             }
         }
     }
@@ -67,13 +67,12 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         }
         
         isRotate = true;
-        RotateManager.Instance.CurrentRotationIdx += 2;
+        RotateManager.Instance.CurrentRotationIdx -= 2;
         if (RotateManager.Instance.CurrentRotationIdx < 0)
         {
-            RotateManager.Instance.CurrentRotationIdx = 2;
-            MapRotate(_leftRot);
+            RotateManager.Instance.CurrentRotationIdx = 3+ RotateManager.Instance.CurrentRotationIdx+1;
         }
-        
+        MapRotate(_rightRot);
         
     }
 
