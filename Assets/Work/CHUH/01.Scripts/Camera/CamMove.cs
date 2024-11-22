@@ -28,6 +28,18 @@ public class CamMove : MonoBehaviour
         Cam2.Priority = 100;
         Cam2.m_Lens.OrthographicSize = nowCamScale;
     }
+
+    public void SetTimeCam(float time)
+    {
+        StartCoroutine(TimeSet(time));
+    }
+    private IEnumerator TimeSet(float time)
+    {
+        Cam2.Priority = 100;
+        Cam2.m_Lens.OrthographicSize = nowCamScale;
+        yield return new WaitForSeconds(time);
+        Cam2.Priority = 0;
+    }
     public void UnSetCam()
     {
         Cam2.Priority = 0;
