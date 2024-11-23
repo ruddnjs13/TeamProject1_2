@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(menuName = "SO/InputReader")]
-public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
+public class InputReaderSO : ScriptableObject, Controls.IPlayerActions,Controls.IUIActions
 {
     private Controls _controls;
 
@@ -24,9 +24,11 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
         {
             _controls = new Controls();
             _controls.Player.SetCallbacks(this);
+            _controls.UI.SetCallbacks(this);
         }
         
         _controls.Player.Enable();
+        _controls.UI.Enable();
 
     }
 

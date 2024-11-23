@@ -71,15 +71,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""EscMenu"",
-                    ""type"": ""Button"",
-                    ""id"": ""1661d150-ef7a-4d22-a595-f6839b9fd728"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -181,10 +172,27 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""MapRotateClockwise"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
+                }
+            ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""440f9817-bd97-47f6-be8b-9c43eaa77808"",
+            ""actions"": [
+                {
+                    ""name"": ""EscMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""caf66ddc-2cad-4959-aa55-b5bb0f627619"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""e256c63d-39c7-435e-952b-2e3cd90eb98d"",
+                    ""id"": ""ceb0709c-5b03-4268-9b88-57d79ea98068"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -222,7 +230,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
         m_Player_MapRotateCounterClockwise = m_Player.FindAction("MapRotateCounterClockwise", throwIfNotFound: true);
         m_Player_MapRotateClockwise = m_Player.FindAction("MapRotateClockwise", throwIfNotFound: true);
-        m_Player_EscMenu = m_Player.FindAction("EscMenu", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_EscMenu = m_UI.FindAction("EscMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -289,7 +299,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interaction;
     private readonly InputAction m_Player_MapRotateCounterClockwise;
     private readonly InputAction m_Player_MapRotateClockwise;
-    private readonly InputAction m_Player_EscMenu;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -299,7 +308,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
         public InputAction @MapRotateCounterClockwise => m_Wrapper.m_Player_MapRotateCounterClockwise;
         public InputAction @MapRotateClockwise => m_Wrapper.m_Player_MapRotateClockwise;
-        public InputAction @EscMenu => m_Wrapper.m_Player_EscMenu;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -324,9 +332,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @MapRotateClockwise.started += instance.OnMapRotateClockwise;
             @MapRotateClockwise.performed += instance.OnMapRotateClockwise;
             @MapRotateClockwise.canceled += instance.OnMapRotateClockwise;
-            @EscMenu.started += instance.OnEscMenu;
-            @EscMenu.performed += instance.OnEscMenu;
-            @EscMenu.canceled += instance.OnEscMenu;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -346,9 +351,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @MapRotateClockwise.started -= instance.OnMapRotateClockwise;
             @MapRotateClockwise.performed -= instance.OnMapRotateClockwise;
             @MapRotateClockwise.canceled -= instance.OnMapRotateClockwise;
-            @EscMenu.started -= instance.OnEscMenu;
-            @EscMenu.performed -= instance.OnEscMenu;
-            @EscMenu.canceled -= instance.OnEscMenu;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -366,6 +368,52 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_EscMenu;
+    public struct UIActions
+    {
+        private @Controls m_Wrapper;
+        public UIActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @EscMenu => m_Wrapper.m_UI_EscMenu;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @EscMenu.started += instance.OnEscMenu;
+            @EscMenu.performed += instance.OnEscMenu;
+            @EscMenu.canceled += instance.OnEscMenu;
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+            @EscMenu.started -= instance.OnEscMenu;
+            @EscMenu.performed -= instance.OnEscMenu;
+            @EscMenu.canceled -= instance.OnEscMenu;
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     private int m_KeyMouseSchemeIndex = -1;
     public InputControlScheme KeyMouseScheme
     {
@@ -382,6 +430,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnInteraction(InputAction.CallbackContext context);
         void OnMapRotateCounterClockwise(InputAction.CallbackContext context);
         void OnMapRotateClockwise(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
         void OnEscMenu(InputAction.CallbackContext context);
     }
 }

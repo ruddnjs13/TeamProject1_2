@@ -8,18 +8,44 @@ public class GameManager : MonoSingleton<GameManager>
 {
     [SerializeField] private float _reBirthTime = 2f;
     [SerializeField] private GameObject _rotateAxis;
+    [SerializeField] private GameObject _escPanel;
+    [SerializeField] private InputReaderSO _inputReaderSO;
+    
+    private bool _uiMode = false;
     public GameObject RotateAxis
     {
-        get
+        get => _rotateAxis;
+        set => _rotateAxis = value;
+    }
+
+    private void OnEnable()
+    {
+        _inputReaderSO.EscEvent += HandleEscEvent;
+    }
+
+    public void OnDisable()
+    {
+        _inputReaderSO.EscEvent -= HandleEscEvent;
+    }
+
+    public void HandleEscEvent()
+    {
+        if (!_uiMode)
         {
-            return _rotateAxis;
+            _uiMode = true;
+            _escPanel.SetActive(true);
+            _inputReaderSO.RockInput(true);
+            Time.timeScale = 0f;
         }
-        set
+        else
         {
-            _rotateAxis = value;
+            _uiMode = false;
+            _escPanel.SetActive(false);
+            _inputReaderSO.RockInput(false);
+            Time.timeScale = 1f;
         }
     }
-    
+
 
     public CheckPoint currentCheckpoint;
 
