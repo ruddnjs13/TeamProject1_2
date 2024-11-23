@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Work/LKW/00.Scene/Title.unity
     guid: 82aa40232063bbc4f9865ab9952287f1
   - enabled: 1
-    path: Assets/Work/LKW/00.Scene/LKW 1.unity
+    path: Assets/Work/LKW/00.Scene/Map1.unity
     guid: 96425df830cee654ab7ebc872892db30
   m_configObjects: {}
