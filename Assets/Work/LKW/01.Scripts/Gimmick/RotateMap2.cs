@@ -32,12 +32,14 @@ public class RotateMap2 : MonoBehaviour,IInteractable
     {
         _leftRot = Quaternion.Euler(0, 0, -180f);
         _rightRot = Quaternion.Euler(0, 0, 180f);
+        _inputReader.ClockwiseRotateEvent += HandleLeftRotate;
+        _inputReader.CounterClockwiseRotateEvent += HandleRightRotate;
     }
 
     private void OnEnable()
     {
-        _inputReader.ClockwiseRotateEvent += HandleLeftRotate;
-        _inputReader.CounterClockwiseRotateEvent += HandleRightRotate;
+        Debug.Log(_inputReader);
+        
     }
 
     private void HandleRightRotate()
