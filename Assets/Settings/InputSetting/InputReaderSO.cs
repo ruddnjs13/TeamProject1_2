@@ -13,6 +13,8 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
     public Action InteractionEvent;
     public Action ClockwiseRotateEvent;
     public Action CounterClockwiseRotateEvent;
+    public Action EscEvent;
+    
     public event Action<Vector2> OnMoveEvent;
     
     public Vector2 Movement { get; private set; }
@@ -84,6 +86,14 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions
         if (context.performed)
         {
             ClockwiseRotateEvent?.Invoke();
+        }
+    }
+
+    public void OnEscMenu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            EscEvent?.Invoke();
         }
     }
 }
