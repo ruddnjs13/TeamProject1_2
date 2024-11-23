@@ -10,7 +10,7 @@ public class SoundSettingSaveLoad : MonoBehaviour
     // 저장할때 호출
     public void SaveSoundDataToJson()
     {
-        string jsonData = JsonUtility.ToJson(SoundData);
+        string jsonData = JsonUtility.ToJson(SoundData,true);
         string path = Path.Combine(Application.dataPath, "soundData.json");
         File.WriteAllText(path, jsonData);
     }
@@ -29,6 +29,6 @@ public class SoundData
 {
     public float MasterSoundScale;
     public float SFXSoundScale;
-    public float BFMSoundScale;
+    public float BGMSoundScale;
 
 }

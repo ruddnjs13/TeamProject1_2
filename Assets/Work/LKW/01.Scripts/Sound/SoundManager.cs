@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public enum BGMEnum
 {
@@ -15,6 +16,12 @@ public class SoundManager : MonoSingleton<SoundManager>
 {
     [SerializeField] private BgmListData bgmListData;
     [SerializeField] private SfxListData sfxListData;
+
+    [SerializeField] private SoundSettingSaveLoad saveLoad;
+
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider bgmSlider;
+    [SerializeField] protected Slider sfxSlider;
     
     AudioSource bgmPlayer;
     AudioSource[] sfxPlayers;
@@ -64,10 +71,14 @@ public class SoundManager : MonoSingleton<SoundManager>
             sfxPlayers[i].playOnAwake = false;
         }
         
-        _mixer.SetFloat("MASTER", Mathf.Log10(0.5f) * 20);
-        _mixer.SetFloat("SFX", Mathf.Log10(0.5f) * 20);
-        _mixer.SetFloat("BGM", Mathf.Log10(0.5f) * 20);
-        
+        saveLoad.LoadSoundDataFromJson();
+        _mixer.SetFloat("MASTER", Mathf.Log10(saveLoad.SoundData.MasterSoundScale) * 20);
+        _mixer.SetFloat("SFX", Mathf.Log10(saveLoad.SoundData.SFXSoundScale) * 20);
+        _mixer.SetFloat("BGM", Mathf.Log10(saveLoad.SoundData.BGMSoundScale) * 20);
+        masterSlider.value = saveLoad.SoundData.MasterSoundScale;
+        bgmSlider.value = saveLoad.SoundData.BGMSoundScale;
+        sfxSlider.value = saveLoad.SoundData.SFXSoundScale;
+
     }
     
     public void PlaySfx(SFXEnum sfx)
@@ -99,14 +110,20 @@ public class SoundManager : MonoSingleton<SoundManager>
     public void SetBgmVolume(float value)
     {
         _mixer.SetFloat("BGM", Mathf.Log10(value) * 20);
+        saveLoad.SoundData.BGMSoundScale = value;
+        saveLoad.SaveSoundDataToJson();
         
     }
     public void SetSfxVolume(float value)
     {
         _mixer.SetFloat("SFX", Mathf.Log10(value) * 20);
-    } 
+        saveLoad.SoundData.SFXSoundScale = value;
+        saveLoad.SaveSoundDataToJson();
+    }
     public void SetMasterVolume(float value)
     {
         _mixer.SetFloat("MASTER", Mathf.Log10(value) * 20);
+        saveLoad.SoundData.MasterSoundScale = value;
+        saveLoad.SaveSoundDataToJson();
     }
 }

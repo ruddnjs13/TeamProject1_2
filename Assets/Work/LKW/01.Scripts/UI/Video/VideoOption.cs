@@ -11,6 +11,8 @@ public class VideoOption : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _resolutionText;
     [SerializeField] private TextMeshProUGUI _fullScreenText;
 
+    [SerializeField] private ScreenScaleSaveLoad saveLoad;
+
     private List<Vector2> _resolutions = new List<Vector2>()
     {
         new Vector2(1280, 720),
@@ -37,11 +39,14 @@ public class VideoOption : MonoBehaviour
     {
         currentResolutionIndex = 1;
         currentScreenModeIndex = 0;
-        Screen.fullScreenMode = _screenModes[currentScreenModeIndex];
-        Screen.SetResolution((int)_resolutions[currentResolutionIndex].x,
-            (int)_resolutions[currentResolutionIndex].y,true);
-        _resolutionText.text = $"{_resolutions[currentResolutionIndex].x} x {_resolutions[currentResolutionIndex].y}";
-        _fullScreenText.text = "ON";
+        saveLoad.LoadKeyDataFromJson();
+        Screen.fullScreenMode = _screenModes[saveLoad.ScreenScaleData.ScreenMode];
+        Screen.SetResolution(saveLoad.ScreenScaleData.width,saveLoad.ScreenScaleData.height, true);
+        if (saveLoad.ScreenScaleData.ScreenMode == 0)
+            _fullScreenText.text = "ON";
+        else
+            _fullScreenText.text = "OFF";
+        _resolutionText.text = $"{saveLoad.ScreenScaleData.width} x {saveLoad.ScreenScaleData.height}";
     }
 
     public void SetScreenMode(int value)
@@ -50,7 +55,9 @@ public class VideoOption : MonoBehaviour
             currentScreenModeIndex = 1;
         else
             currentScreenModeIndex = (currentScreenModeIndex + value) % 2;
-        
+
+        saveLoad.ScreenScaleData.ScreenMode = currentScreenModeIndex;
+        saveLoad.SaveKeyDataToJson();
         Screen.fullScreenMode = _screenModes[currentScreenModeIndex];
         if (currentScreenModeIndex == 0)
             _fullScreenText.text = "ON";
@@ -66,6 +73,9 @@ public class VideoOption : MonoBehaviour
             currentResolutionIndex = (currentResolutionIndex + value) % 3;
         
         Vector2 resolution = _resolutions[currentResolutionIndex];
+        saveLoad.ScreenScaleData.width = (int)resolution.x;
+        saveLoad.ScreenScaleData.height = (int)resolution.y;
+        saveLoad.SaveKeyDataToJson();
         Screen.SetResolution((int)resolution.x,(int)resolution.y,Screen.fullScreenMode);
         _resolutionText.text = $"{resolution.x} x {resolution.y}";
 

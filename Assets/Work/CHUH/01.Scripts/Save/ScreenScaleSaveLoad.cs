@@ -10,7 +10,7 @@ public class ScreenScaleSaveLoad : MonoBehaviour
     // 저장할때 호출
     public void SaveKeyDataToJson()
     {
-        string jsonData = JsonUtility.ToJson(ScreenScaleData);
+        string jsonData = JsonUtility.ToJson(ScreenScaleData,true);
         string path = Path.Combine(Application.dataPath, "ScreenScaleData.json");
         File.WriteAllText(path, jsonData);
     }
@@ -29,4 +29,5 @@ public class ScreenScaleData
 {
     public int width;
     public int height;
+    public int ScreenMode;
 }
