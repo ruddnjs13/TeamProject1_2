@@ -49,15 +49,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "EscMenu",
-                    "type": "Button",
-                    "id": "1661d150-ef7a-4d22-a595-f6839b9fd728",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -159,10 +150,27 @@
                     "action": "MapRotateClockwise",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "440f9817-bd97-47f6-be8b-9c43eaa77808",
+            "actions": [
+                {
+                    "name": "EscMenu",
+                    "type": "Button",
+                    "id": "caf66ddc-2cad-4959-aa55-b5bb0f627619",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "e256c63d-39c7-435e-952b-2e3cd90eb98d",
+                    "id": "ceb0709c-5b03-4268-9b88-57d79ea98068",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
