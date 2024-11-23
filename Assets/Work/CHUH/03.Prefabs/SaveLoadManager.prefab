@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1305322001679356477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4381030555010872665}
+  - component: {fileID: 293204008863455675}
+  - component: {fileID: 4860055646258242326}
+  - component: {fileID: 5051274928699959729}
+  m_Layer: 0
+  m_Name: SaveLoadManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4381030555010872665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305322001679356477}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 43.005745, y: 15.164203, z: 0.038578946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &293204008863455675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305322001679356477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af87ee392d8a63a449805ccd9478df0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyData:
+    keyString: '{     "keyString": "{\"bindings\":[{\"action\":\"Player/Jump\",\"id\":\"36ac742c-44ca-4725-83d7-7c449a49a4e5\",\"path\":\"<Keyboard>/space\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"Player/Movement\",\"id\":\"c3209215-33cc-438f-900f-a846c6a0a901\",\"path\":\"<Keyboard>/a\",\"interactions\":\"null\",\"processors\":\"null\"},{\"action\":\"Player/Movement\",\"id\":\"a25cd9cf-57cf-48d4-bbbf-e3178140fcbf\",\"path\":\"<Keyboard>/d\",\"interactions\":\"null\",\"processors\":\"null\"}]}"
+      }'
+--- !u!114 &4860055646258242326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305322001679356477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8bc8b9d26828b489a63751744b8199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundData:
+    MasterSoundScale: 0.5
+    SFXSoundScale: 0.5
+    BGMSoundScale: 0.5
+--- !u!114 &5051274928699959729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305322001679356477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea68f4d6cb394024c973f68a7dd465b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScreenScaleData:
+    width: 1920
+    height: 1080
+    ScreenMode: 0

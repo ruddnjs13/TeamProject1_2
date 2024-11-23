@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoSingleton<GameManager>
 {
@@ -10,7 +11,9 @@ public class GameManager : MonoSingleton<GameManager>
     [SerializeField] private GameObject _rotateAxis;
     [SerializeField] private GameObject _escPanel;
     [SerializeField] private InputReaderSO _inputReaderSO;
-    
+
+    public UnityEvent DeadEvent;
+
     private bool _uiMode = false;
     public GameObject RotateAxis
     {
@@ -59,6 +62,7 @@ public class GameManager : MonoSingleton<GameManager>
     public void PlayerDead(Player player)
     {
         StartCoroutine(PlayerDeadCoroutine(player));
+        DeadEvent?.Invoke();
     }
 
     private IEnumerator PlayerDeadCoroutine(Player player)
