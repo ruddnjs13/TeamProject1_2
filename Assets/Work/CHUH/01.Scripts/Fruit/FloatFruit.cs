@@ -28,7 +28,7 @@ public class FloatFruit : MonoBehaviour
             collision.GetComponentInParent<Player>().playerInput.RockInput(true);
             doTweenSequence.Kill();
             Sequence sequence = DOTween.Sequence();
-            sequence.Append(transform.DOMove(collision.transform.position, 0.2f))
+            sequence.Append(transform.DOMove(collision.transform.position, 0.25f))
                 .Append(sprite.DOFade(0f,0.5f))
                 .OnComplete(() => EatEvent?.Invoke());
         }
