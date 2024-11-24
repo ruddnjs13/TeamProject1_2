@@ -17,6 +17,15 @@ public class GameManager : MonoSingleton<GameManager>
 
     private bool _uiMode = false;
 
+    public void UiRock()
+    {
+        _inputReaderSO.UIRockInput(true);
+    }
+    public void UiUnRock()
+    {
+        _inputReaderSO.UIRockInput(false);
+    }
+
     
     public GameObject RotateAxis
     {
@@ -37,6 +46,7 @@ public class GameManager : MonoSingleton<GameManager>
     private void Start()
     {
         _inputReaderSO.RockInput(false);
+        _inputReaderSO.UIRockInput(false);
     }
 
     public void HandleEscEvent()
