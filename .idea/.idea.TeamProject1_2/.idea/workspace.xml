@@ -38,9 +38,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/EventBlock/Close/CloseEventBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/EventBlock/EventBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/EventBlock/MoveEventBlock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TargetLaser/FSM/TargetLaserStatesSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TargetLaser/States/TargetLaserIdleState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Work/CD/3. Scripts/Functions/TargetLaser/States/TargetLaserStateSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Interaction/PlayerInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/4a/41dc8a46/UnityEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/6e/ea8d62c5/Tween.cs" root0="FORCE_HIGHLIGHTING" />
@@ -200,6 +197,7 @@
       <workItem from="1732273263803" duration="420000" />
       <workItem from="1732273741404" duration="5124000" />
       <workItem from="1732357320999" duration="2185000" />
+      <workItem from="1732453846488" duration="594000" />
     </task>
     <servers />
   </component>
