@@ -88,5 +88,14 @@ public class Player : Agent
         }
     }
 
+    public void MovePlayer()
+    {
+        _inputReader.RockInput(false);
+    }
+    public void StopPlayer()
+    {
+        _inputReader.RockInput(true);
+    }
+
     
 }
