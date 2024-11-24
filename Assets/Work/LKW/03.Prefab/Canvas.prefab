@@ -86,7 +86,7 @@ SpriteRenderer:
   m_Size: {x: 32, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &234727148451605490
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_Size: {x: 32, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7378645671095049620
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 375
 --- !u!1 &7369650992817214434
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ SpriteRenderer:
   m_Size: {x: 32, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2222265240319172981
@@ -498,7 +498,7 @@ SpriteRenderer:
   m_Size: {x: 32, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4807188903064087474
@@ -600,7 +600,7 @@ SpriteRenderer:
   m_Size: {x: 32, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3729864153809530670
