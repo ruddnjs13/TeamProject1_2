@@ -39,8 +39,12 @@ public class FruitProduction : MonoBehaviour
         _TMIText.enabled = true;
         Sequence sequence = DOTween.Sequence();
         sequence.Append(DOTween.To(x => text.maxVisibleCharacters = (int)x
-            , 0f, text.text.Length, duration).SetEase(Ease.Linear));
-
-        sequence.OnComplete(() => EndEvent?.Invoke());
+            , 0f, text.text.Length, duration).SetEase(Ease.Linear))
+            .AppendInterval(1f);
+        sequence.OnComplete(() =>
+        {
+            gameObject.SetActive(false);
+            EndEvent?.Invoke();
+        });
     }
 }
