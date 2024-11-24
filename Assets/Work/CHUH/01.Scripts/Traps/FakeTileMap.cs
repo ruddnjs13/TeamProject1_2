@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,11 @@ public class FakeTileMap : MonoBehaviour
     private void Awake()
     {
         tilemap = GetComponent<Tilemap>();
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

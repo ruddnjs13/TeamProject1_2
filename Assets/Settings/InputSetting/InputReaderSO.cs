@@ -49,6 +49,18 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions,Controls.
             _controls.Player.Enable();
         }
     }
+    public void UIRockInput(bool isRock)
+    {
+        if (isRock)
+        {
+            Movement = Vector3.zero;
+            _controls.UI.Disable();
+        }
+        else
+        {
+            _controls.UI.Enable();
+        }
+    }
     
 
     public void OnMovement(InputAction.CallbackContext context)

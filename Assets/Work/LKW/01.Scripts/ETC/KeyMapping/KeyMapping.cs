@@ -20,7 +20,7 @@ public class KeyMapping : MonoSingleton<KeyMapping>
     private bool _isRebinding = false;
     
 
-    private void Awake()
+    private void Start()
     {
         InitInputSetting();
     }

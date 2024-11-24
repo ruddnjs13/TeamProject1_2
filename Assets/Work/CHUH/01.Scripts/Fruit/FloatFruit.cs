@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+using UnityEngine.Events;
+
+public class FloatFruit : MonoBehaviour
+{
+    public UnityEvent EatEvent;
+
+    private Sequence doTweenSEquence;
+    private SpriteRenderer sprite;
+    private void Awake()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
+    private void Start()
+    {
+        doTweenSEquence = DOTween.Sequence();
+        doTweenSEquence
+            .Append(transform.DOLocalMoveY(transform.localPosition.y+0.05f, 0.5f).SetEase(Ease.InSine))
+            .SetLoops(-1, LoopType.Yoyo);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.GetComponentInParent<Player>().playerInput.RockInput(true);
+            doTweenSEquence.Kill();
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append(transform.DOMove(collision.transform.position, 0.2f))
+                .Append(sprite.DOFade(0f,0.5f))
+                .OnComplete(() => EatEvent?.Invoke());
+        }
+    }
+}
