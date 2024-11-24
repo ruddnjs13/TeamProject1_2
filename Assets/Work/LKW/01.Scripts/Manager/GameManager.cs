@@ -1,9 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
@@ -15,6 +16,8 @@ public class GameManager : MonoSingleton<GameManager>
     public UnityEvent DeadEvent;
 
     private bool _uiMode = false;
+
+    
     public GameObject RotateAxis
     {
         get => _rotateAxis;
@@ -29,6 +32,11 @@ public class GameManager : MonoSingleton<GameManager>
     public void OnDisable()
     {
         _inputReaderSO.EscEvent -= HandleEscEvent;
+    }
+
+    private void Start()
+    {
+        _inputReaderSO.RockInput(false);
     }
 
     public void HandleEscEvent()
@@ -49,13 +57,21 @@ public class GameManager : MonoSingleton<GameManager>
         }
     }
 
-
+    
     public CheckPoint currentCheckpoint;
 
 
     public void EnableCheckPoint(CheckPoint newCheckPoint)
     {
         currentCheckpoint = newCheckPoint;
+    }
+
+    [Header("Map Index")]
+    [SerializeField] private int _nextMapIndex;
+
+    public void NextSceneLoad()
+    {
+        SceneManager.LoadScene(_nextMapIndex);
     }
 
 
