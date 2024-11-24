@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5096270682974146791, guid: 567639e0ab503f04898a4599d0f06565, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -773.9999
+      value: -773.99994
       objectReference: {fileID: 0}
     - target: {fileID: 5813474393087868411, guid: 567639e0ab503f04898a4599d0f06565, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -903,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7180649004242802544, guid: 567639e0ab503f04898a4599d0f06565, type: 3}
       propertyPath: m_PixelPerfect
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7729590223695866386, guid: 567639e0ab503f04898a4599d0f06565, type: 3}
       propertyPath: saveLoad
