@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -16,6 +13,15 @@ public class GameManager : MonoSingleton<GameManager>
     public UnityEvent DeadEvent;
 
     private bool _uiMode = false;
+
+    public void UiRock()
+    {
+        _inputReaderSO.UIRockInput(true);
+    }
+    public void UiUnRock()
+    {
+        _inputReaderSO.UIRockInput(false);
+    }
 
     
     public GameObject RotateAxis
@@ -37,6 +43,7 @@ public class GameManager : MonoSingleton<GameManager>
     private void Start()
     {
         _inputReaderSO.RockInput(false);
+        _inputReaderSO.UIRockInput(false);
     }
 
     public void HandleEscEvent()

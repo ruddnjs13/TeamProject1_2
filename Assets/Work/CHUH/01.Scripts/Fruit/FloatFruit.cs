@@ -8,7 +8,7 @@ public class FloatFruit : MonoBehaviour
 {
     public UnityEvent EatEvent;
 
-    private Sequence doTweenSEquence;
+    private Sequence doTweenSequence;
     private SpriteRenderer sprite;
     private void Awake()
     {
@@ -16,8 +16,8 @@ public class FloatFruit : MonoBehaviour
     }
     private void Start()
     {
-        doTweenSEquence = DOTween.Sequence();
-        doTweenSEquence
+        doTweenSequence = DOTween.Sequence();
+        doTweenSequence
             .Append(transform.DOLocalMoveY(transform.localPosition.y+0.05f, 0.5f).SetEase(Ease.InSine))
             .SetLoops(-1, LoopType.Yoyo);
     }
@@ -26,7 +26,7 @@ public class FloatFruit : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.GetComponentInParent<Player>().playerInput.RockInput(true);
-            doTweenSEquence.Kill();
+            doTweenSequence.Kill();
             Sequence sequence = DOTween.Sequence();
             sequence.Append(transform.DOMove(collision.transform.position, 0.25f))
                 .Append(sprite.DOFade(0f,0.5f))
