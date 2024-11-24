@@ -37,10 +37,13 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     private void Awake()
     {
-        Init();
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        Init();
+    }
     private void Init()
     {
         foreach (BgmSO item in bgmListData.bgmList)
