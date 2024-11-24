@@ -16,7 +16,8 @@ public class FadeBlack : MonoBehaviour
         Sequence sequence = DOTween.Sequence();
         if (inOut)
         {
-            sequence.Append(_image.DOFade(1, 0.7f));
+            sequence.Append(_image.DOFade(1, 0.7f)).AppendInterval(0.5f);
+            sequence.OnComplete(() => GameManager.Instance.NextSceneLoad());
         }
         else
         {
