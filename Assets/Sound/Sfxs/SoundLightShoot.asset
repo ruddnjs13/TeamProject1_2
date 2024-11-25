@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acddb705f9404de4191af655d397a44e, type: 3}
   m_Name: SoundLightShoot
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: c0f61f52b3a5e4648a8625af22166e73, type: 3}
+  clip: {fileID: 8300000, guid: 6d35977bc220471498f4481ae913c512, type: 3}
   sfxType: 0
