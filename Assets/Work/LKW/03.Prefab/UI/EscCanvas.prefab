@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 9067046894744348593}
   - component: {fileID: 670443255984538261}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: BGMSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1567,7 +1567,7 @@ GameObject:
   - component: {fileID: 8889893610114493020}
   - component: {fileID: 1822997347641004035}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SFXSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3525,7 +3525,7 @@ GameObject:
   - component: {fileID: 7928664715718886309}
   - component: {fileID: 6246761626219715089}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: MasterSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

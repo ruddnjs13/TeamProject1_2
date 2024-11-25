@@ -40,11 +40,6 @@ public class SoundManager : MonoSingleton<SoundManager>
     private Dictionary<BGMEnum,AudioClip> _bgmDic = new Dictionary<BGMEnum,AudioClip>();
     private Dictionary<SFXEnum,AudioClip> _sfxDic = new Dictionary<SFXEnum,AudioClip>();
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void Start()
     {
         Init();
