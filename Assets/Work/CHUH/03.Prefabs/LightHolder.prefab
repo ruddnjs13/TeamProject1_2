@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6022462660134429863}
   - component: {fileID: 3115030837876777027}
   - component: {fileID: 1098976435833269421}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: LightHolder
   m_TagString: Mirror
   m_Icon: {fileID: 0}

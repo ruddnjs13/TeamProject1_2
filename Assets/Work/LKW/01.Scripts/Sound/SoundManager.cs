@@ -101,6 +101,7 @@ public class SoundManager : MonoSingleton<SoundManager>
             channelIndex = loopIndex;
             sfxPlayers[loopIndex].clip = _sfxDic[sfx];
             sfxPlayers[loopIndex].Play();
+            Debug.Log(Time.time);
             Debug.Log("사운드시발아");
             break;
         }

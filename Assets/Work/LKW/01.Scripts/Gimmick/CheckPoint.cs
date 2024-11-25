@@ -24,6 +24,7 @@ public class CheckPoint : MonoBehaviour,IInteractable
     public void Interact()
     {
         if (isActive) return;
+        SoundManager.Instance.PlaySfx(SFXEnum.Save);
         GameManager.Instance.EnableCheckPoint(this);
         _spriteRenderer.sprite = _onSprite;
         _spotLight.gameObject.SetActive(true);
