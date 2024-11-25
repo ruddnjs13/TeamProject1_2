@@ -15,7 +15,7 @@ public class Test13 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            SoundManager.Instance.PlaySfx(SFXEnum.뿅);
+            SoundManager.Instance.PlaySfx(SFXEnum.LightShoot);
             Debug.Log(KeyMapping.Instance.RebindInfo);
             
         }

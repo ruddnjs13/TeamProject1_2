@@ -14,7 +14,6 @@ public class PlayerIdleState : PlayerGroundState
     public override void Enter()
     {
         base.Enter();
-        _player.RbCompo.velocity = Vector3.zero;
         _player.StopImmediately(false);
     }
 

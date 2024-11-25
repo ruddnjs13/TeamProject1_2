@@ -12,13 +12,13 @@ public class PlayerGroundState : PlayerState
 
     public override void Enter()
     {
+        _player.playerInput.JumpEvent += HandleJumpEvent;
         base.Enter();
         if (_player.bufferCount > 0)
         {
             _player.StateMachine.ChangeState(PlayerStateEnum.Jump);
             _player.bufferCount = 0f;
         }
-        _player.playerInput.JumpEvent += HandleJumpEvent;
         _player.canFlip = true;
     }
 

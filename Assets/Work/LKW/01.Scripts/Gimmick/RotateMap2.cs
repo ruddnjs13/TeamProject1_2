@@ -36,12 +36,6 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         _inputReader.CounterClockwiseRotateEvent += HandleRightRotate;
     }
 
-    private void OnEnable()
-    {
-        Debug.Log(_inputReader);
-        
-    }
-
     private void HandleRightRotate()
     {
         if (!_canRotate)
@@ -80,6 +74,7 @@ public class RotateMap2 : MonoBehaviour,IInteractable
 
     public void MapRotate(Quaternion direction)
     {
+        SoundManager.Instance.PlaySfx(SFXEnum.MapRotate);
         RotateManager.Instance.StartRotateEvent?.Invoke();
         StopAllCoroutines();
         Vector3 previousPos = _grid.transform.position;

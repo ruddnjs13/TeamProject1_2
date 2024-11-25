@@ -14,7 +14,7 @@ public class FakeTileMap : MonoBehaviour
         tilemap = GetComponent<Tilemap>();
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         StopAllCoroutines();
     }

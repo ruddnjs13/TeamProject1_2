@@ -8,7 +8,7 @@ public class ShowNoText : MonoBehaviour
     [SerializeField] private TextMeshPro _text;
     [SerializeField] private GameObject ShowText;
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {

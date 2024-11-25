@@ -7,7 +7,6 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions,Controls.
 {
     private Controls _controls;
 
-    [HideInInspector] public bool _isDashing = false;
 
     public Action JumpEvent;
     public Action InteractionEvent;
@@ -72,9 +71,9 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions,Controls.
 
     public void OnJump(InputAction.CallbackContext context)
     {
+            Debug.Log($"{context}");
         if (context.performed)
         {
-            Debug.Log("점프");
             JumpEvent?.Invoke();
         }
     }
