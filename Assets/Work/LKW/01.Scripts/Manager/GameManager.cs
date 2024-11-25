@@ -98,7 +98,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private IEnumerator PlayerDeadCoroutine(Player player)
     {
-        player.transform.Find("Visual").gameObject.SetActive(false);
+        player.gameObject.SetActive(false);
         _deadParticle.transform.position = player.transform.position;
         _deadParticle.Play();
         yield return new WaitForSeconds(0.3f);
@@ -115,7 +115,7 @@ public class GameManager : MonoSingleton<GameManager>
         RotateManager.Instance.CurrentRotationIdx = currentCheckpoint.rotateIdx;
         player.transform.rotation = currentCheckpoint.transform.rotation;
         player.transform.position = currentCheckpoint.transform.position;
-        player.transform.Find("Visual").gameObject.SetActive(true);
+        player.gameObject.SetActive(true);
         player.StateMachine.ChangeState(PlayerStateEnum.Idle);
     }
 }
