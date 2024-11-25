@@ -16,6 +16,7 @@ public class PlayerFallState : PlayerAirState
 
     public override void Exit()
     {
+        SoundManager.Instance.PlaySfx(SFXEnum.Landing);
         _player.playerInput.JumpEvent -= HandleJumpEvent;
         base.Exit();
     }
