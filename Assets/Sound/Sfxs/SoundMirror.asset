@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acddb705f9404de4191af655d397a44e, type: 3}
-  m_Name: "\uBFC5\uC0AC\uC6B4\uB4DC"
+  m_Name: SoundMirror
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 6d35977bc220471498f4481ae913c512, type: 3}
-  sfxType: 0
+  clip: {fileID: 8300000, guid: fd2a5d655d5690c4a84b7475efc761a2, type: 3}
+  sfxType: 1

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Test13 : MonoBehaviour
 {
@@ -16,8 +15,9 @@ public class Test13 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            SceneManager.LoadScene(2);
-
+            SoundManager.Instance.PlaySfx(SFXEnum.LightShoot);
+            Debug.Log(KeyMapping.Instance.RebindInfo);
+            
         }
     }
 }
