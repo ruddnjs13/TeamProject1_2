@@ -25985,11 +25985,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f73f69c74410443b4bb7cb6521aa26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneLoadEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _reBirthTime: 2
   _rotateAxis: {fileID: 500176705}
   _escPanel: {fileID: 973788376}
   _inputReaderSO: {fileID: 11400000, guid: 6afb184478c487d44a3a03792b42f365, type: 2}
   DeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  EndDeadEvent:
     m_PersistentCalls:
       m_Calls: []
   currentCheckpoint: {fileID: 0}
@@ -31561,7 +31567,7 @@ Transform:
   m_GameObject: {fileID: 776141635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.24, y: -1.14, z: 0}
+  m_LocalPosition: {x: 13.44, y: -1.14, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32548,7 +32554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -33156,9 +33162,9 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2117426606}
-          m_TargetAssemblyTypeName: Player, Assembly-CSharp
-          m_MethodName: MovePlayer
+        - m_Target: {fileID: 363328706}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: OpenInput
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -33704,6 +33710,10 @@ PrefabInstance:
     - target: {fileID: 4689721153540068947, guid: a64fba01062289d4795936b32b4cd257, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HandleEscEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846499832379101183, guid: a64fba01062289d4795936b32b4cd257, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34508,7 +34518,7 @@ PrefabInstance:
       objectReference: {fileID: 1133754440}
     - target: {fileID: 6986109241684586500, guid: e32c0feb885d8db43b54833a3c105202, type: 3}
       propertyPath: TypingText
-      value: "\uC704\uD5D8 < \uB3D9\uAD74 \uB545\uAEBC\uC9D0 \uC8FC\uC758>"
+      value: "\uC704\uD5D8 <\uB3D9\uAD74 \uB545\uAEBC\uC9D0 \uC8FC\uC758>"
       objectReference: {fileID: 0}
     - target: {fileID: 8278386814142340313, guid: e32c0feb885d8db43b54833a3c105202, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34611,7 +34621,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.13995332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -34622,7 +34632,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.2799064}
   m_EdgeRadius: 0
 --- !u!212 &1981437116
 SpriteRenderer:
@@ -35015,12 +35025,12 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 363328707}
   - {fileID: 1827700588}
   - {fileID: 477061085}
   - {fileID: 1700920323}
   - {fileID: 64165775}
   - {fileID: 1792462985}
-  - {fileID: 363328707}
   - {fileID: 1691860727}
   - {fileID: 500176706}
   - {fileID: 502420515}

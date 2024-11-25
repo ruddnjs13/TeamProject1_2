@@ -22,13 +22,11 @@ public abstract class PlayerState
 
     public virtual void  Enter()
     {
-        Debug.Log(_animName);
         _player.AnimatorCompo.SetBool(_animBoolHash,true);
     }
 
     public virtual void Exit()
     {
-        Debug.Log(_animName);
         _player.AnimatorCompo.SetBool(_animBoolHash,false);
     }
 
