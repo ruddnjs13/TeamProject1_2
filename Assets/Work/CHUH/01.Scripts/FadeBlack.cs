@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +12,12 @@ public class FadeBlack : MonoBehaviour
     {
         _image = GetComponent<Image>();
     }
+
+    private void OnDestroy()
+    {
+        DOTween.Kill(_image);
+    }
+
     public void FadeAndNextScene(bool inOut)
     {
         Sequence sequence = DOTween.Sequence();

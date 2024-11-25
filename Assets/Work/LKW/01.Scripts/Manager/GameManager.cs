@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
+using Unity.Profiling.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    private UnityEvent SceneLoadEvent;
+    public UnityEvent SceneLoadEvent;
     
     [SerializeField] private float _reBirthTime = 4f;
     [SerializeField] private GameObject _rotateAxis;
@@ -19,14 +20,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     private bool _uiMode = false;
 
-    public void UiRock()
-    {
-        _inputReaderSO.UIRockInput(true);
-    }
-    public void UiUnRock()
-    {
-        _inputReaderSO.UIRockInput(false);
-    }
 
     
     public GameObject RotateAxis
@@ -42,7 +35,9 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void OnEnable()
     {
+        
         _inputReaderSO.EscEvent += HandleEscEvent;
+        InitializeScene();
     }
 
     public void OnDisable()
@@ -50,16 +45,33 @@ public class GameManager : MonoSingleton<GameManager>
         _inputReaderSO.EscEvent -= HandleEscEvent;
     }
 
+    
+
     private void Start()
     {
-        InitializeScene();
-        
+    }
+
+    public void OpenInput()
+    {
+        _inputReaderSO.RockInput(false);
+        _inputReaderSO.UIRockInput(false);
+    }
+    public void RockInput()
+    {
+        _inputReaderSO.RockInput(true);
+        _inputReaderSO.UIRockInput(true);
     }
 
     private void InitializeScene()
     {
-        
-        _inputReaderSO.RockInput(false);
+        SceneLoadEvent?.Invoke();
+    }
+    public void UiRock()
+    {
+        _inputReaderSO.UIRockInput(true);
+    }
+    public void UiUnRock()
+    {
         _inputReaderSO.UIRockInput(false);
     }
 

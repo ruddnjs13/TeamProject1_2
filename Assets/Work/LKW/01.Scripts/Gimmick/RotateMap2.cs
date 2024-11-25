@@ -36,12 +36,6 @@ public class RotateMap2 : MonoBehaviour,IInteractable
         _inputReader.CounterClockwiseRotateEvent += HandleRightRotate;
     }
 
-    private void OnEnable()
-    {
-        Debug.Log(_inputReader);
-        
-    }
-
     private void HandleRightRotate()
     {
         if (!_canRotate)
