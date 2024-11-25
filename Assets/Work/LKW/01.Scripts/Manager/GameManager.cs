@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
+    private UnityEvent SceneLoadEvent;
+    
     [SerializeField] private float _reBirthTime = 4f;
     [SerializeField] private GameObject _rotateAxis;
     [SerializeField] private GameObject _escPanel;
@@ -50,6 +52,13 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Start()
     {
+        InitializeScene();
+        
+    }
+
+    private void InitializeScene()
+    {
+        
         _inputReaderSO.RockInput(false);
         _inputReaderSO.UIRockInput(false);
     }
@@ -105,7 +114,6 @@ public class GameManager : MonoSingleton<GameManager>
         _deadParticle.Simulate(0);
         yield return new WaitForSeconds(_reBirthTime);
         EndDeadEvent?.Invoke();
-        yield return new WaitForSeconds(_reBirthTime/10);
         ReSpawnAndSetPos(player);
     }
 
@@ -117,5 +125,10 @@ public class GameManager : MonoSingleton<GameManager>
         player.transform.position = currentCheckpoint.transform.position;
         player.gameObject.SetActive(true);
         player.StateMachine.ChangeState(PlayerStateEnum.Idle);
+    }
+
+    public void LoadScene(int idx)
+    {
+        SceneManager.LoadScene(idx);
     }
 }
