@@ -16,7 +16,8 @@ public enum SFXEnum
     Lever,
     Butten,
     RotateArrow,
-    Smahser
+    Smahser,
+    Landing
 
 }
 
