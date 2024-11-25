@@ -27,7 +27,7 @@ public class CheckPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             if (isActive) return;
-            //SoundManager.Instance.PlaySfx(SFXEnum.Save);
+            SoundManager.Instance.PlaySfx(SFXEnum.Save);
             GameManager.Instance.EnableCheckPoint(this);
             _spriteRenderer.sprite = _onSprite;
             _spotLight.gameObject.SetActive(true);
