@@ -12,8 +12,8 @@ public class PlayerGroundState : PlayerState
 
     public override void Enter()
     {
-        base.Enter();
         _player.playerInput.JumpEvent += HandleJumpEvent;
+        base.Enter();
         if (_player.bufferCount > 0)
         {
             _player.StateMachine.ChangeState(PlayerStateEnum.Jump);

@@ -12,7 +12,6 @@ public class Player : Agent
     #region MoveSettingRegion
     [Header("MoveSetting")] 
     public float _moveSpeed; 
-    public float _wallJumpPower;
     #endregion
 
     #region JumpSetting
@@ -34,7 +33,6 @@ public class Player : Agent
     protected override void Awake()
     {
         base.Awake();
-        AnimatorCompo = GetComponentInChildren<Animator>();
         StateMachine = new PlayerStateMachine();
         
         foreach (PlayerStateEnum stateEnum in Enum.GetValues(typeof(PlayerStateEnum)))
