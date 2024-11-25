@@ -11,7 +11,11 @@ public class Lever : MonoBehaviour, IInteractable
     public UnityEvent OnEvent;
     public UnityEvent OffEvent;
 
+    [SerializeField] private Sprite _lever;
+
     private ISwitchable active;
+    private SpriteRenderer _sprite;
+
     private void OnValidate()
     {
         if (ActiveObj != null && ActiveObj as ISwitchable == null)
@@ -30,9 +34,11 @@ public class Lever : MonoBehaviour, IInteractable
         {
             Debug.LogError($"ActiveObj is not succession ISwitchble. Message : {ex}");
         }
+        _sprite = GetComponent<SpriteRenderer>();
     }
     public void Interact()
     {
+        _sprite.sprite = _lever;
         StartCoroutine(WaitAndOff());
         active.Activate();
     }
