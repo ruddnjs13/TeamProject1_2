@@ -26376,6 +26376,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2c3f530eb3eb3044b1a90a20b253440, type: 3}
+--- !u!114 &502420516 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4860055646258242326, guid: d2c3f530eb3eb3044b1a90a20b253440, type: 3}
+  m_PrefabInstance: {fileID: 502420515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8bc8b9d26828b489a63751744b8199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &554990608
 GameObject:
   m_ObjectHideFlags: 0
@@ -33488,6 +33499,58 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3284995645982707937, guid: a64fba01062289d4795936b32b4cd257, type: 3}
   m_PrefabInstance: {fileID: 1691860727}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1606581795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606581796}
+  - component: {fileID: 1606581797}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1606581796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606581795}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1606581797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606581795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6724ad850449dab40a2d3e1355a86ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmListData: {fileID: 11400000, guid: 3c76935559b93cc44bdfeb6c20d5336a, type: 2}
+  sfxListData: {fileID: 11400000, guid: 8807cf76916f38a4ba2ae99a0d051e30, type: 2}
+  saveLoad: {fileID: 502420516}
+  masterSlider: {fileID: 1691860730}
+  bgmSlider: {fileID: 1691860729}
+  sfxSlider: {fileID: 1691860728}
+  channels: 16
+  _mixer: {fileID: 24100000, guid: 3faf63bfbe807d94898611f43a0b282b, type: 2}
 --- !u!1 &1618613761
 GameObject:
   m_ObjectHideFlags: 3
@@ -33727,6 +33790,39 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 112004864}
   m_SourcePrefab: {fileID: 100100000, guid: a64fba01062289d4795936b32b4cd257, type: 3}
+--- !u!114 &1691860728 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1822997347641004035, guid: a64fba01062289d4795936b32b4cd257, type: 3}
+  m_PrefabInstance: {fileID: 1691860727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1691860729 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 670443255984538261, guid: a64fba01062289d4795936b32b4cd257, type: 3}
+  m_PrefabInstance: {fileID: 1691860727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1691860730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6246761626219715089, guid: a64fba01062289d4795936b32b4cd257, type: 3}
+  m_PrefabInstance: {fileID: 1691860727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1700920323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35110,3 +35206,4 @@ SceneRoots:
   - {fileID: 1349688047}
   - {fileID: 458265315}
   - {fileID: 1984859636}
+  - {fileID: 1606581796}
