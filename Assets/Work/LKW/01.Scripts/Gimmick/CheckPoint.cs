@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 
-public class CheckPoint : MonoBehaviour,IInteractable
+public class CheckPoint : MonoBehaviour
 {
     public UnityEvent OnEnableEvent;
     public int rotateIdx = 0;
@@ -15,24 +15,24 @@ public class CheckPoint : MonoBehaviour,IInteractable
     private SpriteRenderer _spriteRenderer;
 
     public bool isActive { get; private set; } = false;
+    
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         rotateIdx = (int)transform.rotation.eulerAngles.z / 90;
     }
 
-    public void Interact()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isActive) return;
-        SoundManager.Instance.PlaySfx(SFXEnum.Save);
-        GameManager.Instance.EnableCheckPoint(this);
-        _spriteRenderer.sprite = _onSprite;
-        _spotLight.gameObject.SetActive(true);
-        OnEnableEvent.Invoke();
-        isActive = true;
-    }
-
-    public void EndInteract()
-    {
+        if (collision.CompareTag("Player"))
+        {
+            if (isActive) return;
+            //SoundManager.Instance.PlaySfx(SFXEnum.Save);
+            GameManager.Instance.EnableCheckPoint(this);
+            _spriteRenderer.sprite = _onSprite;
+            _spotLight.gameObject.SetActive(true);
+            OnEnableEvent.Invoke();
+            isActive = true;
+        }
     }
 }
