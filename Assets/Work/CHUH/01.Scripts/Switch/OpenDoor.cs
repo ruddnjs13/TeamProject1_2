@@ -20,14 +20,14 @@ public class OpenDoor : MonoBehaviour, ISwitchable
     public void Activate()
     {
         if (isActived) return;
-        Debug.Log("ÀÛµ¿");
+        Debug.Log("ì‘ë™");
         transform.DOMove(transform.position + transform.up * moveRange, duration);
         isActived = true;
     }
     public void Deactivate()
     {
         if (!isActived) return;
-        Debug.Log("ÀÛµ¿ ÇØÁ¦");
+        Debug.Log("ì‘ë™ í•´ì œ");
         transform.DOMove(StartPos, duration);
         isActived = false;
     }
