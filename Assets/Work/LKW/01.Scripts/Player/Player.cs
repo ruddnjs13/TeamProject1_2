@@ -57,11 +57,13 @@ public class Player : Agent
     private void OnEnable()
     {
         playerInput.OnMoveEvent += Flip;
+        playerInput.JumpEvent += HandleJumpEvent;
     }
 
     private void OnDisable()
     {
         playerInput.OnMoveEvent -= Flip;
+        playerInput.JumpEvent = HandleJumpEvent;
     }
 
     protected void Update()
@@ -84,6 +86,11 @@ public class Player : Agent
         {
             StateMachine.ChangeState(PlayerStateEnum.Dead);
         }
+    }
+
+    public virtual void HandleJumpEvent()
+    {
+        
     }
 
     public void MovePlayer()

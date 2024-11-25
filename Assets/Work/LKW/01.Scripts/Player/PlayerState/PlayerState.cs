@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Video;
 
@@ -22,11 +23,13 @@ public abstract class PlayerState
 
     public virtual void  Enter()
     {
+        Debug.Log("Enter");
         _player.AnimatorCompo.SetBool(_animBoolHash,true);
     }
 
     public virtual void Exit()
     {
+        Debug.Log("Exit");
         _player.AnimatorCompo.SetBool(_animBoolHash,false);
     }
 
