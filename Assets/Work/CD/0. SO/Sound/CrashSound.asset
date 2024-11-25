@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acddb705f9404de4191af655d397a44e, type: 3}
-  m_Name: New Sfx SO
+  m_Name: CrashSound
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: a19f9ccb612dab74a95163f55d5e4d93, type: 3}
   sfxType: 0
