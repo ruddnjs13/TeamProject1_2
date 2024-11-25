@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxList:
   - {fileID: 11400000, guid: f6e2ff81ed74b68428da94041ccfa730, type: 2}
+  - {fileID: 11400000, guid: 018ae6916258f3b41aadd96303b7ff06, type: 2}
+  - {fileID: 11400000, guid: 0b8647ff86a0f81409313081a99000e6, type: 2}
+  - {fileID: 11400000, guid: 3893e5e6ce668014bb1f924ed877fb5e, type: 2}
+  - {fileID: 11400000, guid: 50145655e54e0f14a818e09ef503b443, type: 2}

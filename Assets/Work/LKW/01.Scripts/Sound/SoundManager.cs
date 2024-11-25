@@ -9,7 +9,12 @@ public enum BGMEnum
 
 public enum SFXEnum
 {
-    뿅
+    LightShoot,
+    LightReflect,
+    MapRotate,
+    Save,
+    Lever,
+
 }
 
 public class SoundManager : MonoSingleton<SoundManager>
@@ -96,6 +101,7 @@ public class SoundManager : MonoSingleton<SoundManager>
             channelIndex = loopIndex;
             sfxPlayers[loopIndex].clip = _sfxDic[sfx];
             sfxPlayers[loopIndex].Play();
+            Debug.Log("사운드시발아");
             break;
         }
     }

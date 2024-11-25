@@ -80,6 +80,7 @@ public class LightShooter : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        SoundManager.Instance.PlaySfx(SFXEnum.LightShoot);
         FireLight();
         _colider.enabled = false;
     }
