@@ -41,12 +41,12 @@ public class FadeBlack : MonoBehaviour
         if (inOut)
         {
             _image.color = new Color(0, 0, 0, 0);
-            sequence.Append(_image.DOFade(1, 3f));
+            sequence.Append(_image.DOFade(1, 1.6f));
         }
         else
         {
             _image.color = new Color(0, 0, 0, 1);
-            sequence.Append(_image.DOFade(0, 3f));
+            sequence.Append(_image.DOFade(0, 1.6f));
         }
     }
 
