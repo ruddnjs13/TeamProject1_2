@@ -15,6 +15,13 @@ public class PlayerDeadState : PlayerState
     public override void Enter()
     {
         _player.StopImmediately(true);
+        _player.playerInput.RockInput(true);
         _player.OnDeadEvent?.Invoke();
+    }
+
+    public override void Exit()
+    {
+        _player.playerInput.RockInput(false);
+        base.Exit();
     }
 }
