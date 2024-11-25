@@ -87,6 +87,7 @@ public class RotateMap1 : MonoBehaviour,IInteractable
 
     private void MapRotate(Quaternion direction)
     {
+        SoundManager.Instance.PlaySfx(SFXEnum.MapRotate);
         RotateManager.Instance.StartRotateEvent?.Invoke();
         StopAllCoroutines();
         Vector3 previousPos = _grid.transform.position;
