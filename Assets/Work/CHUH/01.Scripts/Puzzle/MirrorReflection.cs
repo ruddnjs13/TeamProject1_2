@@ -16,6 +16,7 @@ public class MirrorReflection : MonoBehaviour, IInteractable
     
     public void ReflectionMirror(LineRenderer line, Vector2 dir, LightShooter shooter)
     {
+        SoundManager.Instance.PlaySfx(SFXEnum.LightReflect);
         StartCoroutine(ReflectionLight(line, dir, shooter));
     }
     private IEnumerator ReflectionLight(LineRenderer line, Vector2 dir, LightShooter shooter)

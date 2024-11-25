@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -19,6 +20,11 @@ public class FruitProduction : MonoBehaviour
     {
         _nameText.enabled = false;
         _TMIText.enabled = false;
+    }
+
+    private void OnDisable()
+    {
+        DOTween.Kill(this);
     }
 
     public void EatFruit()

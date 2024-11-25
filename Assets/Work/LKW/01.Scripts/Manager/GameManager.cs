@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    public UnityEvent SceneLoadEvent;
     
     [SerializeField] private float _reBirthTime = 4f;
     [SerializeField] private GameObject _rotateAxis;
@@ -35,9 +34,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void OnEnable()
     {
-        
         _inputReaderSO.EscEvent += HandleEscEvent;
-        InitializeScene();
     }
 
     public void OnDisable()
@@ -49,6 +46,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Start()
     {
+        OpenInput();
     }
 
     public void OpenInput()
@@ -64,7 +62,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void InitializeScene()
     {
-        SceneLoadEvent?.Invoke();
     }
     public void UiRock()
     {
