@@ -20,7 +20,9 @@ public class Player : Agent
     public float _extraGravity = 10;
     public float _gravityDelay = 0.2f;
     #endregion
-    
+
+    [field:SerializeField]public PhysicsMaterial2D _material { get; set; }
+
     [SerializeField] private InputReaderSO _inputReader;
     public InputReaderSO playerInput => _inputReader;
     
