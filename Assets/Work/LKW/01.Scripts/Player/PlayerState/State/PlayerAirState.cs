@@ -6,11 +6,13 @@ public class PlayerAirState : PlayerState
 {
     public PlayerAirState(Player player,PlayerStateMachine stateMachine ,string animBoolName) : base(player,stateMachine ,animBoolName)
     {
+
     }
 
     public override void Enter()
     {
         base.Enter();
+        _player._material.friction = 0;
         _player.playerInput.JumpEvent += HandleJumpEvent;
         _player.canFlip = true;
     }
@@ -23,6 +25,7 @@ public class PlayerAirState : PlayerState
     public override void Exit()
     {
         _player.playerInput.JumpEvent -= HandleJumpEvent;
+        _player._material.friction = 0.02f;
         base.Exit();
     }
     
