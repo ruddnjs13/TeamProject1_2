@@ -35,6 +35,7 @@ public class BtnManager : MonoSingleton<BtnManager>
 
     private void BtnClick()
     {
+        SoundManager.Instance.PlaySfx(SFXEnum.Butten);
         switch (_btnType)
         {
             case BtnType.Start: 
@@ -45,6 +46,7 @@ public class BtnManager : MonoSingleton<BtnManager>
                 _settingUI.SetActive(true);
                 break;
             case BtnType.Exit:
+                Application.Quit();
                 break;
             case BtnType.Video:
                 _videoPanel.SetActive(true);

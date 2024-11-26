@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acddb705f9404de4191af655d397a44e, type: 3}
   m_Name: SoundButten
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 2ebb950ca5a582042a4748f2ff139215, type: 3}
+  clip: {fileID: 8300000, guid: 41c5c2b983676c14abbebce504e00d9a, type: 3}
   sfxType: 5
