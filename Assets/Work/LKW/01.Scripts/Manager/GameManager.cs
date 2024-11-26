@@ -110,6 +110,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void PlayerDead(Player player)
     {
+        SoundManager.Instance.PlaySfx(SFXEnum.Hit);
         StartCoroutine(PlayerDeadCoroutine(player));
         DeadEvent?.Invoke();
     }

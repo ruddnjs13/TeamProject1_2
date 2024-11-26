@@ -109,6 +109,7 @@ public class TurnBlock : MonoBehaviour, IInteractable
     {
         Debug.Log("나 인풋받음");
         if (_sequence.IsActive() || IsCorrect) return;
+        SoundManager.Instance.PlaySfx(SFXEnum.RotateArrow);
         OnInputEvent?.Invoke();
     }
 

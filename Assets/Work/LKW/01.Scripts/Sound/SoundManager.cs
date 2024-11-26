@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public enum BGMEnum
 {
+    BGMTitle,
+    BGMMap1,
+    BGMMap2,
+    BGMMap3
 }
 
 public enum SFXEnum
@@ -14,6 +18,12 @@ public enum SFXEnum
     MapRotate,
     Save,
     Lever,
+    Butten,
+    RotateArrow,
+    Smahser,
+    Landing,
+    Move,
+    Hit
 
 }
 
@@ -36,6 +46,7 @@ public class SoundManager : MonoSingleton<SoundManager>
     int channelIndex;
     
     [SerializeField] private AudioMixer _mixer;
+    [SerializeField] private BGMEnum PlayingBGM;
 
     private Dictionary<BGMEnum,AudioClip> _bgmDic = new Dictionary<BGMEnum,AudioClip>();
     private Dictionary<SFXEnum,AudioClip> _sfxDic = new Dictionary<SFXEnum,AudioClip>();
@@ -43,6 +54,7 @@ public class SoundManager : MonoSingleton<SoundManager>
     private void Start()
     {
         Init();
+        PlayBgm(PlayingBGM);
     }
     private void Init()
     {
@@ -96,8 +108,6 @@ public class SoundManager : MonoSingleton<SoundManager>
             channelIndex = loopIndex;
             sfxPlayers[loopIndex].clip = _sfxDic[sfx];
             sfxPlayers[loopIndex].Play();
-            Debug.Log(Time.time);
-            Debug.Log("사운드시발아");
             break;
         }
     }

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bafee83c482f941a289955805dd0b3, type: 3}
   m_Name: Bgm List
   m_EditorClassIdentifier: 
-  bgmList: []
+  bgmList:
+  - {fileID: 11400000, guid: d0752f3ac5c45d84e94156c706a9cf6b, type: 2}
+  - {fileID: 11400000, guid: 916278355b70e3f4c9697776d7e8f0a2, type: 2}
+  - {fileID: 11400000, guid: fb4b60f4ba76cb6438ced8d248ac949d, type: 2}

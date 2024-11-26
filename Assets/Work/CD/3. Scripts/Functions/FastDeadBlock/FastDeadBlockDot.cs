@@ -8,7 +8,9 @@ using DG.Tweening;
 public class FastDeadBlockDot : MonoBehaviour
 {
     public UnityEvent OnHit;
-    
+
+    public bool isCanSoundActive = false;
+
     [SerializeField] private float _position;
     [SerializeField] private float _delayUpSecond;
     
@@ -17,6 +19,7 @@ public class FastDeadBlockDot : MonoBehaviour
     private Tween _tween, _tween2;
     private Sequence _sequence;
     private Transform _pos;
+
     
     public void Start()
     {
@@ -25,7 +28,12 @@ public class FastDeadBlockDot : MonoBehaviour
     
     public void SetSequence()
     {
-        _tween = transform.DOLocalMove(new Vector2(transform.localPosition.x, _position), _duration).SetEase(Ease.OutQuart);
+        _tween = transform.DOLocalMove(new Vector2(transform.localPosition.x, _position), _duration)
+            .SetEase(Ease.OutQuart)
+            .OnComplete(() =>
+            {
+                if(isCanSoundActive) SoundManager.Instance.PlaySfx(SFXEnum.Smahser);
+            });
 
         _sequence = DOTween.Sequence();
         _sequence.AppendInterval(_delayUpSecond)
@@ -33,6 +41,12 @@ public class FastDeadBlockDot : MonoBehaviour
             .AppendInterval(_delayUpSecond);
         _sequence.SetLoops(-1, LoopType.Yoyo);
     }
+
+    public void ChangeSoundSetting(bool setting)
+    {
+        isCanSoundActive = setting;
+    }
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {

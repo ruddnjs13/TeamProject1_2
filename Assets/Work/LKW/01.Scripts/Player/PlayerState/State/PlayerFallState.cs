@@ -17,7 +17,6 @@ public class PlayerFallState : PlayerAirState
     public override void Exit()
     {
         _player.playerInput.JumpEvent -= HandleJumpEvent;
-
         base.Exit();
     }
 
