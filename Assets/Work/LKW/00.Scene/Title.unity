@@ -160,6 +160,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 1340941010}
   channels: 16
   _mixer: {fileID: 24100000, guid: 3faf63bfbe807d94898611f43a0b282b, type: 2}
+  PlayingBGM: 0
 --- !u!4 &371720873
 Transform:
   m_ObjectHideFlags: 0
@@ -804,6 +805,10 @@ PrefabInstance:
     - target: {fileID: 3042082816868673121, guid: 567639e0ab503f04898a4599d0f06565, type: 3}
       propertyPath: m_UseSpriteMesh
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4492694837404116821, guid: 567639e0ab503f04898a4599d0f06565, type: 3}
+      propertyPath: m_text
+      value: Sweet Dream
       objectReference: {fileID: 0}
     - target: {fileID: 5096270682974146791, guid: 567639e0ab503f04898a4599d0f06565, type: 3}
       propertyPath: m_AnchoredPosition.x
