@@ -39,7 +39,7 @@ public class BtnManager : MonoSingleton<BtnManager>
         switch (_btnType)
         {
             case BtnType.Start: 
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(6);
                 break;
             case BtnType.Setting:
                 _titleUI.SetActive(false);
