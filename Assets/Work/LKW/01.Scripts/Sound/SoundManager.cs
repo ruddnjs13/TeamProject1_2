@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public enum BGMEnum
 {
-    Bgm1
+    BGMTitle,
+    BGMMap1,
+    BGMMap2,
+    BGMMap3
 }
 
 public enum SFXEnum
@@ -43,6 +46,7 @@ public class SoundManager : MonoSingleton<SoundManager>
     int channelIndex;
     
     [SerializeField] private AudioMixer _mixer;
+    [SerializeField] private BGMEnum PlayingBGM;
 
     private Dictionary<BGMEnum,AudioClip> _bgmDic = new Dictionary<BGMEnum,AudioClip>();
     private Dictionary<SFXEnum,AudioClip> _sfxDic = new Dictionary<SFXEnum,AudioClip>();
@@ -50,7 +54,7 @@ public class SoundManager : MonoSingleton<SoundManager>
     private void Start()
     {
         Init();
-        PlayBgm(BGMEnum.Bgm1);
+        PlayBgm(PlayingBGM);
     }
     private void Init()
     {
