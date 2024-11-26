@@ -33,7 +33,8 @@ public class MovingPlatform : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        ContactPoint2D con = collision.contacts[0];
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && con.normal.y < 0.1f)
         {
             collision.transform.SetParent(transform);
         }
@@ -41,7 +42,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             collision.transform.SetParent(null);
         }
