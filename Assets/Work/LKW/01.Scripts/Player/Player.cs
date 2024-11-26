@@ -38,13 +38,17 @@ public class Player : Agent
         foreach (PlayerStateEnum stateEnum in Enum.GetValues(typeof(PlayerStateEnum)))
         {
             string typeName = stateEnum.ToString();
-        
-            Type type = Type.GetType($"Player{typeName}State");
-        
-            if (type != null)
+
+            try
             {
+                Type type = Type.GetType($"Player{typeName}State");
                 PlayerState state = Activator.CreateInstance(type, this, StateMachine, typeName) as PlayerState;
                 StateMachine.AddState(stateEnum, state);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Player{typeName}State is not exist :");
+                Debug.LogError(e);
             }
         }
     }

@@ -71,7 +71,6 @@ public class InputReaderSO : ScriptableObject, Controls.IPlayerActions,Controls.
 
     public void OnJump(InputAction.CallbackContext context)
     {
-            Debug.Log($"{context}");
         if (context.performed)
         {
             JumpEvent?.Invoke();
