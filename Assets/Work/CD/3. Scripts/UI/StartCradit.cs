@@ -1,42 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 
 public class StartCradit : MonoBehaviour
 {
-    [SerializeField] private float startDelay, typingDelay, nextDelay;
+    [SerializeField] private float startDelay, typingDelay, nextDelay, lastDelay;
     [SerializeField] private TextMeshProUGUI targetText;
     [SerializeField] private List<string> _texts;
-    [SerializeField] private string _mainText;
+    [SerializeField] private TextMeshProUGUI mainText;
+    [SerializeField] private string titleText;
     
     private Sequence _seq;
     
     private void Start()
     {
+        mainText.text = "";
         targetText.text = "";
         StartCoroutine(TextPrint());
     }
 
     private IEnumerator TextPrint()
     {
-        yield return new WaitForSeconds(startDelay);
+        yield return new WaitForSecondsRealtime(startDelay);
         foreach (var text in _texts)
         {
             StartCoroutine(TextTyping(text));
-            yield return new WaitForSeconds(nextDelay);
+            yield return new WaitForSecondsRealtime(nextDelay);
             StartCoroutine(TextDelete(text));
-            yield return new WaitForSeconds(nextDelay);
+            yield return new WaitForSecondsRealtime(nextDelay);
             targetText.text = "";
         }
+        
+        yield return new WaitForSecondsRealtime(lastDelay);
 
         _seq = DOTween.Sequence()
-            .Append(targetText.DOFade(0f, 1f).OnComplete(() => targetText.text = _mainText))
-            .Append(targetText.DOFade(1f, 1f))
+            .Append(mainText.DOFade(0f, 0.2f))
+            .Append(mainText.DOFade(1f, 3f).OnStart(()=>mainText.text = titleText))
             .AppendInterval(3f)
-            .Append(targetText.DOFade(0f, 1f));
+            .Append(mainText.DOFade(0f, 1f));
+
+        _seq.OnComplete(() => SceneManager.LoadScene(1));
     }
 
     private IEnumerator TextTyping(string text)
