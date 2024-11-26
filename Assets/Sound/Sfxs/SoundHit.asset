@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acddb705f9404de4191af655d397a44e, type: 3}
-  m_Name: SoundLanding
+  m_Name: SoundHit
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: f58ef62bf3b5edc4f937a73c9a9eebe0, type: 3}
-  sfxType: 8
+  clip: {fileID: 8300000, guid: 42770b64e62ccd44da41aa7f1a7a1de7, type: 3}
+  sfxType: 10

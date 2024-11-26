@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public enum BGMEnum
 {
+    Bgm1
 }
 
 public enum SFXEnum
@@ -18,7 +19,8 @@ public enum SFXEnum
     RotateArrow,
     Smahser,
     Landing,
-    Move
+    Move,
+    Hit
 
 }
 
@@ -48,6 +50,7 @@ public class SoundManager : MonoSingleton<SoundManager>
     private void Start()
     {
         Init();
+        PlayBgm(BGMEnum.Bgm1);
     }
     private void Init()
     {
