@@ -80,7 +80,7 @@ public class TurnBlock : MonoBehaviour, IInteractable
         }
         catch (Exception e)
         {
-            Debug.LogError($"Collider2D Load ERRO\n ERROR Name{e.Message}");
+            Debug.LogError($"Collider2D Load ERROR\n ERROR Name{e.Message}");
         }
         
         //회전 기능
