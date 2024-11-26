@@ -427,6 +427,7 @@ MonoBehaviour:
   timeInAir: 0
   _extraGravity: 1.2
   _gravityDelay: 1.8
+  <_material>k__BackingField: {fileID: 6200000, guid: 2d105d65e3957394c882073ce342fc0b, type: 2}
   _inputReader: {fileID: 11400000, guid: 6afb184478c487d44a3a03792b42f365, type: 2}
   OnDeadEvent:
     m_PersistentCalls:

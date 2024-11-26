@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    
+    [SerializeField] private GameObject _requestPanel;
     [SerializeField] private float _reBirthTime = 4f;
     [SerializeField] private GameObject _rotateAxis;
     [SerializeField] private GameObject _escPanel;
@@ -84,6 +84,7 @@ public class GameManager : MonoSingleton<GameManager>
         else
         {
             _uiMode = false;
+            _requestPanel.SetActive(false);
             _escPanel.SetActive(false);
             _inputReaderSO.RockInput(false);
             Time.timeScale = 1f;
