@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acddb705f9404de4191af655d397a44e, type: 3}
   m_Name: SoundSmahser
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: a19f9ccb612dab74a95163f55d5e4d93, type: 3}
+  clip: {fileID: 8300000, guid: 98c5cb04fd06aac4584d23382f7f497b, type: 3}
   sfxType: 7
