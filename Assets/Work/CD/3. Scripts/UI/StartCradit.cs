@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 
 public class StartCradit : MonoBehaviour
@@ -9,7 +10,10 @@ public class StartCradit : MonoBehaviour
     [SerializeField] private float startDelay, typingDelay, nextDelay;
     [SerializeField] private TextMeshProUGUI targetText;
     [SerializeField] private List<string> _texts;
-
+    [SerializeField] private string _mainText;
+    
+    private Sequence _seq;
+    
     private void Start()
     {
         targetText.text = "";
@@ -27,11 +31,12 @@ public class StartCradit : MonoBehaviour
             yield return new WaitForSeconds(nextDelay);
             targetText.text = "";
         }
-        
-        
-        
 
-        
+        _seq = DOTween.Sequence()
+            .Append(targetText.DOFade(0f, 1f).OnComplete(() => targetText.text = _mainText))
+            .Append(targetText.DOFade(1f, 1f))
+            .AppendInterval(3f)
+            .Append(targetText.DOFade(0f, 1f));
     }
 
     private IEnumerator TextTyping(string text)

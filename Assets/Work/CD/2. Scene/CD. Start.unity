@@ -305,6 +305,7 @@ MonoBehaviour:
     \uAC83\uC744 \uB204\uAD6C\uBCF4\uB2E4 \uC798 \uC54C\uAE30\uC5D0..."
   - "\uC2A4\uC2A4\uB85C \uC7AC\uB8CC\uB97C \uCC3E\uC73C\uB7EC \uB098\uC11C\uAC8C
     \uB41C\uB2E4..."
+  _mainText: "\uC544\uC544\u314F"
 --- !u!114 &1195049967
 MonoBehaviour:
   m_ObjectHideFlags: 0
