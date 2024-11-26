@@ -11,7 +11,6 @@ public enum PlayerStateEnum
     Move,
     Jump,
     Fall,
-    FallDown,
     Dead
 }
 
@@ -38,7 +37,6 @@ public class PlayerStateMachine
     {
         CurrentState.Exit();
         CurrentState = stateDictionary[nextState];
-        Debug.Log(CurrentState);
         CurrentState.Enter();
     }
 
