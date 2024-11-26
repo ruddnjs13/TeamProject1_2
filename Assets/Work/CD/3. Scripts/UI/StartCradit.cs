@@ -1,36 +1,58 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 using TMPro;
-using UnityEngine.UI;
 
 
 public class StartCradit : MonoBehaviour
 {
-    [SerializeField] private float _delayValue;
+    [SerializeField] private float startDelay, typingDelay, nextDelay;
     [SerializeField] private TextMeshProUGUI targetText;
     [SerializeField] private List<string> _texts;
 
-    private Sequence _fadeSeq;
-
     private void Start()
     {
-        TextPrint();
+        targetText.text = "";
+        StartCoroutine(TextPrint());
     }
 
-    private void TextPrint()
+    private IEnumerator TextPrint()
     {
-        _fadeSeq = DOTween.Sequence();
+        yield return new WaitForSeconds(startDelay);
         foreach (var text in _texts)
         {
-                _fadeSeq.AppendInterval(_delayValue)
-                .Append(targetText.DOFade(0f, 1f).OnComplete((() => targetText.text = text)))
-                .Append(targetText.DOFade(1f, 1f));
+            StartCoroutine(TextTyping(text));
+            yield return new WaitForSeconds(nextDelay);
+            StartCoroutine(TextDelete(text));
+            yield return new WaitForSeconds(nextDelay);
+            targetText.text = "";
         }
-        _fadeSeq
-            .AppendInterval(_delayValue)
-            .Append(targetText.DOFade(0f, 1f));
+        
+        
+        
+
+        
+    }
+
+    private IEnumerator TextTyping(string text)
+    {
+        foreach (var t in text)
+        {
+            targetText.text += t;
+            yield return new WaitForSeconds(typingDelay);
+        }
+    }
+
+    private IEnumerator TextDelete(string text)
+    {
+        int length = text.Length;
+
+        while (length >= 0)
+        {
+            string t = text.Substring(0, length);
+            targetText.text = t; 
+            yield return new WaitForSeconds(typingDelay);
+            length--;
+        }
     }
 }
