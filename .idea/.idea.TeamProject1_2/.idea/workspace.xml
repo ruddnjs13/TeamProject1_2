@@ -66,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
-    "git-widget-placeholder": "Develop",
+    "git-widget-placeholder": "CD",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -212,7 +212,7 @@
       <workItem from="1732453846488" duration="594000" />
       <workItem from="1732541258857" duration="4911000" />
       <workItem from="1732578013965" duration="11809000" />
-      <workItem from="1733737660367" duration="1445000" />
+      <workItem from="1733737660367" duration="2058000" />
     </task>
     <servers />
   </component>
