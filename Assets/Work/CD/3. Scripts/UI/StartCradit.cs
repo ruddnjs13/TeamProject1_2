@@ -17,11 +17,14 @@ public class StartCradit : MonoBehaviour
     
     private Sequence _seq;
     
+    private Coroutine _coroutine;
+    
     private void Start()
     {
         mainText.text = "";
         targetText.text = "";
-        StartCoroutine(TextPrint());
+        if (_coroutine != null) StopCoroutine(_coroutine);
+        _coroutine = StartCoroutine(TextPrint());
     }
 
     private IEnumerator TextPrint()
