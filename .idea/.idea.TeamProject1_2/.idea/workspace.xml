@@ -5,22 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66529809-aa60-4f1e-86bf-2c24d9fcadf9" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputSetting/InputReaderSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/InputSetting/InputReaderSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CD/2. Scene/CD. Map1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/00.Scene/Map_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CHUH/00.Scene/Map_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/01.Scripts/FadeBlack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/CHUH/01.Scripts/FadeBlack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/Map1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/Map1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/ETC/ShowNoText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/ETC/ShowNoText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Gimmick/RotateMap2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Gimmick/RotateMap2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/PlayerState/PlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/PlayerState/PlayerState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/PlayerState/State/PlayerGroundState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/01.Scripts/Player/PlayerState/State/PlayerGroundState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject1_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/00.Title.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/00.Title.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/03.Map1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/03.Map1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/04.Map2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/04.Map2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/05.Map3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/05.Map3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music/SFX_UI_Click_Organic_Pop_Thin_Generic_1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music/SFX_UI_Click_Organic_Pop_Thin_Generic_1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve/map_preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve/map_preview.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve/tiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve/tiles.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve/tiles2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve/tiles2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve/tiles_preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/CHUH/04.Sprites/adve/tiles_preview.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/Map1/MainPP Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Work/LKW/00.Scene/Map1/MainPP Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/04.Sprites/Tile/tile11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/04.Sprites/Tile/tile11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/RuleTile.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/RuleTile/BackGroundTile 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/RuleTile/BackGroundTile 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/RuleTile/BackGroundTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/RuleTile/BackGroundTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/RuleTile/GrassRuleTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Work/LKW/06.TileMap/RuleTile/GrassRuleTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/soundData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/soundData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_D:/github/Teamp/TeamProject1_2" value="2mPTJAJX00lToHkXniu87NQ57V5" />
+    </persistenceIdMap>
   </component>
   <component name="DpaMonitoringSettings">
     <option name="autoShow" value="false" />
@@ -66,7 +90,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CD&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LKW&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -79,7 +103,7 @@
 }</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\github\Teamp\TeamProject1_2 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\github\Teamp\TeamProject1_2" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -103,7 +127,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\github\Teamp\TeamProject1_2 -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\github\Teamp\TeamProject1_2" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -213,6 +237,15 @@
       <workItem from="1732541258857" duration="4911000" />
       <workItem from="1732578013965" duration="11809000" />
       <workItem from="1733737660367" duration="3047000" />
+      <workItem from="1736251336886" duration="52000" />
+      <workItem from="1749520829683" duration="334000" />
+      <workItem from="1749893102011" duration="3509000" />
+      <workItem from="1752337512467" duration="615000" />
+      <workItem from="1752341629496" duration="663000" />
+      <workItem from="1752347468445" duration="30000" />
+      <workItem from="1752747392129" duration="1667000" />
+      <workItem from="1761998673135" duration="605000" />
+      <workItem from="1776928970115" duration="610000" />
     </task>
     <servers />
   </component>
@@ -244,5 +277,13 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

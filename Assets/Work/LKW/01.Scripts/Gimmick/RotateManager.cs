@@ -13,8 +13,8 @@ public class RotateManager : MonoSingleton<RotateManager>
     public UnityEvent EndRotateEvent;
     
     
-    [SerializeField] private RotateMap1[] _rotateMap1s;
-    [SerializeField] private RotateMap2[] _rotateMap2s;
+    [SerializeField] private RotateMapQuarter[] _rotateMap1s;
+    [SerializeField] private RotateMapHalf[] _rotateMap2s;
     [SerializeField] private Transform _playerTrm;
     [SerializeField] private Transform _rotateAxis;
     [SerializeField] private GameObject _grid;
@@ -64,12 +64,12 @@ public class RotateManager : MonoSingleton<RotateManager>
 
     private void InitializeRotateMaps()
     {
-        foreach (RotateMap1 item in _rotateMap1s)
+        foreach (RotateMapQuarter item in _rotateMap1s)
         {
             item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime1,_inputReaderSO);
         }
 
-        foreach (RotateMap2 item in _rotateMap2s)
+        foreach (RotateMapHalf item in _rotateMap2s)
         {
             item.Initialize(_playerTrm,_rotateAxis,_grid,_rotateTime2,_inputReaderSO);
         }
