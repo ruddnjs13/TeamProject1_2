@@ -22,9 +22,6 @@ public class CamMove : MonoBehaviour
 
     public void SetCam()
     {
-        // DOTween.To(() => cinemachine.m_Lens.OrthographicSize, x => cinemachine.m_Lens.OrthographicSize = x, CamScale, 5f);
-        // 원인은 모르겠으나, 개 끊겨 나와서 기각
-
         Cam2.Priority = 100;
         Cam2.m_Lens.OrthographicSize = nowCamScale;
     }
